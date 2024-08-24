@@ -146,7 +146,7 @@ namespace Example._02000000000001_Company.Classes.Example.Example_03
              * int nResultA = ++nValA;      <- 1
              * int nResultB = nValB++;      <- 0
              * 
-             * 위의 경우 nResultA 변수에는 값이 증가 된 1 값이 할당되는 반면,  nResultB 변수에는 
+             * 위의 경우 nResultA 변수에는 값이 증가 된 1 값이 할당되는 반면, nResultB 변수에는 
              * 0 이 할당된다는 것을 알 수 있다.
              * 
              * 증감 연산자는 동일한 라인에 여러번 명시 할 경우 컴파일러에 따라 결과가 달라질 수 
