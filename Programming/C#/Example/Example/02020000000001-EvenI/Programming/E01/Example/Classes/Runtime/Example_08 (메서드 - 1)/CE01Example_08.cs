@@ -41,9 +41,12 @@ using System.Threading.Tasks;
  * 
  * 따라서, 메서드의 여러 데이터를 출력하기 위해서는 컬렉션과 같은 기능을 활용해야한다.
  */
-namespace Example._02000000000001_Company.Classes.Example.Example_08
+namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_08
 {
-	internal class CExample_08
+	/**
+	 * Example 8
+	 */
+	internal class CE01Example_08
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

@@ -54,7 +54,7 @@ using System.Threading.Tasks;
  * 특징이 존재한다. (즉, 프로그램이 실행 중에 기계어로 변환되기 때문에 현재 실행되고 있는 플랫폼에 
  * 맞는 최적화 된 명령문을 생성 할 수 있다는 것을 알 수 있다.)
  */
-namespace Example._02000000000001_Company.Classes.Example.Example_01
+namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_01
 {
 	/*
      * 클래스란?
@@ -67,7 +67,7 @@ namespace Example._02000000000001_Company.Classes.Example.Example_01
 	/**
 	 * Example 1
 	 */
-	internal class CExample_01
+	internal class CE01Example_01
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

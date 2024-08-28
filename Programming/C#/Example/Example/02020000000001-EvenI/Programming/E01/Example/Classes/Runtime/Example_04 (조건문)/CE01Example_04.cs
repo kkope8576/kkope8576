@@ -43,9 +43,12 @@ using System.Threading.Tasks;
  *          // 조건 A 와 조건 B 를 모두 만족하지 않았을 경우 실행 할 명령문
  * }
  */
-namespace Example._02000000000001_Company.Classes.Example.Example_04
+namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_04
 {
-	internal class CExample_04
+	/**
+	 * Example 4
+	 */
+	internal class CE01Example_04
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

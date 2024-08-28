@@ -85,9 +85,12 @@ using System.Threading.Tasks;
  * 
  * 위와 같이 입력 데이터를 전달 받을 매개 변수를 직접 명시하는 것이 가능하다.
  */
-namespace Example._02000000000001_Company.Classes.Example.Example_09
+namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_09
 {
-	internal class CExample_09
+	/**
+	 * Example 9
+	 */
+	internal class CE01Example_09
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

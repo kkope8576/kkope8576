@@ -72,9 +72,12 @@ using System.Threading.Tasks;
  * 따라서, goto 문을 남발 할 경우 프로그램의 흐름 복잡해질 수 있기 때문에 오늘날 프로그램을 제작하는 
  * 환경에서는 거의 사용되지 않는다.
  */
-namespace Example._02000000000001_Company.Classes.Example.Example_05
+namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_05
 {
-	internal class CExample_05
+	/**
+	 * Example 5
+	 */
+	internal class CE01Example_05
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

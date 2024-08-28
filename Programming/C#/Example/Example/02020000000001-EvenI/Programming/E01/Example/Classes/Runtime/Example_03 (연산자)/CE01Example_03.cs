@@ -18,9 +18,12 @@ using System.Threading.Tasks;
  * - 할당 연산자 (=, +=, -=, *=, /= 등등...)
  * - 기타 연산자 (형 변환 연산자, 조건 연산자 등등...)
  */
-namespace Example._02000000000001_Company.Classes.Example.Example_03
+namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_03
 {
-	internal class CExample_03
+	/**
+	 * Example 3
+	 */
+	internal class CE01Example_03
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

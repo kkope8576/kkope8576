@@ -27,9 +27,12 @@ using System.Threading.Tasks;
  * 반면, 벨류는 실제 관리되는 데이터를 의미하기 때문에 중복이 가능하다는 차이점이 존재한다. (즉, 
  * 딕셔너리는 키를 통해서 사용자가 원하는 벨류를 탐색하는 컬렉션이라는 것을 알 수 있다.)
  */
-namespace Example._02000000000001_Company.Classes.Example.Example_07
+namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_07
 {
-	internal class CExample_07
+	/**
+	 * Example 7
+	 */
+	internal class CE01Example_07
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

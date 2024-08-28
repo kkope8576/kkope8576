@@ -58,8 +58,8 @@ using System.Threading.Tasks;
  * - List + 자료형 + 리스트 이름
  * 
  * Ex)
- * List<int> oValListA = new List<int>();
- * List<float> oValListB = new List<float>();
+ * List<int> oListValuesA = new List<int>();
+ * List<float> oListValuesB = new List<float>();
  * 
  * 리스트는 내부적인 구현 방식에 따라 배열 기반 리스트와 연결 기반 리스트로 구분된다.
  * 
@@ -91,9 +91,12 @@ using System.Threading.Tasks;
  * - FIFO (First In First Out) 순서로 데이터를 관리하는 컬렉션을 의미한다. (즉, 큐 또한 스택처럼 
  * 데이터의 순서가 엄격하게 관리 된다는 것을 알 수 있다.)
  */
-namespace Example._02000000000001_Company.Classes.Example.Example_06
+namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_06
 {
-	internal class CExample_06
+	/**
+	 * Example 6
+	 */
+	internal class CE01Example_06
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

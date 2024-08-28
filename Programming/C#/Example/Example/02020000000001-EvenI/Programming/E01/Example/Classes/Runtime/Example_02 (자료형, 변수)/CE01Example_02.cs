@@ -104,9 +104,12 @@ using System.Threading.Tasks;
  * 단, 변수는 자유롭게 데이터를 저장 할 수 있는 반면 상수는 한번 데이터가 저장되고 나면 더이상 
  * 변경하는 것은 불가능하다. (즉, 읽어들이는 것만 가능하다.)
  */
-namespace Example._02000000000001_Company.Classes.Example.Example_02
+namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_02
 {
-	internal class CExample_02
+	/**
+	 * Example 2
+	 */
+	internal class CE01Example_02
 	{
 		/** 초기화 */
 		public static void Start(string[] args)
