@@ -1,4 +1,4 @@
-#define E04_IF_ELSE
+//#define E04_IF_ELSE
 #define E04_SWITCH_CASE
 
 using System;

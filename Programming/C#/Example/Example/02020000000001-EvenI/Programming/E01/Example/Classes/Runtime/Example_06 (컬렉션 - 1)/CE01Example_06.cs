@@ -1,5 +1,5 @@
-#define E06_ARRAY
-#define E06_LIST
+//#define E06_ARRAY
+//#define E06_LIST
 #define E06_STACK_QUEUE
 
 using System;
