@@ -1,4 +1,4 @@
-#define E07_SET
+//#define E07_SET
 #define E07_DICTIONARY
 
 using System;
