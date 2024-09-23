@@ -1,5 +1,5 @@
-#define E08_METHOD_01
-#define E08_METHOD_02
+//#define E08_METHOD_01
+//#define E08_METHOD_02
 #define E08_METHOD_03
 
 using System;

@@ -1,5 +1,5 @@
-#define E09_METHOD_01
-#define E09_METHOD_02
+//#define E09_METHOD_01
+//#define E09_METHOD_02
 #define E09_METHOD_03
 
 using System;
