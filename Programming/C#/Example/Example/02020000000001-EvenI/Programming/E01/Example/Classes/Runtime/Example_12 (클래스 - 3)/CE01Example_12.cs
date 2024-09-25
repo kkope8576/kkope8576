@@ -35,17 +35,17 @@ using System.Threading.Tasks;
  * 가능하면 고려하지 않는 것을 추천한다.
  * 
  * Ex)
- * class CBase
+ * class CE01Base_12
  * {
  *		// Do Something
  * }
  * 
- * class CDerived : CBase
+ * class CE01Derived_12 : CE01Base_12
  * {
  *		// Do Something
  * }
  * 
- * 위와 CDerived 클래스는 CBase 클래스를 상속하고 있기 때문에 해당 클래스는 CBase 클래스에 존재하는 
+ * 위와 CE01Derived_12 클래스는 CE01Base_12 클래스를 상속하고 있기 때문에 해당 클래스는 CE01Base_12 클래스에 존재하는 
  * 멤버를 사용하는 것이 가능하다.
  * 
  * 단, 상속은 단방향이기 때문에 두 클래스가 서로를 상속하는 것이 불가능하다. (즉, 양방향 상속은 
@@ -58,17 +58,17 @@ using System.Threading.Tasks;
  * C# 은 상속을 통해서 다형성을 흉내내는 것이 가능하다.
  * 
  * Ex)
- * class CBase
+ * class CE01Base_12
  * {
  *		// Do Something
  * }
  * 
- * class CDerived : CBase
+ * class CE01Derived_12 : CE01Base_12
  * {
  *		// Do Something
  * }
  * 
- * CBase oBase = new CDerived();
+ * CE01Base_12 oBase = new CE01Derived_12();
  * 
  * 위와 같이 자식 클래스를 통해서 생성 된 객체는 부모 클래스 형으로 참조하는 것이 가능하다. (즉, 
  * 자식 객체를 부모 객체로 인지하고 있다는 것을 알 수 있다.)
@@ -86,11 +86,11 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		public static void Start(string[] args)
 		{
 #if E12_CLASS_01
-			CBase oBase = new CBase();
+			CE01Base_12 oBase = new CE01Base_12();
 			oBase.m_nVal = 10;
 			oBase.m_fVal = 3.14f;
 
-			CDerived oDerived = new CDerived();
+			CE01Derived_12 oDerived = new CE01Derived_12();
 			oDerived.m_nVal = 20;
 			oDerived.m_fVal = 3.14f;
 			oDerived.m_oStr = "ABC";
@@ -101,10 +101,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("\n=====> 자식 클래스 <=====");
 			oDerived.ShowInfo();
 #elif E12_CLASS_02
-			CBase oBase = new CBase(10, 3.14f);
-			CBase oDerivedA = new CDerived(20, 3.14f, "ABC");
+			CE01Base_12 oBase = new CE01Base_12(10, 3.14f);
+			CE01Base_12 oDerivedA = new CE01Derived_12(20, 3.14f, "ABC");
 
-			CDerived oDerivedB = new CDerived(30, 3.14f, "DEF");
+			CE01Derived_12 oDerivedB = new CE01Derived_12(30, 3.14f, "DEF");
 
 			/*
 			 * 아래와 같이 부모 클래스를 통해 생성 된 객체를 자식 클래스 형으로 참조하는 것은 
@@ -114,7 +114,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 클래스에는 부모 클래스에 대한 정보가 존재하기 때문에 부모 클래스 형으로 자식 객체를 
 			 * 참조하는 것이 가능하다.)
 			 */
-			//CDerived oDerivedC = new CBase(40, 3.14f);
+			//CE01Derived_12 oDerivedC = new CE01Base_12(40, 3.14f);
 
 			Console.WriteLine("=====> 부모 클래스 <=====");
 			oBase.ShowInfo();
@@ -125,10 +125,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("\n=====> 자식 클래스 - B <=====");
 			oDerivedB.ShowInfo();
 #elif E12_CLASS_03
-			CBase oBase = new CBase(10, 3.14f);
-			CBase oDerivedA = new CDerived(20, 3.14f, "ABC");
+			CE01Base_12 oBase = new CE01Base_12(10, 3.14f);
+			CE01Base_12 oDerivedA = new CE01Derived_12(20, 3.14f, "ABC");
 
-			CDerived oDerivedB = new CDerived(30, 3.14f, "DEF");
+			CE01Derived_12 oDerivedB = new CE01Derived_12(30, 3.14f, "DEF");
 
 			Console.WriteLine("=====> 부모 클래스 <=====");
 			oBase.ShowInfo();
@@ -143,7 +143,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 #if E12_CLASS_01
 		/** 부모 클래스 */
-		private class CBase
+		private class CE01Base_12
 		{
 			public int m_nVal = 0;
 			public float m_fVal = 0.0f;
@@ -157,7 +157,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 자식 클래스 */
-		private class CDerived : CBase
+		private class CE01Derived_12 : CE01Base_12
 		{
 			public string m_oStr = string.Empty;
 
@@ -186,19 +186,19 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 #elif E12_CLASS_02
 		/** 부모 클래스 */
-		private class CBase
+		private class CE01Base_12
 		{
 			public int m_nVal = 0;
 			public float m_fVal = 0.0f;
 
 			/** 생성자 */
-			public CBase() : this(0, 0.0f)
+			public CE01Base_12() : this(0, 0.0f)
 			{
 				// Do Something
 			}
 
 			/** 생성자 */
-			public CBase(int a_nVal, float a_fVal)
+			public CE01Base_12(int a_nVal, float a_fVal)
 			{
 				m_nVal = a_nVal;
 				m_fVal = a_fVal;
@@ -213,7 +213,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 자식 클래스 */
-		private class CDerived : CBase
+		private class CE01Derived_12 : CE01Base_12
 		{
 			public string m_oStr = string.Empty;
 			
@@ -232,7 +232,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 명시적으로 부모 클래스 생성자를 호출해줘야한다.
 			 */
 			/** 생성자 */
-			public CDerived(int a_nVal, 
+			public CE01Derived_12(int a_nVal, 
 				float a_fVal, string a_oStr) : base(a_nVal, a_fVal)
 			{
 				m_oStr = a_oStr;
@@ -247,19 +247,19 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 #elif E12_CLASS_03
 		/** 부모 클래스 */
-		private class CBase
+		private class CE01Base_12
 		{
 			public int m_nVal = 0;
 			public float m_fVal = 0.0f;
 
 			/** 생성자 */
-			public CBase() : this(0, 0.0f)
+			public CE01Base_12() : this(0, 0.0f)
 			{
 				// Do Something
 			}
 
 			/** 생성자 */
-			public CBase(int a_nVal, float a_fVal)
+			public CE01Base_12(int a_nVal, float a_fVal)
 			{
 				m_nVal = a_nVal;
 				m_fVal = a_fVal;
@@ -287,12 +287,12 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 자식 클래스 */
-		private class CDerived : CBase
+		private class CE01Derived_12 : CE01Base_12
 		{
 			public string m_oStr = string.Empty;
 
 			/** 생성자 */
-			public CDerived(int a_nVal,
+			public CE01Derived_12(int a_nVal,
 				float a_fVal, string a_oStr) : base(a_nVal, a_fVal)
 			{
 				m_oStr = a_oStr;

@@ -114,10 +114,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		public static void Start(string[] args)
 		{
 #if E13_CLASS_01
-			CBase oDerivedA = new CDerived();
+			CBase oDerivedA = new CE01Derived_13();
 			oDerivedA.m_nVal = 10;
 
-			CDerived oDerivedB = new CDerived();
+			CE01Derived_13 oDerivedB = new CE01Derived_13();
 			oDerivedB.m_nVal = 20;
 			oDerivedB.m_fVal = 3.14f;
 
@@ -146,8 +146,8 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("\n합계 : {0}", oListValues.ExGetValSum());
 #elif E13_CLASS_03
-			CVec3 oVec3A = new CVec3(10.0f, 0.0f, 0.0f);
-			CVec3 oVec3B = new CVec3(0.0f, 10.0f, 0.0f);
+			CE01Vec3_13 oVec3A = new CE01Vec3_13(10.0f, 0.0f, 0.0f);
+			CE01Vec3_13 oVec3B = new CE01Vec3_13(0.0f, 10.0f, 0.0f);
 
 			oVec3A.Normalize();
 			oVec3B.Normalize();
@@ -184,7 +184,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 자식 클래스 */
-		private class CDerived : CBase
+		private class CE01Derived_13 : CBase
 		{
 			public float m_fVal = 0.0f;
 
@@ -197,7 +197,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 #elif E13_CLASS_03
 		/** 3 차원 벡터 */
-		private class CVec3
+		private class CE01Vec3_13
 		{
 			public float X { get; set; } = 0.0f;
 			public float Y { get; set; } = 0.0f;
@@ -206,7 +206,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			public float Length => (float)Math.Sqrt(Math.Pow(this.X, 2.0) + Math.Pow(this.Y, 2.0));
 
 			/** 생성자 */
-			public CVec3(float a_fX = 0.0f,
+			public CE01Vec3_13(float a_fX = 0.0f,
 				float a_fY = 0.0f, float a_fZ = 0.0f)
 			{
 				this.X = a_fX;
@@ -232,30 +232,30 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			/** operator + */
-			public static CVec3 operator +(CVec3 a_oLhs, CVec3 a_oRhs)
+			public static CE01Vec3_13 operator +(CE01Vec3_13 a_oLhs, CE01Vec3_13 a_oRhs)
 			{
-				return new CVec3(a_oLhs.X + a_oRhs.X,
+				return new CE01Vec3_13(a_oLhs.X + a_oRhs.X,
 					a_oLhs.Y + a_oRhs.Y, a_oLhs.Z + a_oRhs.Z);
 			}
 
 			/** operator - */
-			public static CVec3 operator -(CVec3 a_oLhs, CVec3 a_oRhs)
+			public static CE01Vec3_13 operator -(CE01Vec3_13 a_oLhs, CE01Vec3_13 a_oRhs)
 			{
-				return new CVec3(a_oLhs.X - a_oRhs.X,
+				return new CE01Vec3_13(a_oLhs.X - a_oRhs.X,
 					a_oLhs.Y - a_oRhs.Y, a_oLhs.Z - a_oRhs.Z);
 			}
 
 			/** operator * */
-			public static CVec3 operator *(CVec3 a_oLhs, float a_fRhs)
+			public static CE01Vec3_13 operator *(CE01Vec3_13 a_oLhs, float a_fRhs)
 			{
-				return new CVec3(a_oLhs.X * a_fRhs,
+				return new CE01Vec3_13(a_oLhs.X * a_fRhs,
 					a_oLhs.Y * a_fRhs, a_oLhs.Z * a_fRhs);
 			}
 
 			/** operator / */
-			public static CVec3 operator /(CVec3 a_oLhs, float a_fRhs)
+			public static CE01Vec3_13 operator /(CE01Vec3_13 a_oLhs, float a_fRhs)
 			{
-				return new CVec3(a_oLhs.X / a_fRhs,
+				return new CE01Vec3_13(a_oLhs.X / a_fRhs,
 					a_oLhs.Y / a_fRhs, a_oLhs.Z / a_fRhs);
 			}
 		}

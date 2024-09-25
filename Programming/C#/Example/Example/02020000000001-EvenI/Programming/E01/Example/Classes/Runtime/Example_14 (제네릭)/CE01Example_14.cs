@@ -106,8 +106,8 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("\n=====> 정렬 후 <=====");
 			PrintValues(oListValues);
 #elif E14_GENERIC_03
-			var oWriterFile = new CWriterFile("../../Resources/Example_14/Example_14_03.txt");
-			var oWriterConsole = new CWriterConsole();
+			var oWriterFile = new CE01WriterFile_14("../../Resources/Example_14/Example_14_03.txt");
+			var oWriterConsole = new CE01WriterConsole_14();
 
 			for(int i = 0; i < 10; ++i)
 			{
@@ -219,19 +219,19 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 생성 된 객체와 상호 작용을 하는 것이 가능하다.
 		 */
 		/** 데이터 출력 인터페이스 */
-		private interface IWriterData
+		private interface IE01WriterData_14
 		{
 			/** 문자열을 출력한다 */
 			void WriteStr(string a_oStr);
 		}
 
 		/** 파일 출력자 */
-		private class CWriterFile : IWriterData
+		private class CE01WriterFile_14 : IE01WriterData_14
 		{
 			private StreamWriter m_oWriter = null;
 
 			/** 생성자 */
-			public CWriterFile(string a_oPathFile)
+			public CE01WriterFile_14(string a_oPathFile)
 			{
 				var oWStream = File.Open(a_oPathFile,
 					FileMode.Create, FileAccess.Write);
@@ -248,7 +248,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 콘솔 출력자 */
-		private class CWriterConsole : IWriterData
+		private class CE01WriterConsole_14 : IE01WriterData_14
 		{
 			/** 문자열을 출력한다 */
 			public void WriteStr(string a_oStr)

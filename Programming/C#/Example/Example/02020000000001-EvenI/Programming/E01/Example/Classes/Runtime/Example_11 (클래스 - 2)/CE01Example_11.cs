@@ -22,7 +22,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/*
 			 * 아래와 같이 프로퍼티를 활용하면 변수를 다루듯이 명령문을 작성하는 것이 가능하다.
 			 */
-			CCharacter oCharacter = new CCharacter();
+			CE01Character_11 oCharacter = new CE01Character_11();
 			oCharacter.LV = 1;
 			oCharacter.HP = 10;
 			oCharacter.ATK = 5;
@@ -31,7 +31,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("=====> 캐릭터 <=====");
 			oCharacter.ShowInfo();
 #elif E11_CLASS_02
-			CArray oValues = new CArray(5);
+			CE01Array_11 oValues = new CE01Array_11(5);
 			Random oRandom = new Random();
 
 			for(int i = 0; i < 10; ++i)
@@ -48,15 +48,15 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine();
 #elif E11_CLASS_03
-			CData.m_fVal = 3.14f;
+			CE01Data_11.m_fVal = 3.14f;
 
-			CData oDataA = new CData();
+			CE01Data_11 oDataA = new CE01Data_11();
 			oDataA.m_nVal = 10;
 
-			CData oDataB = new CData();
+			CE01Data_11 oDataB = new CE01Data_11();
 			oDataB.m_nVal = 20;
 
-			CData.m_fVal = 6.14f;
+			CE01Data_11.m_fVal = 6.14f;
 
 			Console.WriteLine("=====> 데이터 A <=====");
 			oDataA.ShowInfo();
@@ -65,12 +65,12 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			oDataB.ShowInfo();
 
 			Console.WriteLine("\n=====> 데이터 클래스 <=====");
-			CData.ShowStaticInfo();
+			CE01Data_11.ShowStaticInfo();
 
-			CDataStorage oStorageA = CDataStorage.GetInst();
+			CE01DataStorage_11 oStorageA = CE01DataStorage_11.GetInst();
 			oStorageA.m_nVal = 10;
 
-			CDataStorage oStorageB = CDataStorage.GetInst();
+			CE01DataStorage_11 oStorageB = CE01DataStorage_11.GetInst();
 			oStorageB.m_nVal = 20;
 
 			Console.WriteLine("\n=====> 데이터 저장소 A <=====");
@@ -121,7 +121,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * (즉, 전통적인 방식에 비해 가독성이 향상된다는 것을 알 수 있다.)
 		 */
 		/** 캐릭터 */
-		private class CCharacter
+		private class CE01Character_11
 		{
 			private int m_nLV = 0;
 			private int m_nHP = 0;
@@ -186,14 +186,14 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 #elif E11_CLASS_02
 		/** 배열 */
-		private class CArray
+		private class CE01Array_11
 		{
 			private int[] m_oValues = null;
 
 			public int NumValues { get; private set; } = 0;
 
 			/** 생성자 */
-			public CArray(int a_nSize)
+			public CE01Array_11(int a_nSize)
 			{
 				m_oValues = new int[a_nSize];
 			}
@@ -247,7 +247,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 멤버라는 것을 의미한다.
 		 */
 		/** 데이터 */
-		private class CData
+		private class CE01Data_11
 		{
 			public int m_nVal = 0;
 			public static float m_fVal = 0.0f;
@@ -276,24 +276,24 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 데이터 저장소 */
-		private class CDataStorage
+		private class CE01DataStorage_11
 		{
 			public int m_nVal = 0;
-			private static CDataStorage m_oInst = null;
+			private static CE01DataStorage_11 m_oInst = null;
 
 			/** 생성자 */
-			private CDataStorage()
+			private CE01DataStorage_11()
 			{
 				// Do Something
 			}
 
 			/** 인스턴스를 반환한다 */
-			public static CDataStorage GetInst()
+			public static CE01DataStorage_11 GetInst()
 			{
 				// 인스턴스 생성이 필요 할 경우
 				if(m_oInst == null)
 				{
-					m_oInst = new CDataStorage();
+					m_oInst = new CE01DataStorage_11();
 				}
 
 				return m_oInst;
