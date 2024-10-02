@@ -1,5 +1,5 @@
-#define E11_CLASS_01
-#define E11_CLASS_02
+//#define E11_CLASS_01
+//#define E11_CLASS_02
 #define E11_CLASS_03
 
 using System;
@@ -48,10 +48,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine();
 #elif E11_CLASS_03
-			CE01Data_11.m_fVal = 3.14f;
-
 			CE01Data_11 oDataA = new CE01Data_11();
 			oDataA.m_nVal = 10;
+
+			CE01Data_11.m_fVal = 3.14f;
 
 			CE01Data_11 oDataB = new CE01Data_11();
 			oDataB.m_nVal = 20;
@@ -67,17 +67,17 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("\n=====> 데이터 클래스 <=====");
 			CE01Data_11.ShowStaticInfo();
 
-			CE01DataStorage_11 oStorageA = CE01DataStorage_11.GetInst();
-			oStorageA.m_nVal = 10;
+			CE01Storage_Data_11 oStorage_DataA = CE01Storage_Data_11.GetInst();
+			oStorage_DataA.m_nVal = 10;
 
-			CE01DataStorage_11 oStorageB = CE01DataStorage_11.GetInst();
-			oStorageB.m_nVal = 20;
+			CE01Storage_Data_11 oStorage_DataB = CE01Storage_Data_11.GetInst();
+			oStorage_DataB.m_nVal = 20;
 
 			Console.WriteLine("\n=====> 데이터 저장소 A <=====");
-			Console.WriteLine("{0}", oStorageA.m_nVal);
+			Console.WriteLine("{0}", oStorage_DataA.m_nVal);
 
 			Console.WriteLine("\n=====> 데이터 저장소 B <=====");
-			Console.WriteLine("{0}", oStorageB.m_nVal);
+			Console.WriteLine("{0}", oStorage_DataB.m_nVal);
 #endif
 		}
 
@@ -276,24 +276,24 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 데이터 저장소 */
-		private class CE01DataStorage_11
+		private class CE01Storage_Data_11
 		{
 			public int m_nVal = 0;
-			private static CE01DataStorage_11 m_oInst = null;
+			private static CE01Storage_Data_11 m_oInst = null;
 
 			/** 생성자 */
-			private CE01DataStorage_11()
+			private CE01Storage_Data_11()
 			{
 				// Do Something
 			}
 
 			/** 인스턴스를 반환한다 */
-			public static CE01DataStorage_11 GetInst()
+			public static CE01Storage_Data_11 GetInst()
 			{
 				// 인스턴스 생성이 필요 할 경우
 				if(m_oInst == null)
 				{
-					m_oInst = new CE01DataStorage_11();
+					m_oInst = new CE01Storage_Data_11();
 				}
 
 				return m_oInst;

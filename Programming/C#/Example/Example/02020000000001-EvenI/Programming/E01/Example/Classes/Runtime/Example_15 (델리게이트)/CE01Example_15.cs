@@ -105,44 +105,44 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #if E15_DELEGATE_01
 			var oRandom = new Random();
 
-			var oListValues01 = new List<int>();
-			var oListValues02 = new List<float>();
+			var oListValuesA = new List<int>();
+			var oListValuesB = new List<float>();
 
 			for(int i = 0; i < 5; ++i)
 			{
-				oListValues01.Add(oRandom.Next(1, 100));
-				oListValues02.Add((float)(oRandom.NextDouble() * 100.0));
+				oListValuesA.Add(oRandom.Next(1, 100));
+				oListValuesB.Add((float)(oRandom.NextDouble() * 100.0));
 			}
 
 			Console.WriteLine("=====> 정렬 전 <=====");
 
-			for(int i = 0; i < oListValues01.Count; ++i)
+			for(int i = 0; i < oListValuesA.Count; ++i)
 			{
-				Console.Write("{0}, ", oListValues01[i]);
+				Console.Write("{0}, ", oListValuesA[i]);
 			}
 
 			Console.WriteLine();
 
-			for(int i = 0; i < oListValues02.Count; ++i)
+			for(int i = 0; i < oListValuesB.Count; ++i)
 			{
-				Console.Write("{0:0.00}, ", oListValues02[i]);
+				Console.Write("{0:0.00}, ", oListValuesB[i]);
 			}
 
-			oListValues01.ExSort(CompareByDescending);
-			oListValues02.ExSort(CompareByDescending);
+			oListValuesA.ExSort(CE01Example_15.CompareByDescending);
+			oListValuesB.ExSort(CE01Example_15.CompareByDescending);
 
 			Console.WriteLine("\n\n=====> 정렬 후 <=====");
 
-			for(int i = 0; i < oListValues01.Count; ++i)
+			for(int i = 0; i < oListValuesA.Count; ++i)
 			{
-				Console.Write("{0}, ", oListValues01[i]);
+				Console.Write("{0}, ", oListValuesA[i]);
 			}
 
 			Console.WriteLine();
 
-			for(int i = 0; i < oListValues02.Count; ++i)
+			for(int i = 0; i < oListValuesB.Count; ++i)
 			{
-				Console.Write("{0:0.00}, ", oListValues02[i]);
+				Console.Write("{0:0.00}, ", oListValuesB[i]);
 			}
 
 			Console.WriteLine();
@@ -156,7 +156,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			nLhs = int.Parse(oTokens[0]);
 			nRhs = int.Parse(oTokens[1]);
 
-			Compare oCompare = CompareInt;
+			Compare oCompare = CE01Example_15.CompareInt;
 
 			Console.WriteLine("\n=====> 비교 결과 <=====");
 			Console.WriteLine("{0} Compare {1} = {2}", nLhs, nRhs, oCompare(nLhs, nRhs));
@@ -168,7 +168,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			nRhs = int.Parse(oTokens[2]);
 
 			char chOperator = char.Parse(oTokens[1]);
-			Calculator oCalc = GetCalc(chOperator);
+			Calculator oCalc = CE01Example_15.GetCalc(chOperator);
 
 			// 수식이 유효 할 경우
 			if(oCalc != null)
@@ -218,7 +218,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine("람다 메서드 호출!");
 			};
 
-			Action oActionB = GetAction(nVal);
+			Action oActionB = CE01Example_15.GetAction(nVal);
 			Console.WriteLine("결과 : {0}\n", (nIdx >= 0) ? "탐색 성공" : "탐색 실패");
 
 			oActionA();
@@ -308,25 +308,25 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 덧셈 결과를 반환한다 */
-		public static decimal GetSumVal(int a_nLhs, int a_nRhs)
+		public static decimal GetVal_Sum(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs + a_nRhs;
 		}
 
 		/** 뺄셈 결과를 반환한다 */
-		public static decimal GetSubVal(int a_nLhs, int a_nRhs)
+		public static decimal GetVal_Sub(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs - a_nRhs;
 		}
 
 		/** 곱셈 결과를 반환한다 */
-		public static decimal GetMultiplyVal(int a_nLhs, int a_nRhs)
+		public static decimal GetVal_Mul(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs * a_nRhs;
 		}
 
 		/** 나눗셈 결과를 반환한다 */
-		public static decimal GetDivideVal(int a_nLhs, int a_nRhs)
+		public static decimal GetVal_Div(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs / (decimal)a_nRhs;
 		}
@@ -337,16 +337,16 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			switch(a_chOperator)
 			{
 				case '+':
-					return GetSumVal;
+					return GetVal_Sum;
 
 				case '-':
-					return GetSubVal;
+					return GetVal_Sub;
 
 				case '*':
-					return GetMultiplyVal;
+					return GetVal_Mul;
 
 				case '/':
-					return GetDivideVal;
+					return GetVal_Div;
 			}
 
 			return null;

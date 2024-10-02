@@ -103,6 +103,36 @@ using System.Threading.Tasks;
  * operator 메서드가 구현되면 C# 컴파일러는 객체를 대상은 해당 연산자를 사용했을 때 매칭되는 
  * operator 메서드를 호출해준다.
  */
+/**
+ * 확장 클래스
+ */
+public static class CE01Extenion_13
+{
+	/** 합계를 반환한다 */
+	public static int ExGetVal_Sum(this List<int> a_oSender)
+	{
+		int nVal_Sum = 0;
+
+		for(int i = 0; i < a_oSender.Count; ++i)
+		{
+			nVal_Sum += a_oSender[i];
+		}
+
+		return nVal_Sum;
+	}
+
+	/** 값을 출력한다 */
+	public static void ExPrintValues(this List<int> a_oSender)
+	{
+		for(int i = 0; i < a_oSender.Count; ++i)
+		{
+			Console.Write("{0}, ", a_oSender[i]);
+		}
+
+		Console.WriteLine();
+	}
+}
+
 namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_13
 {
 	/**
@@ -144,7 +174,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("=====> 리스트 <=====");
 			oListValues.ExPrintValues();
 
-			Console.WriteLine("\n합계 : {0}", oListValues.ExGetValSum());
+			Console.WriteLine("\n합계 : {0}", oListValues.ExGetVal_Sum());
 #elif E13_CLASS_03
 			CE01Vec3_13 oVec3A = new CE01Vec3_13(10.0f, 0.0f, 0.0f);
 			CE01Vec3_13 oVec3B = new CE01Vec3_13(0.0f, 10.0f, 0.0f);

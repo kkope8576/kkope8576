@@ -106,13 +106,13 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("\n=====> 정렬 후 <=====");
 			PrintValues(oListValues);
 #elif E14_GENERIC_03
-			var oWriterFile = new CE01WriterFile_14("../../Resources/Example_14/Example_14_03.txt");
-			var oWriterConsole = new CE01WriterConsole_14();
+			var oWriter_File = new CE01Writer_File_14("../../Resources/Example_14/Example_14_03.txt");
+			var oWriter_Console = new CE01Writer_Console_14();
 
 			for(int i = 0; i < 10; ++i)
 			{
-				oWriterFile.WriteStr("Hello, World!");
-				oWriterConsole.WriteStr("Hello, World!");
+				oWriter_File.WriteStr("Hello, World!");
+				oWriter_Console.WriteStr("Hello, World!");
 			}
 #endif
 		}
@@ -148,7 +148,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 				for(int j = i; j < a_oListValues.Count; ++j)
 				{
-					// 정렬 기준에 부합 할 경우
+					// 정렬이 필요 할 경우
 					if(a_oListValues[j].CompareTo(a_oListValues[nIdx]) < 0)
 					{
 						nIdx = j;
@@ -219,24 +219,24 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 생성 된 객체와 상호 작용을 하는 것이 가능하다.
 		 */
 		/** 데이터 출력 인터페이스 */
-		private interface IE01WriterData_14
+		private interface IE01Writer_Data_14
 		{
 			/** 문자열을 출력한다 */
 			void WriteStr(string a_oStr);
 		}
 
 		/** 파일 출력자 */
-		private class CE01WriterFile_14 : IE01WriterData_14
+		private class CE01Writer_File_14 : IE01Writer_Data_14
 		{
 			private StreamWriter m_oWriter = null;
 
 			/** 생성자 */
-			public CE01WriterFile_14(string a_oPathFile)
+			public CE01Writer_File_14(string a_oPath_File)
 			{
-				var oWStream = File.Open(a_oPathFile,
+				var oWStream_File = File.Open(a_oPath_File,
 					FileMode.Create, FileAccess.Write);
 
-				m_oWriter = new StreamWriter(oWStream);
+				m_oWriter = new StreamWriter(oWStream_File);
 			}
 
 			/** 문자열을 출력한다 */
@@ -248,7 +248,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 콘솔 출력자 */
-		private class CE01WriterConsole_14 : IE01WriterData_14
+		private class CE01Writer_Console_14 : IE01Writer_Data_14
 		{
 			/** 문자열을 출력한다 */
 			public void WriteStr(string a_oStr)

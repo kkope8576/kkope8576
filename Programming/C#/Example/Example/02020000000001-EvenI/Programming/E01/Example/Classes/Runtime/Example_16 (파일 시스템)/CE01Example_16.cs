@@ -69,18 +69,18 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 생성했을 경우이다. (즉, 읽기용으로는 파일을 생성하는 것이 불가능하다는 것을 알 수 
 			 * 있다.)
 			 */
-			FileStream oWStream = File.Open("../../Resources/Example_16/Example_16_01.txt",
+			FileStream oWStream_File = File.Open("../../Resources/Example_16/Example_16_01.txt",
 				FileMode.Create, FileAccess.Write);
 
 			// 스트림이 생성되었을 경우
-			if(oWStream != null)
+			if(oWStream_File != null)
 			{
 				/*
 				 * C# 은 파일 스트림을 통해 데이터를 좀더 수월하게 입/출력하기 위한 클래스를 
 				 * 제공하며 StreamReader/StreamWriter 클래스는 문자열 데이터를 입/출력 할 수 
 				 * 있는 기능을 제공한다.
 				 */
-				StreamWriter oWriter = new StreamWriter(oWStream);
+				StreamWriter oWriter = new StreamWriter(oWStream_File);
 
 				for(int i = 0; i < 10; ++i)
 				{
@@ -96,13 +96,13 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oWriter.Close();
 			}
 
-			FileStream oRStream = File.Open("../../Resources/Example_16/Example_16_01.txt",
+			FileStream oRStream_File = File.Open("../../Resources/Example_16/Example_16_01.txt",
 				FileMode.Open, FileAccess.Read);
 
 			// 스트림이 생성되었을 경우
-			if(oRStream != null)
+			if(oRStream_File != null)
 			{
-				StreamReader oReader = new StreamReader(oRStream);
+				StreamReader oReader = new StreamReader(oRStream_File);
 
 				/*
 				 * EndOfStream 프로퍼티를 활용하면 특정 파일에 존재하는 데이터를 모두 읽어들이는 
@@ -118,13 +118,13 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oReader.Close();
 			}
 #elif E14_FILE_SYSTEM_02
-			FileStream oWStream = File.Open("../../Resources/Example_16/Example_16_02.bin",
+			FileStream oWStream_File = File.Open("../../Resources/Example_16/Example_16_02.bin",
 				FileMode.Create, FileAccess.Write);
 
 			// 스트림이 생성되었을 경우
-			if(oWStream != null)
+			if(oWStream_File != null)
 			{
-				BinaryWriter oWriter = new BinaryWriter(oWStream);
+				BinaryWriter oWriter = new BinaryWriter(oWStream_File);
 
 				for(int i = 0; i < 10; ++i)
 				{
@@ -134,13 +134,13 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oWriter.Close();
 			}
 
-			FileStream oRStream = File.Open("../../Resources/Example_16/Example_16_02.bin",
+			FileStream oRStream_File = File.Open("../../Resources/Example_16/Example_16_02.bin",
 				FileMode.Open, FileAccess.Read);
 
 			// 스트림이 생성되었을 경우
-			if(oRStream != null)
+			if(oRStream_File != null)
 			{
-				BinaryReader oReader = new BinaryReader(oRStream);
+				BinaryReader oReader = new BinaryReader(oRStream_File);
 
 				while(oReader.PeekChar() >= 0)
 				{
@@ -159,20 +159,20 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				return;
 			}
 
-			FileStream oRStream = File.Open(args[0],
+			FileStream oRStream_File = File.Open(args[0],
 				FileMode.Open, FileAccess.Read);
 
-			FileStream oWStream = File.Open(args[1],
+			FileStream oWStream_File = File.Open(args[1],
 				FileMode.Create, FileAccess.Write);
 
 			// 스트림이 생성되었을 경우
-			if(oRStream != null && oWStream != null)
+			if(oRStream_File != null && oWStream_File != null)
 			{
 				var oBytes = new byte[255];
 				int nNumBytes = 0;
 
-				BinaryReader oReader = new BinaryReader(oRStream);
-				BinaryWriter oWriter = new BinaryWriter(oWStream);
+				BinaryReader oReader = new BinaryReader(oRStream_File);
+				BinaryWriter oWriter = new BinaryWriter(oWStream_File);
 
 				while((nNumBytes = oReader.Read(oBytes, 0, oBytes.Length)) > 0)
 				{

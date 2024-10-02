@@ -68,7 +68,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 또한, 입력 값을 명시하는 순서는 메서드의 매개 변수의 순서와 동일해야한다. (즉, 입력 
 			 * 값은 차례대로 각 매개 변수에 전달 된다는 것을 알 수 있다.
 			 */
-			decimal dmResult = GetResultCalc(nValA,
+			decimal dmResult = GetResult_Calc(nValA,
 				chOperator, nValB);
 
 			Console.WriteLine("결과 : {0}", dmResult);
@@ -139,7 +139,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 #if E08_METHOD_01
 		/** 수식 결과를 반환한다 */
-		private static decimal GetResultCalc(int a_nValA,
+		private static decimal GetResult_Calc(int a_nValA,
 			char a_chOperator, int a_nValB)
 		{
 			switch(a_chOperator)

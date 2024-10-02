@@ -30,9 +30,17 @@ namespace Example._02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime
 			Console.WriteLine("\n=====> 정렬 후 <=====");
 			P01PrintValues_03(oListValues);
 #elif P_PRACTICE_P01_PRACTICE_03_02
+			Console.Write("정수 입력 : ");
+			int.TryParse(Console.ReadLine(), out int nVal);
 
+			int nResult = P01GetVal_Factorial(nVal);
+			Console.WriteLine("!{0} = {1}", nVal, nResult);
 #elif P_PRACTICE_P01_PRACTICE_03_03
+			Console.Write("정수 입력 : ");
+			int.TryParse(Console.ReadLine(), out int nVal);
 
+			int nResult = P01GetVal_Fibonacci(nVal);
+			Console.WriteLine("결과 : {0}", nResult);
 #endif // #if P_PRACTICE_P01_PRACTICE_03_01
 		}
 
@@ -79,9 +87,29 @@ namespace Example._02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime
 			Console.WriteLine();
 		}
 #elif P_PRACTICE_P01_PRACTICE_03_02
+		/** 팩토리얼 값을 반환한다 */
+		private static int P01GetVal_Factorial(int a_nVal)
+		{
+			// 재귀가 불가능 할 경우
+			if(a_nVal <= 1)
+			{
+				return 1;
+			}
 
+			return a_nVal * P01GetVal_Factorial(a_nVal - 1);
+		}
 #elif P_PRACTICE_P01_PRACTICE_03_03
+		/** 피보나치 값을 반환한다 */
+		private static int P01GetVal_Fibonacci(int a_nVal)
+		{
+			// 재귀가 불가능 할 경우
+			if(a_nVal <= 1)
+			{
+				return (a_nVal <= 0) ? 0 : 1;
+			}
 
+			return P01GetVal_Fibonacci(a_nVal - 2) + P01GetVal_Fibonacci(a_nVal - 1);
+		}
 #endif // #if P_PRACTICE_P01_PRACTICE_03_01
 	}
 }

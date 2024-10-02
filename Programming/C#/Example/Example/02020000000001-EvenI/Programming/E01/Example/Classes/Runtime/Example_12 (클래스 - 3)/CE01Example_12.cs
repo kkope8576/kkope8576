@@ -1,5 +1,5 @@
-#define E12_CLASS_01
-#define E12_CLASS_02
+//#define E12_CLASS_01
+//#define E12_CLASS_02
 #define E12_CLASS_03
 
 using System;

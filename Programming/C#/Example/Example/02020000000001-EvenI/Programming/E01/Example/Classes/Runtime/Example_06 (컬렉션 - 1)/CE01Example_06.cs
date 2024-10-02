@@ -195,28 +195,28 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine();
 #elif E06_LIST
-			List<int> oListA = new List<int>();
-			oListA.Add(1);
-			oListA.Add(2);
-			oListA.Add(3);
+			List<int> oListValuesA = new List<int>();
+			oListValuesA.Add(1);
+			oListValuesA.Add(2);
+			oListValuesA.Add(3);
 
-			List<int> oListB = new List<int>()
+			List<int> oListValuesB = new List<int>()
 			{
 				1, 2, 3, 4, 5
 			};
 
 			Console.WriteLine("=====> 리스트 A <=====");
 
-			for(int i = 0; i < oListA.Count; ++i)
+			for(int i = 0; i < oListValuesA.Count; ++i)
 			{
-				Console.Write("{0}, ", oListA[i]);
+				Console.Write("{0}, ", oListValuesA[i]);
 			}
 
 			Console.WriteLine("\n\n=====> 리스트 B <=====");
 
-			for(int i = 0; i < oListB.Count; ++i)
+			for(int i = 0; i < oListValuesB.Count; ++i)
 			{
-				Console.Write("{0}, ", oListB[i]);
+				Console.Write("{0}, ", oListValuesB[i]);
 			}
 
 			Console.WriteLine();
