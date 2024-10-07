@@ -77,9 +77,10 @@ namespace Example
 			//_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15.CE01Example_15.Start(args);
 			//_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
 #elif PRACTICE
-			_02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_01.CP01Practice_01.Start(args);
+			//_02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_01.CP01Practice_01.Start(args);
 			//_02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
 			//_02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_03.CP01Practice_03.Start(args);
+			_02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_04.CP01Practice_04.Start(args);
 #endif // #if EXAMPLE
 		}
 	}

@@ -96,6 +96,15 @@ namespace Example._02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime
 				return 1;
 			}
 
+			/*
+			 * 메서든 내부에서 자기 자신을 다시 호출하는 것이 가능하며 이를 재귀 호출이라고한다.
+			 * 
+			 * 단, 재귀 호출은 자기 자신을 반복해서 호출하는 것이기 때문에 잘못된 명령문을 작성 할
+			 * 경우 원치 않는 무한 루프가 발생하는 단점이 존재한다.
+			 * 
+			 * 따라서 재귀 호출을 사용 할 경우 반드시 특정 시점에 재구를 끝낼 수 있는 조건문을
+			 * 반드시 작성해줘야한다.
+			 */
 			return a_nVal * P01GetVal_Factorial(a_nVal - 1);
 		}
 #elif P_PRACTICE_P01_PRACTICE_03_03
