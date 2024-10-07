@@ -1,7 +1,7 @@
-#define E15_DELEGATE_01
-#define E15_DELEGATE_02
-#define E15_DELEGATE_03
-#define E15_DELEGATE_04
+#define P_EXAMPLE_E01_EXAMPLE_15_01
+#define P_EXAMPLE_E01_EXAMPLE_15_02
+#define P_EXAMPLE_E01_EXAMPLE_15_03
+#define P_EXAMPLE_E01_EXAMPLE_15_04
 
 using System;
 using System.Collections.Generic;
@@ -72,7 +72,7 @@ using System.Threading.Tasks;
 /** 
  * 확장 클래스 
  */
-public static partial class CExtension
+public static partial class CE01Extension_15
 {
 	/** 값을 정렬한다 */
 	public static void ExSort<T>(this List<T> a_oSender, Func<T, T, int> a_oCompare)
@@ -102,7 +102,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E15_DELEGATE_01
+#if P_EXAMPLE_E01_EXAMPLE_15_01
 			var oRandom = new Random();
 
 			var oListValuesA = new List<int>();
@@ -146,7 +146,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine();
-#elif E15_DELEGATE_02
+#elif P_EXAMPLE_E01_EXAMPLE_15_02
 			int nLhs = 0;
 			int nRhs = 0;
 
@@ -180,7 +180,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			{
 				Console.WriteLine("잘못된 수식을 입력했습니다.");
 			}
-#elif E15_DELEGATE_03
+#elif P_EXAMPLE_E01_EXAMPLE_15_03
 			var oRandom = new Random();
 			var oListValues = new List<int>();
 
@@ -223,7 +223,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			oActionA();
 			oActionB();
-#elif E15_DELEGATE_04
+#elif P_EXAMPLE_E01_EXAMPLE_15_04
 			/*
 			 * 델리게이트 체인을 활용하면 특정 델리게이트 변수가 여러 메서드를 제어하는 것이 
 			 * 가능하다.
@@ -273,10 +273,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("=====> 델리게이트 호출 결과 <=====");
 			Console.WriteLine("{0}", oPrinter());
-#endif // E15_DELEGATE_01
+#endif // P_EXAMPLE_E01_EXAMPLE_15_01
 		}
 
-#if E15_DELEGATE_01
+#if P_EXAMPLE_E01_EXAMPLE_15_01
 		/** 오름차순으로 비교한다 */
 		public static int CompareByAscending<T>(T a_nLhs, T a_nRhs) where T : IComparable
 		{
@@ -288,7 +288,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		{
 			return a_nRhs.CompareTo(a_nLhs);
 		}
-#elif E15_DELEGATE_02
+#elif P_EXAMPLE_E01_EXAMPLE_15_02
 		/*
 		 * C# 구 버전 사용 시 주의 사항
 		 * - 제네릭이 아닌 델리게이트 일반 메서드를 제어하는 것이 가능하며 제네릭 델리게이트는 
@@ -351,7 +351,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			return null;
 		}
-#elif E15_DELEGATE_03
+#elif P_EXAMPLE_E01_EXAMPLE_15_03
 		/*
 		 * 일반적인 메서드는 람다와 달리 다른 지역에 존재하는 지역 변수에 접근하는 것이 불가능하다.
 		 * 따라서, 특정 메서드가 동작하기 위해 필요한 데이터가 있다면 해당 데이터를 일반적으로
@@ -383,9 +383,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine("람다 메서드 호출 : {0}", a_nVal);
 			};
 		}
-#elif E15_DELEGATE_04
+#elif P_EXAMPLE_E01_EXAMPLE_15_04
 		/** 출력 델리게이트 */
 		public delegate int Printer();
-#endif // E15_DELEGATE_01
+#endif // P_EXAMPLE_E01_EXAMPLE_15_01
 	}
 }

@@ -1,6 +1,6 @@
-//#define E08_METHOD_01
-//#define E08_METHOD_02
-#define E08_METHOD_03
+//#define P_EXAMPLE_E01_EXAMPLE_08_01
+//#define P_EXAMPLE_E01_EXAMPLE_08_02
+#define P_EXAMPLE_E01_EXAMPLE_08_03
 
 using System;
 using System.Collections.Generic;
@@ -51,7 +51,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E08_METHOD_01
+#if P_EXAMPLE_E01_EXAMPLE_08_01
 			Console.Write("수식 입력 : ");
 			var oTokens = Console.ReadLine().Split();
 
@@ -72,7 +72,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				chOperator, nValB);
 
 			Console.WriteLine("결과 : {0}", dmResult);
-#elif E08_METHOD_02
+#elif P_EXAMPLE_E01_EXAMPLE_08_02
 			int nValA = 10;
 			int nValB = 20;
 
@@ -113,7 +113,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("\n=====> 참조에 의한 호출 <=====");
 			Console.WriteLine("{0}, {1}", nValA, nValB);
-#elif E08_METHOD_03
+#elif P_EXAMPLE_E01_EXAMPLE_08_03
 			int nValA = 0;
 			int nValB = 0;
 
@@ -137,7 +137,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #endif
 		}
 
-#if E08_METHOD_01
+#if P_EXAMPLE_E01_EXAMPLE_08_01
 		/** 수식 결과를 반환한다 */
 		private static decimal GetResult_Calc(int a_nValA,
 			char a_chOperator, int a_nValB)
@@ -170,7 +170,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 */
 			return 0;
 		}
-#elif E08_METHOD_02
+#elif P_EXAMPLE_E01_EXAMPLE_08_02
 		/** 값을 교환한다 */
 		private static void SwapByVal(int a_nValA, int a_nValB)
 		{
@@ -187,7 +187,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			a_nValA = a_nValB;
 			a_nValB = nTemp;
 		}
-#elif E08_METHOD_03
+#elif P_EXAMPLE_E01_EXAMPLE_08_03
 		/** 값을 변경한다 */
 		private static void SetValByRef(ref int a_nTarget, int a_nVal)
 		{

@@ -1,6 +1,6 @@
-//#define E12_CLASS_01
-//#define E12_CLASS_02
-#define E12_CLASS_03
+//#define P_EXAMPLE_E01_EXAMPLE_12_01
+//#define P_EXAMPLE_E01_EXAMPLE_12_02
+#define P_EXAMPLE_E01_EXAMPLE_12_03
 
 using System;
 using System.Collections.Generic;
@@ -85,7 +85,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E12_CLASS_01
+#if P_EXAMPLE_E01_EXAMPLE_12_01
 			CE01Base_12 oBase = new CE01Base_12();
 			oBase.m_nVal = 10;
 			oBase.m_fVal = 3.14f;
@@ -100,7 +100,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("\n=====> 자식 클래스 <=====");
 			oDerived.ShowInfo();
-#elif E12_CLASS_02
+#elif P_EXAMPLE_E01_EXAMPLE_12_02
 			CE01Base_12 oBase = new CE01Base_12(10, 3.14f);
 			CE01Base_12 oDerivedA = new CE01Derived_12(20, 3.14f, "ABC");
 
@@ -124,7 +124,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("\n=====> 자식 클래스 - B <=====");
 			oDerivedB.ShowInfo();
-#elif E12_CLASS_03
+#elif P_EXAMPLE_E01_EXAMPLE_12_03
 			CE01Base_12 oBase = new CE01Base_12(10, 3.14f);
 			CE01Base_12 oDerivedA = new CE01Derived_12(20, 3.14f, "ABC");
 
@@ -141,7 +141,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #endif
 		}
 
-#if E12_CLASS_01
+#if P_EXAMPLE_E01_EXAMPLE_12_01
 		/** 부모 클래스 */
 		private class CE01Base_12
 		{
@@ -184,7 +184,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine("문자열 : {0}", m_oStr);
 			}
 		}
-#elif E12_CLASS_02
+#elif P_EXAMPLE_E01_EXAMPLE_12_02
 		/** 부모 클래스 */
 		private class CE01Base_12
 		{
@@ -245,7 +245,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine("문자열 : {0}", m_oStr);
 			}
 		}
-#elif E12_CLASS_03
+#elif P_EXAMPLE_E01_EXAMPLE_12_03
 		/** 부모 클래스 */
 		private class CE01Base_12
 		{

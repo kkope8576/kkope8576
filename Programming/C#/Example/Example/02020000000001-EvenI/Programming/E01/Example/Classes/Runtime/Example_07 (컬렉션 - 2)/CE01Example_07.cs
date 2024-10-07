@@ -1,5 +1,5 @@
-//#define E07_SET
-#define E07_DICTIONARY
+//#define P_EXAMPLE_E01_EXAMPLE_07_01
+#define P_EXAMPLE_E01_EXAMPLE_07_02
 
 using System;
 using System.Collections.Generic;
@@ -37,7 +37,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E07_SET
+#if P_EXAMPLE_E01_EXAMPLE_07_01
 			Random oRandom = new Random();
 			HashSet<int> oSetValues = new HashSet<int>();
 
@@ -69,7 +69,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine("\n\n개수 : {0}", oSetValues.Count);
-#elif E07_DICTIONARY
+#elif P_EXAMPLE_E01_EXAMPLE_07_02
 			Dictionary<string, int> oDictValuesA = new Dictionary<string, int>();
 			Dictionary<string, float> oDictValuesB = new Dictionary<string, float>();
 
@@ -96,7 +96,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.Write("{0}:{1}, ",
 					stKeyVal.Key, stKeyVal.Value);
 			}
-#endif // #if E07_SET
+#endif // #if P_EXAMPLE_E01_EXAMPLE_07_01
 		}
 	}
 }

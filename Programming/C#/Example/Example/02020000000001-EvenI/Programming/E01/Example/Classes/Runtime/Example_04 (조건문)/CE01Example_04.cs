@@ -1,5 +1,5 @@
-//#define E04_IF_ELSE
-#define E04_SWITCH_CASE
+//#define P_EXAMPLE_E01_EXAMPLE_04_01
+#define P_EXAMPLE_E01_EXAMPLE_04_02
 
 using System;
 using System.Collections.Generic;
@@ -53,7 +53,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E04_IF_ELSE
+#if P_EXAMPLE_E01_EXAMPLE_04_01
 			int nScore = 0;
 
 			Console.Write("점수 입력 : ");
@@ -87,7 +87,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 					Console.WriteLine("D 학점입니다.");
 				}
 			}
-#elif E04_SWITCH_CASE
+#elif P_EXAMPLE_E01_EXAMPLE_04_02
 			int nScore = 0;
 
 			Console.Write("점수 입력 : ");
@@ -116,7 +116,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 					Console.WriteLine("F 학점입니다.");
 					break;
 			}
-#endif // #if E04_IF_ELSE
+#endif // #if P_EXAMPLE_E01_EXAMPLE_04_01
 		}
 	}
 }

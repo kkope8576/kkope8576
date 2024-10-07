@@ -1,6 +1,6 @@
-#define E14_FILE_SYSTEM_01
-#define E14_FILE_SYSTEM_02
-#define E14_FILE_SYSTEM_03
+#define P_EXAMPLE_E01_EXAMPLE_14_01
+#define P_EXAMPLE_E01_EXAMPLE_14_02
+#define P_EXAMPLE_E01_EXAMPLE_14_03
 
 using System;
 using System.Collections.Generic;
@@ -58,7 +58,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E14_FILE_SYSTEM_01
+#if P_EXAMPLE_E01_EXAMPLE_14_01
 			/*
 			 * File.Open 메서드는 2 개의 역할을 수행한다.
 			 * 
@@ -117,7 +117,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 				oReader.Close();
 			}
-#elif E14_FILE_SYSTEM_02
+#elif P_EXAMPLE_E01_EXAMPLE_14_02
 			FileStream oWStream_File = File.Open("../../Resources/Example_16/Example_16_02.bin",
 				FileMode.Create, FileAccess.Write);
 
@@ -151,7 +151,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oReader.Close();
 				Console.WriteLine();
 			}
-#elif E14_FILE_SYSTEM_03
+#elif P_EXAMPLE_E01_EXAMPLE_14_03
 			// 매개 변수가 잘못되었을 경우
 			if(args.Length < 2)
 			{

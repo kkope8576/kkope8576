@@ -1,6 +1,6 @@
-//#define E10_CLASS_01
-//#define E10_CLASS_02
-#define E10_CLASS_03
+//#define P_EXAMPLE_E01_EXAMPLE_10_01
+//#define P_EXAMPLE_E01_EXAMPLE_10_02
+#define P_EXAMPLE_E01_EXAMPLE_10_03
 
 using System;
 using System.Collections.Generic;
@@ -55,7 +55,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E10_CLASS_01
+#if P_EXAMPLE_E01_EXAMPLE_10_01
 			/*
 			 * 객체 하위에 존재하는 멤버에 접근하고 싶다면 . (멤버 접근 연산자) 를 활용하면 된다. 
 			 * (즉, 해당 연산자를 활용하면 특정 객체가 지니고 있는 변수 및 메서드 등에 접근하는 
@@ -76,7 +76,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("\n=====> 캐릭터 B <=====");
 			oCharacterB.ShowInfo();
-#elif E10_CLASS_02
+#elif P_EXAMPLE_E01_EXAMPLE_10_02
 			CE01Character_10 oCharacterA = new CE01Character_10();
 			oCharacterA.m_nLV = 1;
 			oCharacterA.m_nHP = 25;
@@ -89,7 +89,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("\n=====> 캐릭터 B <=====");
 			oCharacterB.ShowInfo();
-#elif E10_CLASS_03
+#elif P_EXAMPLE_E01_EXAMPLE_10_03
 			/*
 			 * 아래와 같이 접근자 메서드를 통해서 클래스 외부에서는 간접적으로 특정 멤버를 제어하는 
 			 * 것이 가능하다.
@@ -109,7 +109,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #endif
 		}
 
-#if E10_CLASS_01
+#if P_EXAMPLE_E01_EXAMPLE_10_01
 		/** 캐릭터 */
 		private class CE01Character_10
 		{
@@ -134,7 +134,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine("ATK : {0}", m_nATK);
 			}
 		}
-#elif E10_CLASS_02
+#elif P_EXAMPLE_E01_EXAMPLE_10_02
 		/** 캐릭터 */
 		private class CE01Character_10
 		{
@@ -199,7 +199,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine("ATK : {0}", m_nATK);
 			}
 		}
-#elif E10_CLASS_03
+#elif P_EXAMPLE_E01_EXAMPLE_10_03
 		/*
 		 * 접근 제어 지시자 (한정자) 란?
 		 * - 클래스에 선언 된 멤버의 보호 수준을 의미한다. (즉, 접근 제어 지시자를 활용하면 특정 

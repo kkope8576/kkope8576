@@ -1,6 +1,6 @@
-//#define E09_METHOD_01
-//#define E09_METHOD_02
-#define E09_METHOD_03
+//#define P_EXAMPLE_E01_EXAMPLE_09_01
+//#define P_EXAMPLE_E01_EXAMPLE_09_02
+#define P_EXAMPLE_E01_EXAMPLE_09_03
 
 using System;
 using System.Collections.Generic;
@@ -95,7 +95,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E09_METHOD_01
+#if P_EXAMPLE_E01_EXAMPLE_09_01
 			/*
 			 * 가변 길이 매개 변수를 활용하면 C# 컴파일러가 메서드의 입력 데이터를 배열의 형태로 
 			 * 전달해준다는 것을 알 수 있다.
@@ -106,12 +106,12 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("{0}, {1}, {2}",
 				nVal_SumA, nVal_SumB, nVal_SumC);
-#elif E09_METHOD_02
+#elif P_EXAMPLE_E01_EXAMPLE_09_02
 			int nVal_MaxA = GetVal_Max(10, 20);
 			int nVal_MaxB = GetVal_Max(10, 20, 30);
 
 			Console.WriteLine("{0}, {1}", nVal_MaxA, nVal_MaxB);
-#elif E09_METHOD_03
+#elif P_EXAMPLE_E01_EXAMPLE_09_03
 			int nVal_SumA = GetVal_Sum(10);
 			int nVal_SumB = GetVal_Sum(10, 20);
 
@@ -124,10 +124,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("{0}, {1}, {2}", 
 				nVal_SumA, nVal_SumB, nVal_SumC);
-#endif // #if E09_METHOD_01
+#endif // #if P_EXAMPLE_E01_EXAMPLE_09_01
 		}
 
-#if E09_METHOD_01
+#if P_EXAMPLE_E01_EXAMPLE_09_01
 		/** 합계를 반환한다 */
 		private static int GetVal_Sum(params int[] a_oValues)
 		{
@@ -140,7 +140,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			return nVal_Sum;
 		}
-#elif E09_METHOD_02
+#elif P_EXAMPLE_E01_EXAMPLE_09_02
 		/** 최대 값을 반환한다 */
 		private static int GetVal_Max(int a_nValA, int a_nValB)
 		{
@@ -154,12 +154,12 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			int nVal_Max = Math.Max(a_nValA, a_nValB);
 			return Math.Max(nVal_Max, a_nValC);
 		}
-#elif E09_METHOD_03
+#elif P_EXAMPLE_E01_EXAMPLE_09_03
 		/** 합계를 반환한다 */
 		private static int GetVal_Sum(int a_nValA, int a_nValB = 0)
 		{
 			return a_nValA + a_nValB;
 		}
-#endif // #if E09_METHOD_01
+#endif // #if P_EXAMPLE_E01_EXAMPLE_09_01
 	}
 }

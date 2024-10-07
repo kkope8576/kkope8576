@@ -1,6 +1,6 @@
-#define E14_GENERIC_01
-#define E14_GENERIC_02
-#define E14_GENERIC_03
+#define P_EXAMPLE_E01_EXAMPLE_14_01
+#define P_EXAMPLE_E01_EXAMPLE_14_02
+#define P_EXAMPLE_E01_EXAMPLE_14_03
 
 using System;
 using System.Collections.Generic;
@@ -64,7 +64,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E14_GENERIC_01
+#if P_EXAMPLE_E01_EXAMPLE_14_01
 			int nValA = 10;
 			int nValB = 20;
 
@@ -89,7 +89,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("\n=====> 교환 후 <=====");
 			Console.WriteLine("정수 : {0}, {1}", nValA, nValB);
 			Console.WriteLine("실수 : {0}, {1}", fValA, fValB);
-#elif E14_GENERIC_02
+#elif P_EXAMPLE_E01_EXAMPLE_14_02
 			var oRandom = new Random();
 			var oListValues = new List<int>();
 
@@ -105,7 +105,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("\n=====> 정렬 후 <=====");
 			PrintValues(oListValues);
-#elif E14_GENERIC_03
+#elif P_EXAMPLE_E01_EXAMPLE_14_03
 			var oWriter_File = new CE01Writer_File_14("../../Resources/Example_14/Example_14_03.txt");
 			var oWriter_Console = new CE01Writer_Console_14();
 
@@ -117,7 +117,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #endif
 		}
 
-#if E14_GENERIC_01
+#if P_EXAMPLE_E01_EXAMPLE_14_01
 		/** 값을 교환한다 */
 		private static void Swap<T>(ref T a_rtValA, ref T a_rtValB)
 		{
@@ -125,7 +125,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			a_rtValA = a_rtValB;
 			a_rtValB = tTemp;
 		}
-#elif E14_GENERIC_02
+#elif P_EXAMPLE_E01_EXAMPLE_14_02
 		/*
 		 * C# 제네릭 형식 인자 제한 방법
 		 * - where T : class			<- 참조 형식 자료형을 제한
@@ -171,7 +171,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine();
 		}
-#elif E14_GENERIC_03
+#elif P_EXAMPLE_E01_EXAMPLE_14_03
 		/*
 		 * 인터페이스란?
 		 * - 특정 대상과 상호 작용을 할 수 있는 수단을 의미한다. (즉, 객체 지향 프로그래밍에서 

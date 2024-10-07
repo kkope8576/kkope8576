@@ -1,6 +1,6 @@
-//#define E06_ARRAY
-//#define E06_LIST
-#define E06_STACK_QUEUE
+//#define P_EXAMPLE_E01_EXAMPLE_06_01
+//#define P_EXAMPLE_E01_EXAMPLE_06_02
+#define P_EXAMPLE_E01_EXAMPLE_06_03
 
 using System;
 using System.Collections.Generic;
@@ -101,7 +101,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E06_ARRAY
+#if P_EXAMPLE_E01_EXAMPLE_06_01
 			int[] oValuesA = new int[5];
 			oValuesA[0] = 1;
 			oValuesA[1] = 2;
@@ -194,7 +194,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine();
-#elif E06_LIST
+#elif P_EXAMPLE_E01_EXAMPLE_06_02
 			List<int> oListValuesA = new List<int>();
 			oListValuesA.Add(1);
 			oListValuesA.Add(2);
@@ -220,7 +220,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine();
-#elif E06_STACK_QUEUE
+#elif P_EXAMPLE_E01_EXAMPLE_06_03
 			Stack<int> oStackValues = new Stack<int>();
 			Queue<int> oQueueValues = new Queue<int>();
 
@@ -256,7 +256,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine();
-#endif // #if E06_ARRAY
+#endif // #if P_EXAMPLE_E01_EXAMPLE_06_01
 		}
 	}
 }

@@ -1,6 +1,6 @@
-//#define E05_WHILE
-//#define E05_FOR
-#define E05_DO_WHILE
+//#define P_EXAMPLE_E01_EXAMPLE_05_01
+//#define P_EXAMPLE_E01_EXAMPLE_05_02
+#define P_EXAMPLE_E01_EXAMPLE_05_03
 
 using System;
 using System.Collections.Generic;
@@ -82,7 +82,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E05_WHILE
+#if P_EXAMPLE_E01_EXAMPLE_05_01
 			int nNum = 0;
 
 			Console.Write("숫자 입력 : ");
@@ -117,7 +117,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine();
-#elif E05_FOR
+#elif P_EXAMPLE_E01_EXAMPLE_05_02
 			int nNum = 0;
 
 			Console.Write("숫자 입력 : ");
@@ -144,12 +144,12 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine();
-#elif E05_DO_WHILE
+#elif P_EXAMPLE_E01_EXAMPLE_05_03
 			do
 			{
 				Console.WriteLine("Hello, World!");
 			} while(false);
-#endif // #if E05_WHILE
+#endif // #if P_EXAMPLE_E01_EXAMPLE_05_01
 		}
 	}
 }

@@ -1,6 +1,6 @@
-#define E13_CLASS_01
-#define E13_CLASS_02
-#define E13_CLASS_03
+//#define P_EXAMPLE_E01_EXAMPLE_13_01
+#define P_EXAMPLE_E01_EXAMPLE_13_02
+#define P_EXAMPLE_E01_EXAMPLE_13_03
 
 using System;
 using System.Collections.Generic;
@@ -106,7 +106,7 @@ using System.Threading.Tasks;
 /**
  * 확장 클래스
  */
-public static class CE01Extenion_13
+public static class CE01Extension_13
 {
 	/** 합계를 반환한다 */
 	public static int ExGetVal_Sum(this List<int> a_oSender)
@@ -143,7 +143,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E13_CLASS_01
+#if P_EXAMPLE_E01_EXAMPLE_13_01
 			CBase oDerivedA = new CE01Derived_13();
 			oDerivedA.m_nVal = 10;
 
@@ -162,7 +162,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("=====> 자식 클래스 - B <=====");
 			oDerivedB.ShowInfo();
-#elif E13_CLASS_02
+#elif P_EXAMPLE_E01_EXAMPLE_13_02
 			var oRandom = new Random();
 			var oListValues = new List<int>();
 
@@ -175,7 +175,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			oListValues.ExPrintValues();
 
 			Console.WriteLine("\n합계 : {0}", oListValues.ExGetVal_Sum());
-#elif E13_CLASS_03
+#elif P_EXAMPLE_E01_EXAMPLE_13_03
 			CE01Vec3_13 oVec3A = new CE01Vec3_13(10.0f, 0.0f, 0.0f);
 			CE01Vec3_13 oVec3B = new CE01Vec3_13(0.0f, 10.0f, 0.0f);
 
@@ -190,7 +190,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #endif
 		}
 
-#if E13_CLASS_01
+#if P_EXAMPLE_E01_EXAMPLE_13_01
 		/** 부모 클래스 */
 		private abstract class CBase
 		{
@@ -225,7 +225,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine("실수 : {0}", m_fVal);
 			}
 		}
-#elif E13_CLASS_03
+#elif P_EXAMPLE_E01_EXAMPLE_13_03
 		/** 3 차원 벡터 */
 		private class CE01Vec3_13
 		{

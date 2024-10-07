@@ -1,6 +1,6 @@
-//#define E11_CLASS_01
-//#define E11_CLASS_02
-#define E11_CLASS_03
+//#define P_EXAMPLE_E01_EXAMPLE_11_01
+//#define P_EXAMPLE_E01_EXAMPLE_11_02
+#define P_EXAMPLE_E01_EXAMPLE_11_03
 
 using System;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if E11_CLASS_01
+#if P_EXAMPLE_E01_EXAMPLE_11_01
 			/*
 			 * 아래와 같이 프로퍼티를 활용하면 변수를 다루듯이 명령문을 작성하는 것이 가능하다.
 			 */
@@ -30,7 +30,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("=====> 캐릭터 <=====");
 			oCharacter.ShowInfo();
-#elif E11_CLASS_02
+#elif P_EXAMPLE_E01_EXAMPLE_11_02
 			CE01Array_11 oValues = new CE01Array_11(5);
 			Random oRandom = new Random();
 
@@ -47,7 +47,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine();
-#elif E11_CLASS_03
+#elif P_EXAMPLE_E01_EXAMPLE_11_03
 			CE01Data_11 oDataA = new CE01Data_11();
 			oDataA.m_nVal = 10;
 
@@ -81,7 +81,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #endif
 		}
 
-#if E11_CLASS_01
+#if P_EXAMPLE_E01_EXAMPLE_11_01
 		/*
 		 * 프로퍼티란?
 		 * - C# 이 제공하는 접근자 메서드를 구현 할 수 있는 기능을 의미한다. (즉, 프로퍼티를 
@@ -184,7 +184,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine("Name : {0}", this.Name);
 			}
 		}
-#elif E11_CLASS_02
+#elif P_EXAMPLE_E01_EXAMPLE_11_02
 		/** 배열 */
 		private class CE01Array_11
 		{
@@ -228,7 +228,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				m_oValues[this.NumValues++] = a_nVal;
 			}
 		}
-#elif E11_CLASS_03
+#elif P_EXAMPLE_E01_EXAMPLE_11_03
 		/* 클래스 (정적) 멤버란?
 		 * - 객체에 종속되는 일반적인 멤버와 달리 클래스 자체에 종속되는 멤버를 의미한다. (즉, 
 		 * 클래스 멤버는 클래스 별로 하나만 존재한다는 것을 알 수 있다.)
