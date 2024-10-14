@@ -1,4 +1,4 @@
-#define P_EXAMPLE_E01_EXAMPLE_15_01
+//#define P_EXAMPLE_E01_EXAMPLE_15_01
 #define P_EXAMPLE_E01_EXAMPLE_15_02
 #define P_EXAMPLE_E01_EXAMPLE_15_03
 #define P_EXAMPLE_E01_EXAMPLE_15_04
@@ -15,13 +15,15 @@ using System.Threading.Tasks;
  * 기능을 의미한다. (즉, 델리게이트를 활용하면 특정 발생되는 이벤트에 따라 객체의 상태를 처리하는
  * 콜백 구조로 프로그램을 설계하는 것이 가능하다.)
  * 
- * 또한, C# 은 델리게이트를 활용해서 람다 (Lambda) or 무명 메서드를 구현하는 것이 가능하다.
+ * 또한 C# 은 델리게이트를 활용해서 람다 (Lambda) or 무명 메서드를 구현하는 것이 가능하다.
  * 
  * 람다 및 무명 메서드란?
- * - 일반적인 메서드와 달리 이름이 존재하지 않는 메서드를 의미한다. 따라서, 람다 및 무명 메서드를
- * 활용하면 재사용성이 떨어지는 일회성 메서드를 손쉽게 구현하는 것이 가능하다.
+ * - 일반적인 메서드와 달리 이름이 존재하지 않는 메서드를 의미한다. 
  * 
- * 또한, 람다 및 무명 메서드는 다른 메서드 내부에서 구현되는 내장 메서드이기 때문에 해당 메서드가
+ * 따라서 람다 및 무명 메서드를 활용하면 재사용성이 떨어지는 일회성 메서드를 손쉽게 구현하는 것이 
+ * 가능하다.
+ * 
+ * 또한 람다 및 무명 메서드는 다른 메서드 내부에서 구현되는 내장 메서드이기 때문에 해당 메서드가
  * 선언 된 영역에 존재하는 지역 변수에 접근하는 것이 가능하다. (즉, 지역 변수에 접근하기 위해서
  * 별도의 데이터를 전달 할 필요가 없다는 것을 의미한다.)
  * 
@@ -46,14 +48,15 @@ using System.Threading.Tasks;
  * 식 형식으로 주로 한줄로 처리되는 간단한 람다 메서드를 구현 할 때 활용되며, 문 형식은 여러 라인을 
  * 지니는 복잡한 명령문을 지니는 람다 메서드를 구현 할 때 활용된다.
  * 
- * 또한, C# 람다는 입력으로 전달되는 자료형의 매개 변수를 생략하는 것이 가능하다.
- * 따라서, (a_nLhs, a_nRhs) 와 같은 매개 변수의 이름만 명시하는 것이 가능하다는 것을 알 수 있다.
+ * 또한 C# 람다는 입력으로 전달되는 자료형의 매개 변수를 생략하는 것이 가능하다.
+ * 따라서 (a_nLhs, a_nRhs) 와 같은 매개 변수의 이름만 명시하는 것이 가능하다는 것을 알 수 있다.
  * 
  * C# 무명 메서드 구현 방법
  * - delegate + 매개 변수 + 메서드 몸체
  * 
  * Ex)
- * delegate (int a_nLhs, int a_nRhs) {
+ * delegate (int a_nLhs, int a_nRhs)
+ * {
  *		// Do Something
  * }
  * 
@@ -103,50 +106,6 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		public static void Start(string[] args)
 		{
 #if P_EXAMPLE_E01_EXAMPLE_15_01
-			var oRandom = new Random();
-
-			var oListValuesA = new List<int>();
-			var oListValuesB = new List<float>();
-
-			for(int i = 0; i < 5; ++i)
-			{
-				oListValuesA.Add(oRandom.Next(1, 100));
-				oListValuesB.Add((float)(oRandom.NextDouble() * 100.0));
-			}
-
-			Console.WriteLine("=====> 정렬 전 <=====");
-
-			for(int i = 0; i < oListValuesA.Count; ++i)
-			{
-				Console.Write("{0}, ", oListValuesA[i]);
-			}
-
-			Console.WriteLine();
-
-			for(int i = 0; i < oListValuesB.Count; ++i)
-			{
-				Console.Write("{0:0.00}, ", oListValuesB[i]);
-			}
-
-			oListValuesA.ExSort(CE01Example_15.CompareByDescending);
-			oListValuesB.ExSort(CE01Example_15.CompareByDescending);
-
-			Console.WriteLine("\n\n=====> 정렬 후 <=====");
-
-			for(int i = 0; i < oListValuesA.Count; ++i)
-			{
-				Console.Write("{0}, ", oListValuesA[i]);
-			}
-
-			Console.WriteLine();
-
-			for(int i = 0; i < oListValuesB.Count; ++i)
-			{
-				Console.Write("{0:0.00}, ", oListValuesB[i]);
-			}
-
-			Console.WriteLine();
-#elif P_EXAMPLE_E01_EXAMPLE_15_02
 			int nLhs = 0;
 			int nRhs = 0;
 
@@ -180,6 +139,67 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			{
 				Console.WriteLine("잘못된 수식을 입력했습니다.");
 			}
+#elif P_EXAMPLE_E01_EXAMPLE_15_02
+			var oRandom = new Random();
+
+			var oListValuesA = new List<int>();
+			var oListValuesB = new List<float>();
+
+			for(int i = 0; i < 10; ++i)
+			{
+				oListValuesA.Add(oRandom.Next(1, 100));
+				oListValuesB.Add((float)(oRandom.NextDouble() * 100.0));
+			}
+
+			Console.WriteLine("=====> 정렬 전 <=====");
+
+			for(int i = 0; i < oListValuesA.Count; ++i)
+			{
+				Console.Write("{0}, ", oListValuesA[i]);
+			}
+
+			Console.WriteLine();
+
+			for(int i = 0; i < oListValuesB.Count; ++i)
+			{
+				Console.Write("{0:0.00}, ", oListValuesB[i]);
+			}
+
+			oListValuesA.ExSort(CE01Example_15.CompareByAscending);
+			oListValuesB.ExSort(CE01Example_15.CompareByAscending);
+
+			Console.WriteLine("\n\n=====> 정렬 후 - 오름차순 <=====");
+
+			for(int i = 0; i < oListValuesA.Count; ++i)
+			{
+				Console.Write("{0}, ", oListValuesA[i]);
+			}
+
+			Console.WriteLine();
+
+			for(int i = 0; i < oListValuesB.Count; ++i)
+			{
+				Console.Write("{0:0.00}, ", oListValuesB[i]);
+			}
+
+			oListValuesA.ExSort(CE01Example_15.CompareByDescending);
+			oListValuesB.ExSort(CE01Example_15.CompareByDescending);
+
+			Console.WriteLine("\n\n=====> 정렬 후 - 내림차순 <=====");
+
+			for(int i = 0; i < oListValuesA.Count; ++i)
+			{
+				Console.Write("{0}, ", oListValuesA[i]);
+			}
+
+			Console.WriteLine();
+
+			for(int i = 0; i < oListValuesB.Count; ++i)
+			{
+				Console.Write("{0:0.00}, ", oListValuesB[i]);
+			}
+
+			Console.WriteLine();
 #elif P_EXAMPLE_E01_EXAMPLE_15_03
 			var oRandom = new Random();
 			var oListValues = new List<int>();
@@ -231,11 +251,11 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 이때, 해당 델리게이트 변수를 통해 메서드를 호출하면 변수가 지니고 있던 메서드가 추가
 			 * 된 순서에 따라 순차적으로 호출 된다는 특징이 존재한다.
 			 * 
-			 * 따라서, 해당 특징을 활용하면 프로그램이 수행 중에 특정 작업을 여러 단계에 걸쳐서 
+			 * 따라서 해당 특징을 활용하면 프로그램이 수행 중에 특정 작업을 여러 단계에 걸쳐서 
 			 * 수행 할 필요가 있을 경우 델리게이트 체인을 통해 좀 더 수월하게 각 메서드를 
 			 * 호출해주는 것이 가능하다.
 			 * 
-			 * 또한, 델리게이트 변수에 = (할당 연산자) 를 사용 할 경우 기존에 지니고 있던 체인 
+			 * 또한 델리게이트 변수에 = (할당 연산자) 를 사용 할 경우 기존에 지니고 있던 체인 
 			 * 정보는 리셋이 된다는 특징이 존재하기 때문에 체인 정보를 유지하기 위해서는 
 			 * = (할당 연산자) 가 아닌 +, - 연산자를 활용해서 특정 메서드를 추가하거나 
 			 * 제거해야한다.
@@ -244,7 +264,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 마지막에 추가 된 메서드의 반환 값만 유효하며 나머지 메서드의 반환 값은 무시가 된다는 
 			 * 특징이 존재한다.
 			 * 
-			 * 따라서, 해당 결과를 유도한 경우가 아니라면 델리게이트 체인에는 가능하면 반환 값이 
+			 * 따라서 해당 결과를 유도한 경우가 아니라면 델리게이트 체인에는 가능하면 반환 값이 
 			 * 존재하지 않는 메서드를 추가하거나 제거하는 것을 추천한다.
 			 */
 			Printer oPrinter = () =>
@@ -277,18 +297,6 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 #if P_EXAMPLE_E01_EXAMPLE_15_01
-		/** 오름차순으로 비교한다 */
-		public static int CompareByAscending<T>(T a_nLhs, T a_nRhs) where T : IComparable
-		{
-			return a_nLhs.CompareTo(a_nRhs);
-		}
-
-		/** 내림차순으로 비교한다 */
-		public static int CompareByDescending<T>(T a_nLhs, T a_nRhs) where T : IComparable
-		{
-			return a_nRhs.CompareTo(a_nLhs);
-		}
-#elif P_EXAMPLE_E01_EXAMPLE_15_02
 		/*
 		 * C# 구 버전 사용 시 주의 사항
 		 * - 제네릭이 아닌 델리게이트 일반 메서드를 제어하는 것이 가능하며 제네릭 델리게이트는 
@@ -351,10 +359,22 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			return null;
 		}
+#elif P_EXAMPLE_E01_EXAMPLE_15_02
+		/** 오름차순으로 비교한다 */
+		public static int CompareByAscending<T>(T a_nLhs, T a_nRhs) where T : IComparable
+		{
+			return a_nLhs.CompareTo(a_nRhs);
+		}
+
+		/** 내림차순으로 비교한다 */
+		public static int CompareByDescending<T>(T a_nLhs, T a_nRhs) where T : IComparable
+		{
+			return a_nRhs.CompareTo(a_nLhs);
+		}
 #elif P_EXAMPLE_E01_EXAMPLE_15_03
 		/*
 		 * 일반적인 메서드는 람다와 달리 다른 지역에 존재하는 지역 변수에 접근하는 것이 불가능하다.
-		 * 따라서, 특정 메서드가 동작하기 위해 필요한 데이터가 있다면 해당 데이터를 일반적으로
+		 * 따라서 특정 메서드가 동작하기 위해 필요한 데이터가 있다면 해당 데이터를 일반적으로
 		 * 매개 변수를 통해서 전달해주는 것이 기본적인 구조이다.
 		 */
 		/** 값을 비교한다 */
@@ -374,7 +394,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * (즉, 개념적으로 람다 메서드가 외부에 존재하는 지역 변수의 사본을 가지고 있는 개념과
 			 * 비슷한 의미이다.)
 			 * 
-			 * 따라서, 특정 고수준 언어에서는 람다를 클로저라고도 부른다. (즉, 클로저라는 단어는 
+			 * 따라서 특정 고수준 언어에서는 람다를 클로저라고도 부른다. (즉, 클로저라는 단어는 
 			 * 외부에서는 닫혀 있는 영역이지만 내부에서 여전히 열려 있는 영역이라는 의미를 내포하고 
 			 * 있다.)
 			 */

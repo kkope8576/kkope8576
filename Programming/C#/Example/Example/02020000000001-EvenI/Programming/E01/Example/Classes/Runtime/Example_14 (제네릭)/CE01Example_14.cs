@@ -1,6 +1,7 @@
-#define P_EXAMPLE_E01_EXAMPLE_14_01
-#define P_EXAMPLE_E01_EXAMPLE_14_02
-#define P_EXAMPLE_E01_EXAMPLE_14_03
+//#define P_EXAMPLE_E01_EXAMPLE_14_01
+//#define P_EXAMPLE_E01_EXAMPLE_14_02
+//#define P_EXAMPLE_E01_EXAMPLE_14_03
+#define P_EXAMPLE_E01_EXAMPLE_14_04
 
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ using System.Threading.Tasks;
  * 메서드는 호출되는 시점에 자료형이 결정되고 클래스는 객체로 생성되는 시점에 자료형이 결정된다는 
  * 것을 알 수 있다.)
  * 
- * 따라서, 각 자료형마다 별도로 메서드 or 클래스를 제작 할 필요없이 제네릭은 하나의 메서드 or 
+ * 따라서 각 자료형마다 별도로 메서드 or 클래스를 제작 할 필요없이 제네릭은 하나의 메서드 or 
  * 클래스만을 제작하면 된다는 장점이 존재한다.
  * 
  * Ex)
@@ -106,15 +107,32 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("\n=====> 정렬 후 <=====");
 			PrintValues(oListValues);
 #elif P_EXAMPLE_E01_EXAMPLE_14_03
-			var oWriter_File = new CE01Writer_File_14("../../Resources/Example_14/Example_14_03.txt");
-			var oWriter_Console = new CE01Writer_Console_14();
+			var oRandom = new Random();
+			var oValues = new CE01Array_14<int>();
+
+			for(int i = 0; i < 10; ++i)
+			{
+				oValues.Add(oRandom.Next(1, 100));
+			}
+
+			Console.WriteLine("=====> 배열 요소 <=====");
+
+			for(int i = 0; i < oValues.NumValues; ++i)
+			{
+				Console.Write("{0}, ", oValues[i]);
+			}
+
+			Console.WriteLine();
+#elif P_EXAMPLE_E01_EXAMPLE_14_04
+			IE01Writer_Data_14 oWriter_File = new CE01Writer_File_14("../../Resources/Example_14/Example_14_03.txt");
+			IE01Writer_Data_14 oWriter_Console = new CE01Writer_Console_14();
 
 			for(int i = 0; i < 10; ++i)
 			{
 				oWriter_File.WriteStr("Hello, World!");
 				oWriter_Console.WriteStr("Hello, World!");
 			}
-#endif
+#endif // #if P_EXAMPLE_E01_EXAMPLE_14_01
 		}
 
 #if P_EXAMPLE_E01_EXAMPLE_14_01
@@ -128,7 +146,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #elif P_EXAMPLE_E01_EXAMPLE_14_02
 		/*
 		 * C# 제네릭 형식 인자 제한 방법
-		 * - where T : class			<- 참조 형식 자료형을 제한
+		 * - where T : class			<- 참조 형식 자료형으로 제한
 		 * - where T : struct			<- 값 형식 자료형으로 제한
 		 * - where T : SomeClass		<- 해당 클래스를 상속하는 자료형으로 제한
 		 * - where T : SomeInterface	<- 해당 인터페이스를 따르는 자료형으로 제한
@@ -136,7 +154,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * C# 제네릭 메서드 or 제네릭 클래스는 기본적으로 모든 자료형에 동작하도록 정의 될 필요가 
 		 * 있다.
 		 * 
-		 * 따라서, 특정 자료형에만 동작하는 메서드 or 클래스를 정의하고 싶다면 where 키워드를 
+		 * 따라서 특정 자료형에만 동작하는 메서드 or 클래스를 정의하고 싶다면 where 키워드를 
 		 * 이용해서 제네릭 형식 인자의 타입을 제한 할 필요가 있다.
 		 */
 		/** 값을 오름차순 정렬한다 */
@@ -172,6 +190,46 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine();
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_14_03
+		/**
+		 * 배열
+		 */
+		private class CE01Array_14<T>
+		{
+			public int NumValues { get; private set; } = 0;
+			public T[] Values { get; private set; } = null;
+
+			public CE01Array_14(int a_nSize = 5)
+			{
+				this.Values = new T[a_nSize];
+			}
+
+			public T this[int a_nIdx]
+			{
+				get
+				{
+					return this.Values[a_nIdx];
+				}
+				set
+				{
+					this.Values[a_nIdx] = value;
+				}
+			}
+
+			public void Add(T a_tVal)
+			{
+				// 배열이 가득찼을 경우
+				if(this.NumValues >= this.Values.Length)
+				{
+					var oValues = this.Values;
+					Array.Resize(ref oValues, this.Values.Length * 2);
+
+					this.Values = oValues;
+				}
+
+				this.Values[this.NumValues++] = a_tVal;
+			}
+		}
+#elif P_EXAMPLE_E01_EXAMPLE_14_04
 		/*
 		 * 인터페이스란?
 		 * - 특정 대상과 상호 작용을 할 수 있는 수단을 의미한다. (즉, 객체 지향 프로그래밍에서 
@@ -196,7 +254,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 따르고 있을 경우 해당 클래스는 반드시 인터페이스에 존재하는 모든 메서드를 구현해줘야한다. 
 		 * (즉, 하나라도 구현하지 않으면 컴파일 에러가 발생한다는 것을 알 수 있다.)
 		 * 
-		 * 또한, 인터페이스는 상속과 달리 여러 인터페이스를 따르는 것이 가능하다.
+		 * 또한 인터페이스는 상속과 달리 여러 인터페이스를 따르는 것이 가능하다.
 		 * (즉, 하나의 클래스가 여러 인터페이스를 따르는 것이 가능하다.)
 		 * 
 		 * Ex)
@@ -218,14 +276,18 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 위와 같이 클래스가 여러 인터페이스를 따름으로서 여러가지 방식으로 해당 클래스를 통해 
 		 * 생성 된 객체와 상호 작용을 하는 것이 가능하다.
 		 */
-		/** 데이터 출력 인터페이스 */
+		/**
+		 * 데이터 출력 인터페이스
+		 */
 		private interface IE01Writer_Data_14
 		{
 			/** 문자열을 출력한다 */
 			void WriteStr(string a_oStr);
 		}
 
-		/** 파일 출력자 */
+		/**
+		 * 파일 출력자
+		 */
 		private class CE01Writer_File_14 : IE01Writer_Data_14
 		{
 			private StreamWriter m_oWriter = null;
@@ -233,6 +295,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/** 생성자 */
 			public CE01Writer_File_14(string a_oPath_File)
 			{
+				var oDir_Path = Path.GetDirectoryName(a_oPath_File);
+				Directory.CreateDirectory(oDir_Path);
+
 				var oWStream_File = File.Open(a_oPath_File,
 					FileMode.Create, FileAccess.Write);
 
@@ -247,7 +312,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 		}
 
-		/** 콘솔 출력자 */
+		/**
+		 * 콘솔 출력자
+		 */
 		private class CE01Writer_Console_14 : IE01Writer_Data_14
 		{
 			/** 문자열을 출력한다 */
@@ -256,6 +323,6 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine(a_oStr);
 			}
 		}
-#endif
+#endif // #if P_EXAMPLE_E01_EXAMPLE_14_01
 	}
 }

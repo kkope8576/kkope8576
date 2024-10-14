@@ -59,7 +59,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 같이 여러 데이터를 포함하고 있는 대상에게 사용하는 것이
 			 * 가능하다.)
 			 * 
-			 * 따라서, foreach 반복문은 순회문이라고도 불린다. (즉,
+			 * 따라서 foreach 반복문은 순회문이라고도 불린다. (즉,
 			 * 일반적인 반복문과 반복이 끝나는 조건을 따로 명시 할
 			 * 필요가 없다.)
 			 */

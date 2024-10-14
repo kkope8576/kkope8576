@@ -1,5 +1,5 @@
 //#define P_EXAMPLE_E01_EXAMPLE_13_01
-#define P_EXAMPLE_E01_EXAMPLE_13_02
+//#define P_EXAMPLE_E01_EXAMPLE_13_02
 #define P_EXAMPLE_E01_EXAMPLE_13_03
 
 using System;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
  * new 키워드를 통해서 직접 객체화 시키는 것은 불가능하며 자식 클래스를 통해 간접적으로 객체화 
  * 시키는 것만 가능하다는 것을 알 수 있다.)
  * 
- * 따라서, 추상 클래스는 다른 클래스에 의해 상속이 되기 위한 목적으로 주로 활용된다. (즉, 추상 
+ * 따라서 추상 클래스는 다른 클래스에 의해 상속이 되기 위한 목적으로 주로 활용된다. (즉, 추상 
  * 클래스는 상속을 전제로하는 클래스라는 것을 알 수 있다.)
  * 
  * C# 추상 클래스 정의 방법
@@ -33,7 +33,7 @@ using System.Threading.Tasks;
  * - 일반적인 클래스와 달리 정적 멤버만을 정의 할 수 있는 클래스를 의미한다. (즉, 정적 클래스에는 
  * 일반적인 멤버를 정의하면 컴파일 에러가 발생한다는 것을 알 수 있다.)
  * 
- * 따라서, 정적 클래스는 new 키워드를 통해 객체화 시키는 것이 불가능하며 다른 클래스에서 상속을 하는 
+ * 따라서 정적 클래스는 new 키워드를 통해 객체화 시키는 것이 불가능하며 다른 클래스에서 상속을 하는 
  * 것도 불가능하다는 특징이 존재한다. (즉, 정적 클래스는 상속을 통한 간접적인 객체화도 불가능하다는 
  * 것을 알 수 있다.)
  * 
@@ -165,7 +165,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #elif P_EXAMPLE_E01_EXAMPLE_13_02
 			var oRandom = new Random();
 			var oListValues = new List<int>();
-
+			
 			for(int i = 0; i < 10; ++i)
 			{
 				oListValues.Add(oRandom.Next(1, 100));
@@ -205,7 +205,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 특정 클래스가 추상 메서드를 하나라도 지니고 있다면 해당 클래스는 직접적으로 객체화 
 			 * 시키는 것이 불가능 한 추상 클래스가 되는 특징이 존재한다.
 			 * 
-			 * 따라서, 추상 메서드는 자식 클래스에서 반드시 재정의 할 필요가 있다. (즉, 자식 
+			 * 따라서 추상 메서드는 자식 클래스에서 반드시 재정의 할 필요가 있다. (즉, 자식 
 			 * 클래스에서 부모 클래스의 추상 메서드를 재정의 함으로서 해당 메서드 호출되었을 때 
 			 * 어떤 동작을 할지를 결정해줘야한다는 것을 알 수 있다.)
 			 */

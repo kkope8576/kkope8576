@@ -69,7 +69,7 @@ using System.Threading.Tasks;
  * - 가장 강력한 점프문으로서 프로그램의 흐름을 제한없이 특정 위치로 이동시키는 기능을 의미한다. 
  * (즉, goto 문을 활용하면 프로그램의 흐름을 마음대로 제어하는 것이 가능하다.)
  * 
- * 따라서, goto 문을 남발 할 경우 프로그램의 흐름 복잡해질 수 있기 때문에 오늘날 프로그램을 제작하는 
+ * 따라서 goto 문을 남발 할 경우 프로그램의 흐름 복잡해질 수 있기 때문에 오늘날 프로그램을 제작하는 
  * 환경에서는 거의 사용되지 않는다.
  */
 namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_05
@@ -103,7 +103,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
                      * continue 키워드는 프로그램의 현재 흐름을 생략하고
                      * 다음 흐름으로 이동시키는 역할을 수행한다. 
                      * 
-                     * 따라서, while 반복문 내부에 해당 키워드를 사용 할
+                     * 따라서 while 반복문 내부에 해당 키워드를 사용 할
                      * 경우 반복을 깨기 위한 명령문이 생략되었는지 주의
                      * 할 필요가 있다. (즉, continue 키워드에 의해서
                      * 반복을 깨기 위한 명령문을 생략 할 경우 의도치 않게
