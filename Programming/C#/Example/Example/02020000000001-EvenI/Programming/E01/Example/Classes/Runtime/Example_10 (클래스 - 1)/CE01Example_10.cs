@@ -33,9 +33,6 @@ using System.Threading.Tasks;
  * }
  * 
  * CSomeClass oSomeObj = new CSomeClass();
- * oSomeObj.m_nVal = 10;
- * 
- * oSomeObj.ShowMethod();
  * 
  * 위와 같이 정의 된 클래스는 자료형처럼 사용하는 것이 가능하며 new 키워드를 통해 사물 (객체) 을 
  * 생성하는 것이 가능하다. (즉, 클래스는 사물을 생성하기 위한 틀처럼 활용된다는 것을 알 수 있다.)
@@ -71,10 +68,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			oCharacterB.m_nHP = 250;
 			oCharacterB.m_nATK = 100;
 
-			Console.WriteLine("=====> 캐릭터 A <=====");
+			Console.WriteLine("=====> 캐릭터 - A <=====");
 			oCharacterA.ShowInfo();
 
-			Console.WriteLine("\n=====> 캐릭터 B <=====");
+			Console.WriteLine("\n=====> 캐릭터 - B <=====");
 			oCharacterB.ShowInfo();
 #elif P_EXAMPLE_E01_EXAMPLE_10_02
 			CE01Character_10 oCharacterA = new CE01Character_10();
@@ -84,10 +81,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			CE01Character_10 oCharacterB = new CE01Character_10(20, 250, 100);
 
-			Console.WriteLine("=====> 캐릭터 A <=====");
+			Console.WriteLine("=====> 캐릭터 - A <=====");
 			oCharacterA.ShowInfo();
 
-			Console.WriteLine("\n=====> 캐릭터 B <=====");
+			Console.WriteLine("\n=====> 캐릭터 - B <=====");
 			oCharacterB.ShowInfo();
 #elif P_EXAMPLE_E01_EXAMPLE_10_03
 			/*
@@ -101,10 +98,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			CE01Character_10 oCharacterB = new CE01Character_10(20, 250, 100);
 
-			Console.WriteLine("=====> 캐릭터 A <=====");
+			Console.WriteLine("=====> 캐릭터 - A <=====");
 			oCharacterA.ShowInfo();
 
-			Console.WriteLine("\n=====> 캐릭터 B <=====");
+			Console.WriteLine("\n=====> 캐릭터 - B <=====");
 			oCharacterB.ShowInfo();
 #endif
 		}

@@ -18,10 +18,8 @@ using System.Threading.Tasks;
  * 또한 C# 은 델리게이트를 활용해서 람다 (Lambda) or 무명 메서드를 구현하는 것이 가능하다.
  * 
  * 람다 및 무명 메서드란?
- * - 일반적인 메서드와 달리 이름이 존재하지 않는 메서드를 의미한다. 
- * 
- * 따라서 람다 및 무명 메서드를 활용하면 재사용성이 떨어지는 일회성 메서드를 손쉽게 구현하는 것이 
- * 가능하다.
+ * - 일반적인 메서드와 달리 이름이 존재하지 않는 메서드를 의미한다. 따라서 람다 및 무명 메서드를
+ * 활용하면 재사용성이 떨어지는 일회성 메서드를 손쉽게 구현하는 것이 가능하다.
  * 
  * 또한 람다 및 무명 메서드는 다른 메서드 내부에서 구현되는 내장 메서드이기 때문에 해당 메서드가
  * 선언 된 영역에 존재하는 지역 변수에 접근하는 것이 가능하다. (즉, 지역 변수에 접근하기 위해서
@@ -106,6 +104,50 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		public static void Start(string[] args)
 		{
 #if P_EXAMPLE_E01_EXAMPLE_15_01
+			var oRandom = new Random();
+
+			var oListValuesA = new List<int>();
+			var oListValuesB = new List<float>();
+
+			for(int i = 0; i < 5; ++i)
+			{
+				oListValuesA.Add(oRandom.Next(1, 100));
+				oListValuesB.Add((float)(oRandom.NextDouble() * 100.0));
+			}
+
+			Console.WriteLine("=====> 정렬 전 <=====");
+
+			for(int i = 0; i < oListValuesA.Count; ++i)
+			{
+				Console.Write("{0}, ", oListValuesA[i]);
+			}
+
+			Console.WriteLine();
+
+			for(int i = 0; i < oListValuesB.Count; ++i)
+			{
+				Console.Write("{0:0.00}, ", oListValuesB[i]);
+			}
+
+			oListValuesA.ExSort(CE01Example_15.CompareByAscending);
+			oListValuesB.ExSort(CE01Example_15.CompareByAscending);
+
+			Console.WriteLine("\n\n=====> 정렬 후 <=====");
+
+			for(int i = 0; i < oListValuesA.Count; ++i)
+			{
+				Console.Write("{0}, ", oListValuesA[i]);
+			}
+
+			Console.WriteLine();
+
+			for(int i = 0; i < oListValuesB.Count; ++i)
+			{
+				Console.Write("{0:0.00}, ", oListValuesB[i]);
+			}
+
+			Console.WriteLine();
+#elif P_EXAMPLE_E01_EXAMPLE_15_02
 			int nLhs = 0;
 			int nRhs = 0;
 
@@ -139,67 +181,6 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			{
 				Console.WriteLine("잘못된 수식을 입력했습니다.");
 			}
-#elif P_EXAMPLE_E01_EXAMPLE_15_02
-			var oRandom = new Random();
-
-			var oListValuesA = new List<int>();
-			var oListValuesB = new List<float>();
-
-			for(int i = 0; i < 10; ++i)
-			{
-				oListValuesA.Add(oRandom.Next(1, 100));
-				oListValuesB.Add((float)(oRandom.NextDouble() * 100.0));
-			}
-
-			Console.WriteLine("=====> 정렬 전 <=====");
-
-			for(int i = 0; i < oListValuesA.Count; ++i)
-			{
-				Console.Write("{0}, ", oListValuesA[i]);
-			}
-
-			Console.WriteLine();
-
-			for(int i = 0; i < oListValuesB.Count; ++i)
-			{
-				Console.Write("{0:0.00}, ", oListValuesB[i]);
-			}
-
-			oListValuesA.ExSort(CE01Example_15.CompareByAscending);
-			oListValuesB.ExSort(CE01Example_15.CompareByAscending);
-
-			Console.WriteLine("\n\n=====> 정렬 후 - 오름차순 <=====");
-
-			for(int i = 0; i < oListValuesA.Count; ++i)
-			{
-				Console.Write("{0}, ", oListValuesA[i]);
-			}
-
-			Console.WriteLine();
-
-			for(int i = 0; i < oListValuesB.Count; ++i)
-			{
-				Console.Write("{0:0.00}, ", oListValuesB[i]);
-			}
-
-			oListValuesA.ExSort(CE01Example_15.CompareByDescending);
-			oListValuesB.ExSort(CE01Example_15.CompareByDescending);
-
-			Console.WriteLine("\n\n=====> 정렬 후 - 내림차순 <=====");
-
-			for(int i = 0; i < oListValuesA.Count; ++i)
-			{
-				Console.Write("{0}, ", oListValuesA[i]);
-			}
-
-			Console.WriteLine();
-
-			for(int i = 0; i < oListValuesB.Count; ++i)
-			{
-				Console.Write("{0:0.00}, ", oListValuesB[i]);
-			}
-
-			Console.WriteLine();
 #elif P_EXAMPLE_E01_EXAMPLE_15_03
 			var oRandom = new Random();
 			var oListValues = new List<int>();
@@ -227,11 +208,6 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			{
 				return a_nVal == nVal;
 			});
-
-			//int nIdx = oListValues.FindIndex(delegate (int a_nVal)
-			//{
-			//	return a_nVal == nVal;
-			//});
 
 			Action oActionA = () =>
 			{
@@ -285,7 +261,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				return 3;
 			};
 
-			oPrinter = () =>
+			oPrinter += () =>
 			{
 				Console.WriteLine("네번째 메서드 호출!");
 				return 4;
@@ -297,6 +273,18 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 #if P_EXAMPLE_E01_EXAMPLE_15_01
+		/** 오름차순으로 비교한다 */
+		public static int CompareByAscending<T>(T a_nLhs, T a_nRhs) where T : IComparable
+		{
+			return a_nLhs.CompareTo(a_nRhs);
+		}
+
+		/** 내림차순으로 비교한다 */
+		public static int CompareByDescending<T>(T a_nLhs, T a_nRhs) where T : IComparable
+		{
+			return a_nRhs.CompareTo(a_nLhs);
+		}
+#elif P_EXAMPLE_E01_EXAMPLE_15_02
 		/*
 		 * C# 구 버전 사용 시 주의 사항
 		 * - 제네릭이 아닌 델리게이트 일반 메서드를 제어하는 것이 가능하며 제네릭 델리게이트는 
@@ -358,18 +346,6 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			return null;
-		}
-#elif P_EXAMPLE_E01_EXAMPLE_15_02
-		/** 오름차순으로 비교한다 */
-		public static int CompareByAscending<T>(T a_nLhs, T a_nRhs) where T : IComparable
-		{
-			return a_nLhs.CompareTo(a_nRhs);
-		}
-
-		/** 내림차순으로 비교한다 */
-		public static int CompareByDescending<T>(T a_nLhs, T a_nRhs) where T : IComparable
-		{
-			return a_nRhs.CompareTo(a_nLhs);
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_15_03
 		/*

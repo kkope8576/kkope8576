@@ -48,20 +48,20 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine();
 #elif P_EXAMPLE_E01_EXAMPLE_11_03
+			CE01Data_11.m_fVal = 3.14f;
+
 			CE01Data_11 oDataA = new CE01Data_11();
 			oDataA.m_nVal = 10;
-
-			CE01Data_11.m_fVal = 3.14f;
 
 			CE01Data_11 oDataB = new CE01Data_11();
 			oDataB.m_nVal = 20;
 
 			CE01Data_11.m_fVal = 6.14f;
 
-			Console.WriteLine("=====> 데이터 A <=====");
+			Console.WriteLine("=====> 데이터 - A <=====");
 			oDataA.ShowInfo();
 
-			Console.WriteLine("\n=====> 데이터 B <=====");
+			Console.WriteLine("\n=====> 데이터 - B <=====");
 			oDataB.ShowInfo();
 
 			Console.WriteLine("\n=====> 데이터 클래스 <=====");
@@ -73,10 +73,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			CE01Storage_Data_11 oStorage_DataB = CE01Storage_Data_11.GetInst();
 			oStorage_DataB.m_nVal = 20;
 
-			Console.WriteLine("\n=====> 데이터 저장소 A <=====");
+			Console.WriteLine("\n=====> 데이터 저장소 - A <=====");
 			Console.WriteLine("{0}", oStorage_DataA.m_nVal);
 
-			Console.WriteLine("\n=====> 데이터 저장소 B <=====");
+			Console.WriteLine("\n=====> 데이터 저장소 - B <=====");
 			Console.WriteLine("{0}", oStorage_DataB.m_nVal);
 #endif
 		}
@@ -189,7 +189,6 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		private class CE01Array_11
 		{
 			private int[] m_oValues = null;
-
 			public int NumValues { get; private set; } = 0;
 
 			/** 생성자 */

@@ -139,8 +139,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 #if P_EXAMPLE_E01_EXAMPLE_08_01
 		/** 수식 결과를 반환한다 */
-		private static decimal GetResult_Calc(int a_nValA,
-			char a_chOperator, int a_nValB)
+		private static decimal GetResult_Calc(int a_nValA, char a_chOperator, int a_nValB)
 		{
 			switch(a_chOperator)
 			{
@@ -180,8 +179,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 값을 교환한다 */
-		private static void SwapByRef(ref int a_nValA, 
-			ref int a_nValB)
+		private static void SwapByRef(ref int a_nValA, ref int a_nValB)
 		{
 			int nTemp = a_nValA;
 			a_nValA = a_nValB;

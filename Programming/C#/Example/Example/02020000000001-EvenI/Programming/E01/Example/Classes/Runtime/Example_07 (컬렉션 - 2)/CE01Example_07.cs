@@ -54,14 +54,12 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("\n\n=====> 셋 <=====");
 
 			/*
-			 * foreach 반복문은 열거 가능한 데이터를 대상으로 동작하는
-			 * 반복문을 의미한다. (즉, 해당 반복문을 활용하면 컬렉션과
-			 * 같이 여러 데이터를 포함하고 있는 대상에게 사용하는 것이
-			 * 가능하다.)
+			 * foreach 반복문은 열거 가능한 데이터를 대상으로 동작하는 반복문을 의미한다. (즉, 
+			 * 해당 반복문을 활용하면 컬렉션과 같이 여러 데이터를 포함하고 있는 대상에게 사용하는 
+			 * 것이 가능하다.)
 			 * 
-			 * 따라서 foreach 반복문은 순회문이라고도 불린다. (즉,
-			 * 일반적인 반복문과 반복이 끝나는 조건을 따로 명시 할
-			 * 필요가 없다.)
+			 * 따라서 foreach 반복문은 순회문이라고도 불린다. (즉, 일반적인 반복문과 반복이 
+			 * 끝나는 조건을 따로 명시 할 필요가 없다.)
 			 */
 			foreach(int nVal in oSetValues)
 			{
@@ -81,7 +79,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oDictValuesB.Add(oKey, i + 1.0f);
 			}
 
-			Console.WriteLine("=====> 딕셔너리 A <=====");
+			Console.WriteLine("=====> 딕셔너리 - A <=====");
 
 			foreach(KeyValuePair<string, int> stKeyVal in oDictValuesA)
 			{
@@ -89,13 +87,15 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 					stKeyVal.Key, stKeyVal.Value);
 			}
 
-			Console.WriteLine("\n\n=====> 딕셔너리 B <=====");
+			Console.WriteLine("\n\n=====> 딕셔너리 - B <=====");
 
 			foreach(KeyValuePair<string, float> stKeyVal in oDictValuesB)
 			{
 				Console.Write("{0}:{1}, ",
 					stKeyVal.Key, stKeyVal.Value);
 			}
+
+			Console.WriteLine();
 #endif // #if P_EXAMPLE_E01_EXAMPLE_07_01
 		}
 	}

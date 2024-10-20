@@ -1,7 +1,6 @@
 //#define P_EXAMPLE_E01_EXAMPLE_14_01
 //#define P_EXAMPLE_E01_EXAMPLE_14_02
-//#define P_EXAMPLE_E01_EXAMPLE_14_03
-#define P_EXAMPLE_E01_EXAMPLE_14_04
+#define P_EXAMPLE_E01_EXAMPLE_14_03
 
 using System;
 using System.Collections.Generic;
@@ -107,23 +106,6 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("\n=====> 정렬 후 <=====");
 			PrintValues(oListValues);
 #elif P_EXAMPLE_E01_EXAMPLE_14_03
-			var oRandom = new Random();
-			var oValues = new CE01Array_14<int>();
-
-			for(int i = 0; i < 10; ++i)
-			{
-				oValues.Add(oRandom.Next(1, 100));
-			}
-
-			Console.WriteLine("=====> 배열 요소 <=====");
-
-			for(int i = 0; i < oValues.NumValues; ++i)
-			{
-				Console.Write("{0}, ", oValues[i]);
-			}
-
-			Console.WriteLine();
-#elif P_EXAMPLE_E01_EXAMPLE_14_04
 			IE01Writer_Data_14 oWriter_File = new CE01Writer_File_14("../../Resources/Example_14/Example_14_03.txt");
 			IE01Writer_Data_14 oWriter_Console = new CE01Writer_Console_14();
 
@@ -190,46 +172,6 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine();
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_14_03
-		/**
-		 * 배열
-		 */
-		private class CE01Array_14<T>
-		{
-			public int NumValues { get; private set; } = 0;
-			public T[] Values { get; private set; } = null;
-
-			public CE01Array_14(int a_nSize = 5)
-			{
-				this.Values = new T[a_nSize];
-			}
-
-			public T this[int a_nIdx]
-			{
-				get
-				{
-					return this.Values[a_nIdx];
-				}
-				set
-				{
-					this.Values[a_nIdx] = value;
-				}
-			}
-
-			public void Add(T a_tVal)
-			{
-				// 배열이 가득찼을 경우
-				if(this.NumValues >= this.Values.Length)
-				{
-					var oValues = this.Values;
-					Array.Resize(ref oValues, this.Values.Length * 2);
-
-					this.Values = oValues;
-				}
-
-				this.Values[this.NumValues++] = a_tVal;
-			}
-		}
-#elif P_EXAMPLE_E01_EXAMPLE_14_04
 		/*
 		 * 인터페이스란?
 		 * - 특정 대상과 상호 작용을 할 수 있는 수단을 의미한다. (즉, 객체 지향 프로그래밍에서 
@@ -295,8 +237,8 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/** 생성자 */
 			public CE01Writer_File_14(string a_oPath_File)
 			{
-				var oDir_Path = Path.GetDirectoryName(a_oPath_File);
-				Directory.CreateDirectory(oDir_Path);
+				var oPath_Dir = Path.GetDirectoryName(a_oPath_File);
+				Directory.CreateDirectory(oPath_Dir);
 
 				var oWStream_File = File.Open(a_oPath_File,
 					FileMode.Create, FileAccess.Write);

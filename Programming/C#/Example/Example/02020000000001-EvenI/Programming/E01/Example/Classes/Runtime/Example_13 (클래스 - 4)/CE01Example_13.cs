@@ -165,7 +165,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #elif P_EXAMPLE_E01_EXAMPLE_13_02
 			var oRandom = new Random();
 			var oListValues = new List<int>();
-			
+
 			for(int i = 0; i < 10; ++i)
 			{
 				oListValues.Add(oRandom.Next(1, 100));
@@ -229,15 +229,15 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 3 차원 벡터 */
 		private class CE01Vec3_13
 		{
-			public float X { get; set; } = 0.0f;
-			public float Y { get; set; } = 0.0f;
-			public float Z { get; set; } = 0.0f;
+			public float X { get; private set; } = 0.0f;
+			public float Y { get; private set; } = 0.0f;
+			public float Z { get; private set; } = 0.0f;
 
-			public float Length => (float)Math.Sqrt(Math.Pow(this.X, 2.0) + Math.Pow(this.Y, 2.0));
+			public float Length =>
+				(float)Math.Sqrt(Math.Pow(this.X, 2.0) + Math.Pow(this.Y, 2.0));
 
 			/** 생성자 */
-			public CE01Vec3_13(float a_fX = 0.0f,
-				float a_fY = 0.0f, float a_fZ = 0.0f)
+			public CE01Vec3_13(float a_fX = 0.0f, float a_fY = 0.0f, float a_fZ = 0.0f)
 			{
 				this.X = a_fX;
 				this.Y = a_fY;
@@ -257,8 +257,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/** 문자열로 변환한다 */
 			public override string ToString()
 			{
-				return string.Format("({0}, {1}, {2})",
-					this.X, this.Y, this.Z);
+				return string.Format("({0}, {1}, {2})", this.X, this.Y, this.Z);
 			}
 
 			/** operator + */

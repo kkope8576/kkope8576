@@ -136,14 +136,14 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				{ 7, 8 }
 			};
 
-			Console.WriteLine("=====> 1 차원 배열 A <=====");
+			Console.WriteLine("=====> 1 차원 배열 - A <=====");
 
 			for(int i = 0; i < oValuesA.Length; ++i)
 			{
 				Console.Write("{0}, ", oValuesA[i]);
 			}
 
-			Console.WriteLine("\n\n=====> 1 차원 배열 B <=====");
+			Console.WriteLine("\n\n=====> 1 차원 배열 - B <=====");
 
 			for(int i = 0; i < oValuesB.Length; ++i)
 			{
@@ -157,7 +157,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.Write("{0}, ", oValuesC[i]);
 			}
 
-			Console.WriteLine("\n\n=====> 2 차원 배열 A <=====");
+			Console.WriteLine("\n\n=====> 2 차원 배열 - A <=====");
 
 			for(int i = 0; i < oMatrixA.GetLength(0); ++i)
 			{
@@ -169,7 +169,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine();
 			}
 
-			Console.WriteLine("\n=====> 2 차원 배열 B <=====");
+			Console.WriteLine("\n=====> 2 차원 배열 - B <=====");
 
 			for(int i = 0; i < oMatrixB.GetLength(0); ++i)
 			{
@@ -205,14 +205,14 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				1, 2, 3, 4, 5
 			};
 
-			Console.WriteLine("=====> 리스트 A <=====");
+			Console.WriteLine("=====> 리스트 - A <=====");
 
 			for(int i = 0; i < oListValuesA.Count; ++i)
 			{
 				Console.Write("{0}, ", oListValuesA[i]);
 			}
 
-			Console.WriteLine("\n\n=====> 리스트 B <=====");
+			Console.WriteLine("\n\n=====> 리스트 - B <=====");
 
 			for(int i = 0; i < oListValuesB.Count; ++i)
 			{
@@ -237,11 +237,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			Console.WriteLine("\n\n=====> 스택 <=====");
 
 			/*
-			 * 스택과 큐에 존재하는 데이터를 가져오고 나면 해당
-			 * 데이터는 컬렉션으로부터 제거되는 특징이 존재한다.
-			 * (즉, 일반적인 컬렉션을 데이터에 접근한다하더라도
-			 * 해당 데이터는 여전히 컬렉션에 존재하지만 스택과
-			 * 큐는 다르다는 것을 알 수 있다.)
+			 * 스택과 큐에 존재하는 데이터를 가져오고 나면 해당 데이터는 컬렉션으로부터 제거되는 
+			 * 특징이 존재한다. (즉, 일반적인 컬렉션을 데이터에 접근한다하더라도 해당 데이터는 
+			 * 여전히 컬렉션에 존재하지만 스택과 큐는 다르다는 것을 알 수 있다.)
 			 */
 			while(oStackValues.Count >= 1)
 			{

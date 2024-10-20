@@ -48,17 +48,25 @@ namespace Example
 		/** 메인 메서드 */
 		public static void Main(string[] args)
 		{
+			Program.Main_Programmin(args);
+			//Program.Main_Structure(args);
+			//Program.Main_Algorithm(args);
+		}
+
+		/** 프로그래밍 메인 메서드 */
+		private static void Main_Programmin(string[] args)
+		{
 			/*
-             * C# 은 . (맴버 접근 연산자) 를 통해 특정 네임 스페이스나 클래스 하위에 접근하는 것이 
-             * 가능하다. (즉, 해당 연산자를 활용하면 특정 클래스 내부에 존재하는 메서드를 호출하는 
-             * 것이 가능하다.)
-             * 
-             * 메서드 (함수) 란?
-             * - 특정 명령문을 포함하고 있는 기능을 의미한다. (즉, 메서드를 실행하면 메서드 내부에 
-             * 존재하는 명령문이 동작한다는 것을 알 수 있다.)
-             * 
-             * 따라서 메서드를 활용하면 여러 기능들을 미리 만들어서 재사용하는 것이 가능하다.
-             */
+			 * C# 은 . (맴버 접근 연산자) 를 통해 특정 네임 스페이스나 클래스 하위에 접근하는 것이 
+			 * 가능하다. (즉, 해당 연산자를 활용하면 특정 클래스 내부에 존재하는 메서드를 호출하는 
+			 * 것이 가능하다.)
+			 * 
+			 * 메서드 (함수) 란?
+			 * - 특정 명령문을 포함하고 있는 기능을 의미한다. (즉, 메서드를 실행하면 메서드 내부에 
+			 * 존재하는 명령문이 동작한다는 것을 알 수 있다.)
+			 * 
+			 * 따라서 메서드를 활용하면 여러 기능들을 미리 만들어서 재사용하는 것이 가능하다.
+			 */
 #if EXAMPLE
 			//_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
 			//_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
@@ -77,10 +85,33 @@ namespace Example
 			_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15.CE01Example_15.Start(args);
 			//_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
 #elif PRACTICE
-			//_02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_01.CP01Practice_01.Start(args);
-			//_02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
-			//_02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_03.CP01Practice_03.Start(args);
-			_02020000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_04.CP01Practice_04.Start(args);
+			// Do Something
+#endif // #if EXAMPLE
+		}
+
+		/** 자료구조 메인 메서드 */
+		private static void Main_Structure(string[] args)
+		{
+#if EXAMPLE
+			_02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
+			//_02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
+			//_02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
+			//_02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
+			//_02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
+			//_02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
+			//_02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
+#elif PRACTICE
+			// Do Something
+#endif // #if EXAMPLE
+		}
+
+		/** 알고리즘 메인 메서드 */
+		private static void Main_Algorithm(string[] args)
+		{
+#if EXAMPLE
+			_02020000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
+#elif PRACTICE
+			// Do Something
 #endif // #if EXAMPLE
 		}
 	}
