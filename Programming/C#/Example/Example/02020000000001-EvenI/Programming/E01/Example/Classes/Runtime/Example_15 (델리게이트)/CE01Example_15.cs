@@ -1,6 +1,6 @@
 //#define P_EXAMPLE_E01_EXAMPLE_15_01
-#define P_EXAMPLE_E01_EXAMPLE_15_02
-#define P_EXAMPLE_E01_EXAMPLE_15_03
+//#define P_EXAMPLE_E01_EXAMPLE_15_02
+//#define P_EXAMPLE_E01_EXAMPLE_15_03
 #define P_EXAMPLE_E01_EXAMPLE_15_04
 
 using System;
@@ -17,14 +17,6 @@ using System.Threading.Tasks;
  * 
  * 또한 C# 은 델리게이트를 활용해서 람다 (Lambda) or 무명 메서드를 구현하는 것이 가능하다.
  * 
- * 람다 및 무명 메서드란?
- * - 일반적인 메서드와 달리 이름이 존재하지 않는 메서드를 의미한다. 따라서 람다 및 무명 메서드를
- * 활용하면 재사용성이 떨어지는 일회성 메서드를 손쉽게 구현하는 것이 가능하다.
- * 
- * 또한 람다 및 무명 메서드는 다른 메서드 내부에서 구현되는 내장 메서드이기 때문에 해당 메서드가
- * 선언 된 영역에 존재하는 지역 변수에 접근하는 것이 가능하다. (즉, 지역 변수에 접근하기 위해서
- * 별도의 데이터를 전달 할 필요가 없다는 것을 의미한다.)
- * 
  * C# 델리게이트 선언 방법
  * - delegate + 반환 형 + 델리게이트 이름 + 매개 변수
  * 
@@ -33,6 +25,14 @@ using System.Threading.Tasks;
  * 
  * 위의 경우 정수 2 개를 입력으로 받고 출력은 존재하지 않는 메서드에 대한 델리게이트를 선언이라는
  * 것을 알 수 있다.
+ * 
+ * 람다 및 무명 메서드란?
+ * - 일반적인 메서드와 달리 이름이 존재하지 않는 메서드를 의미한다. 따라서 람다 및 무명 메서드를
+ * 활용하면 재사용성이 떨어지는 일회성 메서드를 손쉽게 구현하는 것이 가능하다.
+ * 
+ * 또한 람다 및 무명 메서드는 다른 메서드 내부에서 구현되는 내장 메서드이기 때문에 해당 메서드가
+ * 선언 된 영역에 존재하는 지역 변수에 접근하는 것이 가능하다. (즉, 지역 변수에 접근하기 위해서
+ * 별도의 데이터를 전달 할 필요가 없다는 것을 의미한다.)
  * 
  * C# 람다 구현 방법
  * - 매개 변수 + 람다 몸체
@@ -76,19 +76,19 @@ using System.Threading.Tasks;
 public static partial class CE01Extension_15
 {
 	/** 값을 정렬한다 */
-	public static void ExSort<T>(this List<T> a_oSender, Func<T, T, int> a_oCompare)
+	public static void E01ExSort_15<T>(this List<T> a_oSender, Func<T, T, int> a_oE01Compare_15)
 	{
 		for(int i = 1; i < a_oSender.Count; ++i)
 		{
 			int j = 0;
-			T tCompareVal = a_oSender[i];
+			T tE01Compare_15Val = a_oSender[i];
 
-			for(j = i - 1; j >= 0 && a_oCompare(a_oSender[j], tCompareVal) > 0; --j)
+			for(j = i - 1; j >= 0 && a_oE01Compare_15(a_oSender[j], tE01Compare_15Val) > 0; --j)
 			{
 				a_oSender[j + 1] = a_oSender[j];
 			}
 
-			a_oSender[j + 1] = tCompareVal;
+			a_oSender[j + 1] = tE01Compare_15Val;
 		}
 	}
 }
@@ -129,8 +129,8 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.Write("{0:0.00}, ", oListValuesB[i]);
 			}
 
-			oListValuesA.ExSort(CE01Example_15.CompareByAscending);
-			oListValuesB.ExSort(CE01Example_15.CompareByAscending);
+			oListValuesA.E01ExSort_15(E01CompareByAscending_15);
+			oListValuesB.E01ExSort_15(E01CompareByAscending_15);
 
 			Console.WriteLine("\n\n=====> 정렬 후 <=====");
 
@@ -157,10 +157,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			nLhs = int.Parse(oTokens[0]);
 			nRhs = int.Parse(oTokens[1]);
 
-			Compare oCompare = CE01Example_15.CompareInt;
+			E01Compare_15 oE01Compare_15 = E01CompareInt_15;
 
 			Console.WriteLine("\n=====> 비교 결과 <=====");
-			Console.WriteLine("{0} Compare {1} = {2}", nLhs, nRhs, oCompare(nLhs, nRhs));
+			Console.WriteLine("{0} E01Compare_15 {1} = {2}", nLhs, nRhs, oE01Compare_15(nLhs, nRhs));
 
 			Console.Write("\n수식 입력 (+, -, *, /) : ");
 			oTokens = Console.ReadLine().Split();
@@ -169,7 +169,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			nRhs = int.Parse(oTokens[2]);
 
 			char chOperator = char.Parse(oTokens[1]);
-			Calculator oCalc = CE01Example_15.GetCalc(chOperator);
+			E01Calculator_15 oCalc = E01GetCalc_15(chOperator);
 
 			// 수식이 유효 할 경우
 			if(oCalc != null)
@@ -214,7 +214,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine("람다 메서드 호출!");
 			};
 
-			Action oActionB = CE01Example_15.GetAction(nVal);
+			Action oActionB = E01GetAction_15(nVal);
 			Console.WriteLine("결과 : {0}\n", (nIdx >= 0) ? "탐색 성공" : "탐색 실패");
 
 			oActionA();
@@ -243,7 +243,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 따라서 해당 결과를 유도한 경우가 아니라면 델리게이트 체인에는 가능하면 반환 값이 
 			 * 존재하지 않는 메서드를 추가하거나 제거하는 것을 추천한다.
 			 */
-			Printer oPrinter = () =>
+			E01Printer_15 oPrinter = () =>
 			{
 				Console.WriteLine("첫번째 메서드 호출!");
 				return 1;
@@ -274,13 +274,13 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 #if P_EXAMPLE_E01_EXAMPLE_15_01
 		/** 오름차순으로 비교한다 */
-		public static int CompareByAscending<T>(T a_nLhs, T a_nRhs) where T : IComparable
+		public static int E01CompareByAscending_15<T>(T a_nLhs, T a_nRhs) where T : IComparable
 		{
 			return a_nLhs.CompareTo(a_nRhs);
 		}
 
 		/** 내림차순으로 비교한다 */
-		public static int CompareByDescending<T>(T a_nLhs, T a_nRhs) where T : IComparable
+		public static int E01CompareByDescending_15<T>(T a_nLhs, T a_nRhs) where T : IComparable
 		{
 			return a_nRhs.CompareTo(a_nLhs);
 		}
@@ -292,57 +292,57 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 메서드를 제어해야 한다는 것을 알 수 있다.)
 		 */
 		/** 비교 델리게이트 */
-		public delegate int Compare(int a_nLhs, int a_nRhs);
+		public delegate int E01Compare_15(int a_nLhs, int a_nRhs);
 
 		/** 계산 델리게이트 */
-		public delegate decimal Calculator(int a_nLhs, int a_nRhs);
+		public delegate decimal E01Calculator_15(int a_nLhs, int a_nRhs);
 
 		/** 값을 비교한다 */
-		public static int CompareInt(int a_nLhs, int a_nRhs)
+		public static int E01CompareInt_15(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs - a_nRhs;
 		}
 
 		/** 덧셈 결과를 반환한다 */
-		public static decimal GetVal_Sum(int a_nLhs, int a_nRhs)
+		public static decimal E01GetVal_Sum_15(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs + a_nRhs;
 		}
 
 		/** 뺄셈 결과를 반환한다 */
-		public static decimal GetVal_Sub(int a_nLhs, int a_nRhs)
+		public static decimal E01GetVal_Sub_15(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs - a_nRhs;
 		}
 
 		/** 곱셈 결과를 반환한다 */
-		public static decimal GetVal_Mul(int a_nLhs, int a_nRhs)
+		public static decimal E01GetVal_Mul_15(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs * a_nRhs;
 		}
 
 		/** 나눗셈 결과를 반환한다 */
-		public static decimal GetVal_Div(int a_nLhs, int a_nRhs)
+		public static decimal E01GetVal_Div_15(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs / (decimal)a_nRhs;
 		}
 
 		/** 계산 메서드를 반환한다 */
-		public static Calculator GetCalc(char a_chOperator)
+		public static E01Calculator_15 E01GetCalc_15(char a_chOperator)
 		{
 			switch(a_chOperator)
 			{
 				case '+':
-					return GetVal_Sum;
+					return E01GetVal_Sum_15;
 
 				case '-':
-					return GetVal_Sub;
+					return E01GetVal_Sub_15;
 
 				case '*':
-					return GetVal_Mul;
+					return E01GetVal_Mul_15;
 
 				case '/':
-					return GetVal_Div;
+					return E01GetVal_Div_15;
 			}
 
 			return null;
@@ -354,13 +354,13 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 매개 변수를 통해서 전달해주는 것이 기본적인 구조이다.
 		 */
 		/** 값을 비교한다 */
-		//public static bool IsEquals(int a_nVal)
+		//public static bool E01IsEquals_15(int a_nVal)
 		//{
 		//	return a_nVal == nVal;
 		//}
 
 		/** 람다를 반환한다 */
-		public static Action GetAction(int a_nVal)
+		public static Action E01GetAction_15(int a_nVal)
 		{
 			/*
 			 * 람다 메서드는 해당 메서드가 구현되어있는 지역 변수에 접근하는 것이 가능하며
@@ -381,7 +381,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_15_04
 		/** 출력 델리게이트 */
-		public delegate int Printer();
+		public delegate int E01Printer_15();
 #endif // P_EXAMPLE_E01_EXAMPLE_15_01
 	}
 }

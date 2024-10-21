@@ -107,7 +107,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 #if P_EXAMPLE_E01_EXAMPLE_10_01
-		/** 캐릭터 */
+		/**
+		 * 캐릭터
+		 */
 		private class CE01Character_10
 		{
 			public int m_nLV = 0;
@@ -132,7 +134,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_10_02
-		/** 캐릭터 */
+		/**
+		 * 캐릭터
+		 */
 		private class CE01Character_10
 		{
 			public int m_nLV = 0;
@@ -223,7 +227,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 접근 할 필요가 있을 경우 접근자 메서드를 제공해야한다. (즉, 클래스 외부에서는 접근자 
 		 * 메서드를 통해 private 수준으로 보호되고 있는 멤버에 간접적으로 접근하는 것이 가능하다.)
 		 */
-		/** 캐릭터 */
+		/**
+		 * 캐릭터
+		 */
 		private class CE01Character_10
 		{
 			private int m_nLV = 0;

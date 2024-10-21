@@ -109,7 +109,7 @@ using System.Threading.Tasks;
 public static class CE01Extension_13
 {
 	/** 합계를 반환한다 */
-	public static int ExGetVal_Sum(this List<int> a_oSender)
+	public static int E01ExGetVal_Sum_13(this List<int> a_oSender)
 	{
 		int nVal_Sum = 0;
 
@@ -122,7 +122,7 @@ public static class CE01Extension_13
 	}
 
 	/** 값을 출력한다 */
-	public static void ExPrintValues(this List<int> a_oSender)
+	public static void E01ExPrintValues_13(this List<int> a_oSender)
 	{
 		for(int i = 0; i < a_oSender.Count; ++i)
 		{
@@ -172,26 +172,28 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine("=====> 리스트 <=====");
-			oListValues.ExPrintValues();
+			oListValues.E01ExPrintValues_13();
 
-			Console.WriteLine("\n합계 : {0}", oListValues.ExGetVal_Sum());
+			Console.WriteLine("\n합계 : {0}", oListValues.E01ExGetVal_Sum_13());
 #elif P_EXAMPLE_E01_EXAMPLE_13_03
-			CE01Vec3_13 oVec3A = new CE01Vec3_13(10.0f, 0.0f, 0.0f);
-			CE01Vec3_13 oVec3B = new CE01Vec3_13(0.0f, 10.0f, 0.0f);
+			CE01Vec_13 oVecA = new CE01Vec_13(10.0f, 0.0f, 0.0f);
+			CE01Vec_13 oVecB = new CE01Vec_13(0.0f, 10.0f, 0.0f);
 
-			oVec3A.Normalize();
-			oVec3B.Normalize();
+			oVecA.Normalize();
+			oVecB.Normalize();
 
 			Console.WriteLine("=====> 연산자 오버로딩 <=====");
-			Console.WriteLine("{0} + {1} = {2}", oVec3A, oVec3B, oVec3A + oVec3B);
-			Console.WriteLine("{0} - {1} = {2}", oVec3A, oVec3B, oVec3A - oVec3B);
-			Console.WriteLine("{0} * {1} = {2}", oVec3A, 10.0f, oVec3A * 10.0f);
-			Console.WriteLine("{0} / {1} = {2}", oVec3A, 10.0f, oVec3A / 10.0f);
+			Console.WriteLine("{0} + {1} = {2}", oVecA, oVecB, oVecA + oVecB);
+			Console.WriteLine("{0} - {1} = {2}", oVecA, oVecB, oVecA - oVecB);
+			Console.WriteLine("{0} * {1} = {2}", oVecA, 10.0f, oVecA * 10.0f);
+			Console.WriteLine("{0} / {1} = {2}", oVecA, 10.0f, oVecA / 10.0f);
 #endif
 		}
 
 #if P_EXAMPLE_E01_EXAMPLE_13_01
-		/** 부모 클래스 */
+		/**
+		 * 부모 클래스
+		 */
 		private abstract class CBase
 		{
 			public int m_nVal = 0;
@@ -213,7 +215,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			public abstract void ShowInfo();
 		}
 
-		/** 자식 클래스 */
+		/**
+		 * 자식 클래스
+		 */
 		private class CE01Derived_13 : CBase
 		{
 			public float m_fVal = 0.0f;
@@ -226,8 +230,10 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_13_03
-		/** 3 차원 벡터 */
-		private class CE01Vec3_13
+		/**
+		 * 벡터
+		 */
+		private class CE01Vec_13
 		{
 			public float X { get; private set; } = 0.0f;
 			public float Y { get; private set; } = 0.0f;
@@ -237,7 +243,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				(float)Math.Sqrt(Math.Pow(this.X, 2.0) + Math.Pow(this.Y, 2.0));
 
 			/** 생성자 */
-			public CE01Vec3_13(float a_fX = 0.0f, float a_fY = 0.0f, float a_fZ = 0.0f)
+			public CE01Vec_13(float a_fX = 0.0f, float a_fY = 0.0f, float a_fZ = 0.0f)
 			{
 				this.X = a_fX;
 				this.Y = a_fY;
@@ -261,30 +267,30 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			/** operator + */
-			public static CE01Vec3_13 operator +(CE01Vec3_13 a_oLhs, CE01Vec3_13 a_oRhs)
+			public static CE01Vec_13 operator +(CE01Vec_13 a_oLhs, CE01Vec_13 a_oRhs)
 			{
-				return new CE01Vec3_13(a_oLhs.X + a_oRhs.X,
+				return new CE01Vec_13(a_oLhs.X + a_oRhs.X,
 					a_oLhs.Y + a_oRhs.Y, a_oLhs.Z + a_oRhs.Z);
 			}
 
 			/** operator - */
-			public static CE01Vec3_13 operator -(CE01Vec3_13 a_oLhs, CE01Vec3_13 a_oRhs)
+			public static CE01Vec_13 operator -(CE01Vec_13 a_oLhs, CE01Vec_13 a_oRhs)
 			{
-				return new CE01Vec3_13(a_oLhs.X - a_oRhs.X,
+				return new CE01Vec_13(a_oLhs.X - a_oRhs.X,
 					a_oLhs.Y - a_oRhs.Y, a_oLhs.Z - a_oRhs.Z);
 			}
 
 			/** operator * */
-			public static CE01Vec3_13 operator *(CE01Vec3_13 a_oLhs, float a_fRhs)
+			public static CE01Vec_13 operator *(CE01Vec_13 a_oLhs, float a_fRhs)
 			{
-				return new CE01Vec3_13(a_oLhs.X * a_fRhs,
+				return new CE01Vec_13(a_oLhs.X * a_fRhs,
 					a_oLhs.Y * a_fRhs, a_oLhs.Z * a_fRhs);
 			}
 
 			/** operator / */
-			public static CE01Vec3_13 operator /(CE01Vec3_13 a_oLhs, float a_fRhs)
+			public static CE01Vec_13 operator /(CE01Vec_13 a_oLhs, float a_fRhs)
 			{
-				return new CE01Vec3_13(a_oLhs.X / a_fRhs,
+				return new CE01Vec_13(a_oLhs.X / a_fRhs,
 					a_oLhs.Y / a_fRhs, a_oLhs.Z / a_fRhs);
 			}
 		}

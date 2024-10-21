@@ -120,7 +120,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 위와 같이 프로퍼티를 활용하면 변수에 접근하는 듯이 명령문을 작성하는 것이 가능하다. 
 		 * (즉, 전통적인 방식에 비해 가독성이 향상된다는 것을 알 수 있다.)
 		 */
-		/** 캐릭터 */
+		/**
+		 * 캐릭터
+		 */
 		private class CE01Character_11
 		{
 			private int m_nLV = 0;
@@ -185,7 +187,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_11_02
-		/** 배열 */
+		/**
+		 * 배열
+		 */
 		private class CE01Array_11
 		{
 			private int[] m_oValues = null;
@@ -245,7 +249,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 위와 같이 멤버 앞에 static 키워드를 명시하면 해당 멤버는 클래스에 종속되는 클래스 
 		 * 멤버라는 것을 의미한다.
 		 */
-		/** 데이터 */
+		/**
+		 * 데이터
+		 */
 		private class CE01Data_11
 		{
 			public int m_nVal = 0;
@@ -274,7 +280,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 		}
 
-		/** 데이터 저장소 */
+		/**
+		 * 데이터 저장소
+		 */
 		private class CE01Storage_Data_11
 		{
 			public int m_nVal = 0;

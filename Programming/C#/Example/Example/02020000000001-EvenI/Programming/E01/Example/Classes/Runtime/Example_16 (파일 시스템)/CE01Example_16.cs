@@ -1,5 +1,5 @@
-#define P_EXAMPLE_E01_EXAMPLE_16_01
-#define P_EXAMPLE_E01_EXAMPLE_16_02
+//#define P_EXAMPLE_E01_EXAMPLE_16_01
+//#define P_EXAMPLE_E01_EXAMPLE_16_02
 #define P_EXAMPLE_E01_EXAMPLE_16_03
 
 using System;
@@ -41,8 +41,7 @@ using System.Threading.Tasks;
  * - File.Open
  * 
  * Ex)
- * FileStream oWStream = File.Open("SomeFile.txt", 
- *		FileMode.Create, FileAccess.Write);
+ * FileStream oWStream = File.Open("SomeFile.txt", FileMode.Create, FileAccess.Write);
  * 
  * 위와 같이 File.Open 메서드를 활용하면 파일을 대상으로 데이터를 입/출력 할 수 있는 스트림을 
  * 생성하는 것이 가능하다. (즉, 프로그램에서 파일을 개방한다는 것은 파일과 데이터를 주고 받을 수 
@@ -58,6 +57,12 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
+			// 디렉토리가 없을 경우
+			if(!Directory.Exists("../../Resources/Example_16"))
+			{
+				Directory.CreateDirectory("../../Resources/Example_16");
+			}
+
 #if P_EXAMPLE_E01_EXAMPLE_16_01
 			/*
 			 * File.Open 메서드는 2 개의 역할을 수행한다.

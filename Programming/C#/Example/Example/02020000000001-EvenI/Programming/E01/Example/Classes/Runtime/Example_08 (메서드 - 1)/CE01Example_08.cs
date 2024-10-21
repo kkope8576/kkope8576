@@ -68,9 +68,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 또한 입력 값을 명시하는 순서는 메서드의 매개 변수의 순서와 동일해야한다. (즉, 입력 
 			 * 값은 차례대로 각 매개 변수에 전달 된다는 것을 알 수 있다.
 			 */
-			decimal dmResult = GetResult_Calc(nValA,
-				chOperator, nValB);
-
+			decimal dmResult = E01GetResult_Calc_08(nValA, chOperator, nValB);
 			Console.WriteLine("결과 : {0}", dmResult);
 #elif P_EXAMPLE_E01_EXAMPLE_08_02
 			int nValA = 10;
@@ -104,12 +102,12 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 아니라 참조를 전달 받을 수 있는 매개 변수라는 것을 C# 컴파일러에게 알려 줄 필요가 
 			 * 있다.
 			 */
-			SwapByVal(nValA, nValB);
+			E01SwapByVal_08(nValA, nValB);
 
 			Console.WriteLine("=====> 값에 의한 호출 <=====");
 			Console.WriteLine("{0}, {1}", nValA, nValB);
 
-			SwapByRef(ref nValA, ref nValB);
+			E01SwapByRef_08(ref nValA, ref nValB);
 
 			Console.WriteLine("\n=====> 참조에 의한 호출 <=====");
 			Console.WriteLine("{0}, {1}", nValA, nValB);
@@ -130,8 +128,8 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 특정 값을 설정해줘야하기 때문이다. (즉, out 키워드로 참조를 전달 받을 경우 반드시 
 			 * 특정 값으로 설정해줘야하며 그렇지 않으면 컴파일 에러가 발생한다는 것을 알 수 있다.)
 			 */
-			SetValByRef(ref nValA, 10);
-			SetValByOut(out nValB, 20);
+			E01SetValByRef_08(ref nValA, 10);
+			E01SetValByOut_08(out nValB, 20);
 
 			Console.WriteLine("{0}, {1}", nValA, nValB);
 #endif
@@ -139,7 +137,8 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 #if P_EXAMPLE_E01_EXAMPLE_08_01
 		/** 수식 결과를 반환한다 */
-		private static decimal GetResult_Calc(int a_nValA, char a_chOperator, int a_nValB)
+		private static decimal E01GetResult_Calc_08(int a_nValA, 
+			char a_chOperator, int a_nValB)
 		{
 			switch(a_chOperator)
 			{
@@ -171,7 +170,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_08_02
 		/** 값을 교환한다 */
-		private static void SwapByVal(int a_nValA, int a_nValB)
+		private static void E01SwapByVal_08(int a_nValA, int a_nValB)
 		{
 			int nTemp = a_nValA;
 			a_nValA = a_nValB;
@@ -179,7 +178,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 값을 교환한다 */
-		private static void SwapByRef(ref int a_nValA, ref int a_nValB)
+		private static void E01SwapByRef_08(ref int a_nValA, ref int a_nValB)
 		{
 			int nTemp = a_nValA;
 			a_nValA = a_nValB;
@@ -187,13 +186,13 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_08_03
 		/** 값을 변경한다 */
-		private static void SetValByRef(ref int a_nTarget, int a_nVal)
+		private static void E01SetValByRef_08(ref int a_nTarget, int a_nVal)
 		{
 			a_nTarget = a_nVal;
 		}
 
 		/** 값을 변경한다 */
-		private static void SetValByOut(out int a_nTarget, int a_nVal)
+		private static void E01SetValByOut_08(out int a_nTarget, int a_nVal)
 		{
 			a_nTarget = a_nVal;
 		}

@@ -142,7 +142,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 #if P_EXAMPLE_E01_EXAMPLE_12_01
-		/** 부모 클래스 */
+		/**
+		 * 부모 클래스
+		 */
 		private class CE01Base_12
 		{
 			public int m_nVal = 0;
@@ -156,7 +158,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 		}
 
-		/** 자식 클래스 */
+		/**
+		 * 자식 클래스
+		 */
 		private class CE01Derived_12 : CE01Base_12
 		{
 			public string m_oStr = string.Empty;
@@ -185,7 +189,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_12_02
-		/** 부모 클래스 */
+		/**
+		 * 부모 클래스
+		 */
 		private class CE01Base_12
 		{
 			public int m_nVal = 0;
@@ -212,7 +218,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 		}
 
-		/** 자식 클래스 */
+		/**
+		 * 자식 클래스
+		 */
 		private class CE01Derived_12 : CE01Base_12
 		{
 			public string m_oStr = string.Empty;
@@ -246,7 +254,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_12_03
-		/** 부모 클래스 */
+		/**
+		 * 부모 클래스
+		 */
 		private class CE01Base_12
 		{
 			public int m_nVal = 0;
@@ -286,7 +296,9 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 		}
 
-		/** 자식 클래스 */
+		/**
+		 * 자식 클래스
+		 */
 		private class CE01Derived_12 : CE01Base_12
 		{
 			public string m_oStr = string.Empty;

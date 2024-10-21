@@ -100,27 +100,27 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 가변 길이 매개 변수를 활용하면 C# 컴파일러가 메서드의 입력 데이터를 배열의 형태로 
 			 * 전달해준다는 것을 알 수 있다.
 			 */
-			int nVal_SumA = GetVal_Sum(1, 2, 3);
-			int nVal_SumB = GetVal_Sum(1, 2, 3, 4, 5, 6);
-			int nVal_SumC = GetVal_Sum(1, 2, 3, 4, 5, 6, 7, 8, 9);
+			int nVal_SumA = E01GetVal_Sum_09(1, 2, 3);
+			int nVal_SumB = E01GetVal_Sum_09(1, 2, 3, 4, 5, 6);
+			int nVal_SumC = E01GetVal_Sum_09(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
 			Console.WriteLine("{0}, {1}, {2}",
 				nVal_SumA, nVal_SumB, nVal_SumC);
 #elif P_EXAMPLE_E01_EXAMPLE_09_02
-			int nVal_MaxA = GetVal_Max(10, 20);
-			int nVal_MaxB = GetVal_Max(10, 20, 30);
+			int nVal_MaxA = E01GetVal_Max_09(10, 20);
+			int nVal_MaxB = E01GetVal_Max_09(10, 20, 30);
 
 			Console.WriteLine("{0}, {1}", nVal_MaxA, nVal_MaxB);
 #elif P_EXAMPLE_E01_EXAMPLE_09_03
-			int nVal_SumA = GetVal_Sum(10);
-			int nVal_SumB = GetVal_Sum(10, 20);
+			int nVal_SumA = E01GetVal_Sum_09(10);
+			int nVal_SumB = E01GetVal_Sum_09(10, 20);
 
 			/*
 			 * 아래의 경우 네임드 매개 변수를 활용해서 입력 할 데이터를 전달 받을 매개 변수를 직접 
 			 * 명시했다는 것을 알 수 있다. (즉, 데이터의 입력 순서와 매개 변수의 순서가 서로 
 			 * 다르다는 것을 알 수 있다.)
 			 */
-			int nVal_SumC = GetVal_Sum(a_nValB: 10, a_nValA: 20);
+			int nVal_SumC = E01GetVal_Sum_09(a_nValB: 10, a_nValA: 20);
 
 			Console.WriteLine("{0}, {1}, {2}", 
 				nVal_SumA, nVal_SumB, nVal_SumC);
@@ -129,7 +129,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 #if P_EXAMPLE_E01_EXAMPLE_09_01
 		/** 합계를 반환한다 */
-		private static int GetVal_Sum(params int[] a_oValues)
+		private static int E01GetVal_Sum_09(params int[] a_oValues)
 		{
 			int nVal_Sum = 0;
 
@@ -142,21 +142,20 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_09_02
 		/** 최대 값을 반환한다 */
-		private static int GetVal_Max(int a_nValA, int a_nValB)
+		private static int E01GetVal_Max_09(int a_nValA, int a_nValB)
 		{
 			return Math.Max(a_nValA, a_nValB);
 		}
 
 		/** 최대 값을 반환한다 */
-		private static int GetVal_Max(int a_nValA, 
-			int a_nValB, int a_nValC)
+		private static int E01GetVal_Max_09(int a_nValA, int a_nValB, int a_nValC)
 		{
 			int nVal_Max = Math.Max(a_nValA, a_nValB);
 			return Math.Max(nVal_Max, a_nValC);
 		}
 #elif P_EXAMPLE_E01_EXAMPLE_09_03
 		/** 합계를 반환한다 */
-		private static int GetVal_Sum(int a_nValA, int a_nValB = 0)
+		private static int E01GetVal_Sum_09(int a_nValA, int a_nValB = 0)
 		{
 			return a_nValA + a_nValB;
 		}
