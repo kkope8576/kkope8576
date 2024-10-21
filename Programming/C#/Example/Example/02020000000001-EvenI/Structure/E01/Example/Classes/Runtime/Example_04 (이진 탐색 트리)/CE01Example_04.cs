@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * 이진 탐색 트리 (Binary Search Tree) 란?
+ * - 
+ */
 namespace Example._02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_04
 {
 	/**

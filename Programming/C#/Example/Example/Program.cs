@@ -85,7 +85,7 @@ namespace Example
 			_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15.CE01Example_15.Start(args);
 			//_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
 #elif PRACTICE
-			// Do Something
+
 #endif // #if EXAMPLE
 		}
 
@@ -101,7 +101,7 @@ namespace Example
 			//_02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 #elif PRACTICE
-			// Do Something
+
 #endif // #if EXAMPLE
 		}
 
@@ -111,7 +111,7 @@ namespace Example
 #if EXAMPLE
 			_02020000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
 #elif PRACTICE
-			// Do Something
+
 #endif // #if EXAMPLE
 		}
 	}
