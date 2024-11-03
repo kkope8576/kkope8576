@@ -48,8 +48,8 @@ namespace Example
 		/** 메인 메서드 */
 		public static void Main(string[] args)
 		{
-			Program.Main_Programmin(args);
-			//Program.Main_Structure(args);
+			//Program.Main_Programmin(args);
+			Program.Main_Structure(args);
 			//Program.Main_Algorithm(args);
 		}
 
@@ -82,8 +82,8 @@ namespace Example
 			//_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_12.CE01Example_12.Start(args);
 			//_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_13.CE01Example_13.Start(args);
 			//_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_14.CE01Example_14.Start(args);
-			_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15.CE01Example_15.Start(args);
-			//_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
+			//_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15.CE01Example_15.Start(args);
+			_02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
 #elif PRACTICE
 
 #endif // #if EXAMPLE
@@ -110,6 +110,13 @@ namespace Example
 		{
 #if EXAMPLE
 			_02020000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
+			//_02020000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
+			//_02020000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
+			//_02020000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
+			//_02020000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
+			//_02020000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
+			//_02020000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
+			//_02020000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
 #elif PRACTICE
 
 #endif // #if EXAMPLE

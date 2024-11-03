@@ -80,7 +80,19 @@ namespace Example._02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 				return;
 			}
 
-			for(int i = nResult; i < this.NumValues - 1; ++i)
+			this.RemoveValAt(nResult);
+		}
+
+		/** 값을 제거한다 */
+		public void RemoveValAt(int a_nIdx)
+		{
+			// 값 제거가 불가능 할 경우
+			if(a_nIdx < 0 || a_nIdx >= this.NumValues)
+			{
+				return;
+			}
+
+			for(int i = a_nIdx; i < this.NumValues - 1; ++i)
 			{
 				this.Values[i] = this.Values[i + 1];
 			}

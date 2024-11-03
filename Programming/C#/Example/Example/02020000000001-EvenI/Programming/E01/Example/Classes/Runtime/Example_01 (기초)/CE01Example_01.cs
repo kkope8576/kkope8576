@@ -81,7 +81,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
              * Console.Write vs Console.WriteLine
              * - 두 메서드 모두 콘솔 창에 특정 문장을 출력하는 역할을 수행한다.
              * 
-             * Console.Write 메서드는 단순히 문장을 출력하는 반면, Console.WriteLine 메서드는 
+             * Console.Write 메서드는 단순히 문장을 출력하는 반면 Console.WriteLine 메서드는 
              * 문장을 출력 후 개행 처리가 자동적으로 이루어지는 차이점이 존재한다.
              */
 			Console.WriteLine("Hello, World!");

@@ -156,7 +156,7 @@ namespace Example._02020000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			}
 		}
 
-		/** 노드를 순회한다 */
+		/** 값을 순회한다 */
 		public void Enumerate(EOrder a_eOrder, Action<T> a_oCallback)
 		{
 			switch(a_eOrder)

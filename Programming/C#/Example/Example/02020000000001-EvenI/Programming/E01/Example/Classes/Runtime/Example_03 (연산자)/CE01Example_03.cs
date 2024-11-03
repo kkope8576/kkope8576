@@ -62,7 +62,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
              * - 두 메서드 모두 문자열 데이터를 특정 자료형 데이터로 변환하는 역할을 수행한다.
              * 
              * Parse 메서드는 데이터가 변환이 불가능 할 경우 내부적으로 런타임 에러가 발생하는 
-             * 반면, TryParse 메서드는 변환이 불가능 할 경우 해당 변환을 무시하기 때문에 좀 더 
+             * 반면 TryParse 메서드는 변환이 불가능 할 경우 해당 변환을 무시하기 때문에 좀 더 
              * 안전하게 사용하는 것이 가능하다.
              * 
              * 또한 TryParse 메서드는 변환에 대한 성공 여부를 메서드의 반환 값으로 돌려주기 
@@ -139,7 +139,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
              * 전위 증감 연산자 vs 후위 증감 연산자
              * - 두 연산자 모두 변수가 지니고 있는 값을 변경하는 역할을 수행한다.
              * 
-             * 전위 증감 연산자는 선 증감 후 연산에 순서로 사용되는 반면, 후위 증감 연산자는 
+             * 전위 증감 연산자는 선 증감 후 연산에 순서로 사용되는 반면 후위 증감 연산자는 
              * 선 연산 후 증감 순서가 사용되는 차이점이 존재한다.
              * 
              * Ex)
@@ -149,7 +149,7 @@ namespace Example._02020000000001_EvenI.Programming.E01.Example.Classes.Runtime.
              * int nResultA = ++nValA;      <- 1
              * int nResultB = nValB++;      <- 0
              * 
-             * 위의 경우 nResultA 변수에는 값이 증가 된 1 값이 할당되는 반면, nResultB 변수에는 
+             * 위의 경우 nResultA 변수에는 값이 증가 된 1 값이 할당되는 반면 nResultB 변수에는 
              * 0 이 할당된다는 것을 알 수 있다.
              * 
              * 증감 연산자는 동일한 라인에 여러번 명시 할 경우 컴파일러에 따라 결과가 달라질 수 
