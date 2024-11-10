@@ -1,5 +1,5 @@
 /*
- * 자료구조 과제 - 1
+ * 자료구조 과제 1
  * - 단방향 연결 리스트 구현하기
  */
 
@@ -29,6 +29,7 @@
  */
 #define EXAMPLE
 #define PRACTICE
+#define SOLUTION
 
 /*
  * 네임스페이스란?
@@ -89,8 +90,6 @@ namespace Example
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_14.CE01Example_14.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15.CE01Example_15.Start(args);
 			_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
-#elif PRACTICE
-
 #endif // #if EXAMPLE
 		}
 
@@ -107,6 +106,8 @@ namespace Example
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 #elif PRACTICE
 
+#elif SOLUTION
+			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 #endif // #if EXAMPLE
 		}
 
@@ -122,8 +123,6 @@ namespace Example
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
-#elif PRACTICE
-
 #endif // #if EXAMPLE
 		}
 	}
