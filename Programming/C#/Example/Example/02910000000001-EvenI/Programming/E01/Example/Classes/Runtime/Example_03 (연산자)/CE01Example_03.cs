@@ -20,7 +20,7 @@ using System.Threading.Tasks;
  */
 namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_03
 {
-	/**
+	/**	
 	 * Example 3
 	 */
 	internal class CE01Example_03
@@ -63,7 +63,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
              * 
              * Parse 메서드는 데이터가 변환이 불가능 할 경우 내부적으로 런타임 에러가 발생하는 
              * 반면 TryParse 메서드는 변환이 불가능 할 경우 해당 변환을 무시하기 때문에 좀 더 
-             * 안전하게 사용하는 것이 가능하다.
+             * 안전하게 사용하는 것이 가능하다.	
              * 
              * 또한 TryParse 메서드는 변환에 대한 성공 여부를 메서드의 반환 값으로 돌려주기 
              * 때문에 해당 값을 이용하면 간단하게 변환에 대한 성공 여부에 프로그램을 제어하는 것이 
