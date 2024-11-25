@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_02
+namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_01
 {
     /**
 	 * 연결 리스트
@@ -72,6 +67,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
         public void InsertVal(int a_nIdx, T a_tVal)
         {
             var oNode_Next = this.FindNodeAt(a_nIdx);
+			var oNode_Prev = this.FindNodeAt(a_nIdx - 1);
 
             // 노드가 없을 경우
             if (oNode_Next == null)
@@ -79,9 +75,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
                 return;
             }
 
-            var oNode = this.CreateNode(a_tVal);
-            var oNode_Prev = oNode_Next.Node_Next;
-                
+            var oNode = this.CreateNode(a_tVal);    
             oNode.Node_Next = oNode_Next;
 
             // 이전 노드가 존재 할 경우
@@ -102,7 +96,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
         /** 값을 제거한다 */
         public void RemoveVal(T a_tVal)
         {
-            var oNode_Remove = this.FindNode(a_tVal);
+            var oNode_Remove = this.FindNode(a_tVal, out CNode oNode_Prev);
 
             // 제거가 불가능 할 경우
             if (oNode_Remove == null)
@@ -118,12 +112,6 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
                 oNode_Prev.Node_Next = oNode_Next;
             }
 
-            // 다음 노드가 존재 할 경우
-            if (oNode_Next != null)
-            {
-                oNode_Next.Node_Next = oNode_Prev;
-            }
-
             // 헤드 노드 일 경우
             if (oNode_Remove == this.Node_Head)
             {
@@ -136,15 +124,23 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
         /** 노드를 탐색한다 */
         private CNode FindNode(T a_tVal)
         {
-            var oNode = this.Node_Head;
-
-            while (oNode != null && oNode.Val.CompareTo(a_tVal) != 0)
-            {
-                oNode = oNode.Node_Next;
-            }
-
-            return oNode;
+			return this.FindNode(a_tVal, out CNode oNode_Prev);
         }
+
+		/** 노드를 탐색한다 */
+		private CNode FindNode(T a_tVal, out CNode a_oOutNode_Prev)
+		{
+			var oNode = this.Node_Head;
+			a_oOutNode_Prev = null;
+
+			while(oNode != null && oNode.Val.CompareTo(a_tVal) != 0)
+			{
+				a_oOutNode_Prev = oNode;
+				oNode = oNode.Node_Next;
+			}
+
+			return oNode;
+		}
 
         /** 노드를 탐색한다 */
         private CNode FindNodeAt(int a_nIdx)
