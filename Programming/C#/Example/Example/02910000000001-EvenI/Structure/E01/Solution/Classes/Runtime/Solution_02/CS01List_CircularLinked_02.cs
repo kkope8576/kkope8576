@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_01
+namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_02
 {
 	/**
-	 * 연결 리스트
+	 * 원형 연결 리스트
 	 */
-	internal class CS01List_Linked_01<T> where T : IComparable
+	internal class CS01List_CircularLinked_02<T> where T : IComparable
 	{
 		/**
 		 * 노드
@@ -21,7 +21,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.S
 		};
 
 		public int NumValues { get; private set; } = 0;
-		public CNode Node_Head { get; private set; } = null;
+		public CNode Node_Tail { get; private set; } = null;
 
 		/** 인덱서 */
 		public T this[int a_nIdx]
@@ -42,23 +42,18 @@ namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.S
 		{
 			var oNode = this.CreateNode(a_tVal);
 
-			// 헤드 노드가 없을 경우
-			if(this.Node_Head == null)
+			// 꼬리 노드가 없을 경우
+			if(this.Node_Tail == null)
 			{
-				this.Node_Head = oNode;
+				oNode.Node_Next = oNode;
 			}
 			else
 			{
-				var oNode_Tail = this.Node_Head;
-
-				while(oNode_Tail.Node_Next != null)
-				{
-					oNode_Tail = oNode_Tail.Node_Next;
-				}
-
-				oNode_Tail.Node_Next = oNode;
+				oNode.Node_Next = this.Node_Tail.Node_Next;
+				this.Node_Tail.Node_Next = oNode;
 			}
 
+			this.Node_Tail = oNode;
 			this.NumValues += 1;
 		}
 
@@ -76,18 +71,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.S
 			var oNode = this.CreateNode(a_tVal);
 			oNode.Node_Next = oNode_Next;
 
-			// 이전 노드가 존재 할 경우
-			if(oNode_Prev != null)
-			{
-				oNode_Prev.Node_Next = oNode;
-			}
-
-			// 헤드 노드 일 경우
-			if(this.Node_Head == oNode_Next)
-			{
-				this.Node_Head = oNode;
-			}
-
+			oNode_Prev.Node_Next = oNode;
 			this.NumValues += 1;
 		}
 
@@ -103,35 +87,38 @@ namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.S
 			}
 
 			var oNode_Next = oNode_Remove.Node_Next;
+			oNode_Prev.Node_Next = oNode_Next;
 
-			// 이전 노드가 존재 할 경우
-			if(oNode_Prev != null)
+			// 꼬리 노드 일 경우
+			if(oNode_Remove == this.Node_Tail)
 			{
-				oNode_Prev.Node_Next = oNode_Next;
-			}
-
-			// 헤드 노드 일 경우
-			if(oNode_Remove == this.Node_Head)
-			{
-				this.Node_Head = oNode_Next;
+				this.Node_Tail = oNode_Prev;
 			}
 
 			this.NumValues -= 1;
 		}
 
 		/** 노드를 탐색한다 */
-		private CNode FindNode(T a_tVal, out CNode oOutNode_Prev)
+		private CNode FindNode(T a_tVal, out CNode a_oOutNode_Prev)
 		{
-			var oNode = this.Node_Head;
-			oOutNode_Prev = null;
+			a_oOutNode_Prev = this.Node_Tail;
 
-			while(oNode != null && oNode.Val.CompareTo(a_tVal) != 0)
+			// 노드 탐색이 불가능 할 경우
+			if(this.Node_Tail == null)
 			{
-				oOutNode_Prev = oNode;
+				return null;
+			}
+
+			int i = 0;
+			var oNode = this.Node_Tail.Node_Next;
+
+			for(i = 0; i < this.NumValues && oNode.Val.CompareTo(a_tVal) != 0; ++i)
+			{
+				a_oOutNode_Prev = oNode;
 				oNode = oNode.Node_Next;
 			}
 
-			return oNode;
+			return (i < this.NumValues) ? oNode : null;
 		}
 
 		/** 노드를 탐색한다 */
@@ -143,16 +130,24 @@ namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.S
 		/** 노드를 탐색한다 */
 		private CNode FindNodeAt(int a_nIdx, out CNode a_oOutNode_Prev)
 		{
-			var oNode = this.Node_Head;
-			a_oOutNode_Prev = null;
+			a_oOutNode_Prev = this.Node_Tail;
 
-			for(int i = 0; i < a_nIdx; ++i)
+			// 노드 탐색이 불가능 할 경우
+			if(this.Node_Tail == null)
+			{
+				return null;
+			}
+
+			int i = 0;
+			var oNode = this.Node_Tail.Node_Next;
+
+			for(i = 0; i < a_nIdx; ++i)
 			{
 				a_oOutNode_Prev = oNode;
 				oNode = oNode.Node_Next;
 			}
 
-			return oNode;
+			return (i < this.NumValues) ? oNode : null;
 		}
 
 		/** 노드를 생성한다 */
