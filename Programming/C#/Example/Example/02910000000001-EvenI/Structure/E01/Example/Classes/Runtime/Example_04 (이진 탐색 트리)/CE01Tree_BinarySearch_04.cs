@@ -156,6 +156,27 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			}
 		}
 
+		/** 값을 탐색한다 */
+		public CNode FindVal(T a_tVal)
+		{
+			var oNode = this.Node_Root;
+
+			while(oNode != null && a_tVal.CompareTo(oNode.Val) != 0)
+			{
+				// 왼쪽 노드로 이동해야 될 경우
+				if(a_tVal.CompareTo(oNode.Val) < 0)
+				{
+					oNode = oNode.Node_LChild;
+				}
+				else
+				{
+					oNode = oNode.Node_RChild;
+				}
+			}
+
+			return oNode;
+		}
+
 		/** 값을 순회한다 */
 		public void Enumerate(EOrder a_eOrder, Action<T> a_oCallback)
 		{
