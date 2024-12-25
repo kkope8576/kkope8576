@@ -63,13 +63,13 @@ namespace Example
 		/** 메인 메서드 */
 		public static void Main(string[] args)
 		{
-			//Program.Main_Programmin(args);
+			//Program.Main_Programming(args);
 			Program.Main_Structure(args);
 			//Program.Main_Algorithm(args);
 		}
 
 		/** 프로그래밍 메인 메서드 */
-		private static void Main_Programmin(string[] args)
+		private static void Main_Programming(string[] args)
 		{
 			/*
 			 * C# 은 . (맴버 접근 연산자) 를 통해 특정 네임 스페이스나 클래스 하위에 접근하는 것이 
