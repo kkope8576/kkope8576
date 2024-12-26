@@ -38,8 +38,8 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
              * 적절하게 제어 할 필요가 있다.
              * 
              * Ex)
-             * string oInputStr = Console.ReadLine();
-             * int.TryParse(oInputStr, out int nVal);
+             * string oStr_Input = Console.ReadLine();
+             * int.TryParse(oStr_Input, out int nVal);
              * 
              * 위의 경우 읽어들인 문자열을 정수 데이터로 변환한다는 것을 알 수 있다.
              * 
