@@ -45,7 +45,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			if(this.Node_Root == null)
 			{
 				this.Node_Root = oNode;
-				return;
+				return;	
 			}
 
 			var oNode_Child = this.Node_Root;
@@ -124,7 +124,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			if(oNode_Remove == this.Node_Root)
 			{
 				this.Node_Root = (this.Node_Root.Node_LChild != null) ?
-					this.Node_Root.Node_LChild : this.Node_Root.Node_RChild;
+						this.Node_Root.Node_LChild : this.Node_Root.Node_RChild;
 
 				return;
 			}
