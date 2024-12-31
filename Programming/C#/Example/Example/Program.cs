@@ -4,6 +4,12 @@
  * 
  * 자료구조 과제 2
  * - 단방향 원형 연결 리스트 구현하기
+ * 
+ * 자료구조 과제 3
+ * - 이진 탐색 트리 레벨 순회 구현하기
+ * 
+ * 자료구조 과제 4
+ * - 1 번 인덱스부터 시작하는 우선 순위 큐 구현하기
  */
 
 /*
@@ -57,13 +63,13 @@ namespace Example
 		/** 메인 메서드 */
 		public static void Main(string[] args)
 		{
-			//Program.Main_Programmin(args);
+			//Program.Main_Programming(args);
 			Program.Main_Structure(args);
 			//Program.Main_Algorithm(args);
 		}
 
 		/** 프로그래밍 메인 메서드 */
-		private static void Main_Programmin(string[] args)
+		private static void Main_Programming(string[] args)
 		{
 			/*
 			 * C# 은 . (맴버 접근 연산자) 를 통해 특정 네임 스페이스나 클래스 하위에 접근하는 것이 
@@ -100,17 +106,19 @@ namespace Example
 		private static void Main_Structure(string[] args)
 		{
 #if EXAMPLE
-			_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
-			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
+			_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 #elif PRACTICE
-
+			_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
 #elif SOLUTION
-			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
+			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
 #endif // #if EXAMPLE
 		}
 

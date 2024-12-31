@@ -149,14 +149,14 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
              * C# 의 문자열은 변경이 불가능한 데이터이기 때문에 해당 문자열 중 특정 문자를 변경하고 
              * 싶다면 새로운 문자열 데이터를 생성 할 필요가 있다.
              * 
-             * 따라서 문자열의 일부를 빈번하게 수정 할 경우 string 자료형보다는 
-             * System.Text.StringBuilder 를 사용하는 것이 좋다. (즉, StringBuilder 는 내부적으로 
-             * 임시적인 문자열 데이터를 생성하지 않는다는 것을 알 수 있다.)
+             * 따라서 문자열의 일부를 빈번하게 수정 할 경우 string 자료형보다는 StringBuilder 를 
+			 * 사용하는 것이 좋다. (즉, StringBuilder 는 내부적으로 임시적인 문자열 데이터를 
+			 * 생성하지 않는다는 것을 알 수 있다.)
              */
 			string oStr = "ABC";
 			oStr = oStr.Replace("A", "a");
 
-			//System.Text.StringBuilder oStrBuilder = new System.Text.StringBuilder();
+			//StringBuilder oStrBuilder = new StringBuilder();
 
 			Console.WriteLine("\n=====> 문자 <=====");
 			Console.WriteLine("Char : {0}, {1}, {2}", chLetterA, chLetterB, chLetterC);

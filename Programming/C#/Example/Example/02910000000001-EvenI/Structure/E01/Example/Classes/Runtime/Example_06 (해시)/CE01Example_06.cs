@@ -1,4 +1,4 @@
-#define S_EXAMPLE_E01_EXAMPLE_06_01
+//#define S_EXAMPLE_E01_EXAMPLE_06_01
 #define S_EXAMPLE_E01_EXAMPLE_06_02
 
 using System;
@@ -36,9 +36,9 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 		{
 #if S_EXAMPLE_E01_EXAMPLE_06_01
 			var oRandom = new Random();
-			var oHashValues = new CE01Hash_Chain_06<int>();
+			var oHashValues = new CE01Hash_Chain_06<int>(10);
 
-			for(int i = 0; i < 10; ++i)
+			for(int i = 0; i < 25; ++i)
 			{
 				oHashValues.AddVal(oRandom.Next(1, 100));
 			}

@@ -20,6 +20,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			PRE,
 			IN,
 			POST,
+			LEVEL,
 			MAX_VAL
 		}
 
@@ -156,6 +157,27 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			}
 		}
 
+		/** 값을 탐색한다 */
+		public CNode FindVal(T a_tVal)
+		{
+			var oNode = this.Node_Root;
+
+			while(oNode != null && a_tVal.CompareTo(oNode.Val) != 0)
+			{
+				// 왼쪽 노드로 이동해야 될 경우
+				if(a_tVal.CompareTo(oNode.Val) < 0)
+				{
+					oNode = oNode.Node_LChild;
+				}
+				else
+				{
+					oNode = oNode.Node_RChild;
+				}
+			}
+
+			return oNode;
+		}
+
 		/** 값을 순회한다 */
 		public void Enumerate(EOrder a_eOrder, Action<T> a_oCallback)
 		{
@@ -171,6 +193,10 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 
 				case EOrder.POST:
 					this.EnumerateByOrder_Post(this.Node_Root, a_oCallback);
+					break;
+
+				case EOrder.LEVEL:
+					this.EnumerateByOrder_Level(this.Node_Root, a_oCallback);
 					break;
 			}
 		}
@@ -218,6 +244,31 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			this.EnumerateByOrder_Post(a_oNode.Node_RChild, a_oCallback);
 
 			a_oCallback?.Invoke(a_oNode.Val);
+		}
+
+		/** 레벨 순회한다 */
+		private void EnumerateByOrder_Level(CNode a_oNode, Action<T> a_oCallback)
+		{
+			var oQueueNodes = new Queue<CNode>();
+			oQueueNodes.Enqueue(a_oNode);
+
+			while(oQueueNodes.Count > 0)
+			{
+				var oNode = oQueueNodes.Dequeue();
+				a_oCallback?.Invoke(oNode.Val);
+
+				// 왼쪽 노드가 존재 할 경우
+				if(oNode.Node_LChild != null)
+				{
+					oQueueNodes.Enqueue(oNode.Node_LChild);
+				}
+
+				// 오른쪽 노드가 존재 할 경우
+				if(oNode.Node_RChild != null)
+				{
+					oQueueNodes.Enqueue(oNode.Node_RChild);
+				}
+			}
 		}
 
 		/** 노드를 생성한다 */
