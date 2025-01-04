@@ -1,18 +1,4 @@
 /*
- * 자료구조 과제 1
- * - 단방향 연결 리스트 구현하기
- * 
- * 자료구조 과제 2
- * - 단방향 원형 연결 리스트 구현하기
- * 
- * 자료구조 과제 3
- * - 이진 탐색 트리 레벨 순회 구현하기
- * 
- * 자료구조 과제 4
- * - 1 번 인덱스부터 시작하는 우선 순위 큐 구현하기
- */
-
-/*
  * 전처리기 명령어란?
  * - 전처리기 단계에서 실행되는 명령어로서 C# 코드로 작성 된 명령문을 컴파일하기 전에 코드를 한번 
  * 튜닝하는 역할을 수행한다.
@@ -36,8 +22,8 @@
  *      // 기타 플랫폼 명령문
  * #endif
  */
-#define EXAMPLE
-#define PRACTICE
+//#define EXAMPLE
+//#define PRACTICE
 #define SOLUTION
 
 /*
@@ -63,11 +49,53 @@ namespace Example
 		/** 메인 메서드 */
 		public static void Main(string[] args)
 		{
-			//Program.Main_Programming(args);
-			Program.Main_Structure(args);
+			Program.Main_Programming(args);
+			//Program.Main_Structure(args);
 			//Program.Main_Algorithm(args);
 		}
 
+		/*
+		 * 프로그래밍 과제 1
+		 * - ABC 출력하기
+		 * - 다양한 방법으로 ABC 출력 (+ 최소 4 가지 이상)
+		 * 
+		 * 프로그래밍 과제 2
+		 * - 업 / 다운 게임 제작하기
+		 * - 1 ~ 99 범위 숫자 중 하나를 랜덤하게 선택
+		 * - 사용자로부터 숫자를 입력 받아 정답 여부 검사
+		 * - 정답이 아닐 경우 숫자의 비교를 통해 힌트 출력
+		 * 
+		 * Ex)
+		 * 정답 : 95
+		 * 
+		 * 숫자 입력 : 60
+		 * 정답은 60 보다 큽니다.
+		 * 
+		 * 숫자 입력 : 99
+		 * 정답은 99 보다 작습니다.
+		 * 
+		 * 숫자 입력 : 95
+		 * 프로그램을 종료합니다.
+		 * 
+		 * 프로그래밍 과제 3
+		 * - 바위 (1) / 가위 (2) / 보 (3) 게임 제작하기
+		 * - 사용자로부터 선택지를 입력 받은 후 컴퓨터의 선택과 비교
+		 * - 컴퓨터에게 승리했을 경우 게임 유지
+		 * - 컴퓨터에게 패배했을 경우 전적 출력 후 게임 종료
+		 * 
+		 * Ex)
+		 * 숫자 (1. 바위, 2. 가위, 3. 보) 입력 : 1
+		 * 결과 : 승리 (나 - 바위, 컴퓨터 - 가위)
+		 * 
+		 * 숫자 (1. 바위, 2. 가위, 3. 보) 입력 : 2
+		 * 결과 : 무승부 (나 - 가위, 컴퓨터 - 가위)
+		 * 
+		 * 숫자 (1. 바위, 2. 가위, 3. 보) 입력 : 3
+		 * 결과 : 패배 (나 - 보, 컴퓨터 - 가위)
+		 * 
+		 * 전적 : 1 승 1 무 1 패
+		 * 프로그램을 종료합니다.
+		 */
 		/** 프로그래밍 메인 메서드 */
 		private static void Main_Programming(string[] args)
 		{
@@ -99,9 +127,27 @@ namespace Example
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_14.CE01Example_14.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15.CE01Example_15.Start(args);
 			_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
+#elif PRACTICE
+
+#elif SOLUTION
+			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
+			_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
 #endif // #if EXAMPLE
 		}
 
+		/*
+		 * 자료구조 과제 1
+		 * - 단방향 연결 리스트 구현하기
+		 * 
+		 * 자료구조 과제 2
+		 * - 단방향 원형 연결 리스트 구현하기
+		 * 
+		 * 자료구조 과제 3
+		 * - 이진 탐색 트리 레벨 순회 구현하기
+		 * 
+		 * 자료구조 과제 4
+		 * - 1 번 인덱스부터 시작하는 우선 순위 큐 구현하기
+		 */
 		/** 자료구조 메인 메서드 */
 		private static void Main_Structure(string[] args)
 		{
