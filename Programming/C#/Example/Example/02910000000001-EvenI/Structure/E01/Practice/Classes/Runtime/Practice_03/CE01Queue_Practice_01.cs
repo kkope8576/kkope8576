@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_03
 {
-	internal class CE01Tree_BinarySearch
+	internal class CE01Queue_Practice_01<T> where T : IComparable
 	{
+		public int
 	}
 }
