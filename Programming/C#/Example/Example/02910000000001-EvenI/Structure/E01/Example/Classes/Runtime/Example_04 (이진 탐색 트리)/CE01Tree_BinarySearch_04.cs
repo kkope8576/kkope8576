@@ -184,25 +184,25 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			switch(a_eOrder)
 			{
 				case EOrder.PRE:
-					this.EnumerateByOrder_Pre(this.Node_Root, a_oCallback);
+					this.Enumerate_ByPreOrder(this.Node_Root, a_oCallback);
 					break;
 
 				case EOrder.IN:
-					this.EnumerateByOrder_In(this.Node_Root, a_oCallback);
+					this.Enumerate_ByInOrder(this.Node_Root, a_oCallback);
 					break;
 
 				case EOrder.POST:
-					this.EnumerateByOrder_Post(this.Node_Root, a_oCallback);
+					this.Enumerate_ByPostOrder(this.Node_Root, a_oCallback);
 					break;
 
 				case EOrder.LEVEL:
-					this.EnumerateByOrder_Level(this.Node_Root, a_oCallback);
+					this.Enumerate_ByLevelOrder(this.Node_Root, a_oCallback);
 					break;
 			}
 		}
 
 		/** 전위 순회한다 */
-		private void EnumerateByOrder_Pre(CNode a_oNode, Action<T> a_oCallback)
+		private void Enumerate_ByPreOrder(CNode a_oNode, Action<T> a_oCallback)
 		{
 			// 순회가 불가능 할 경우
 			if(a_oNode == null)
@@ -212,12 +212,12 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 
 			a_oCallback?.Invoke(a_oNode.Val);
 
-			this.EnumerateByOrder_Pre(a_oNode.Node_LChild, a_oCallback);
-			this.EnumerateByOrder_Pre(a_oNode.Node_RChild, a_oCallback);
+			this.Enumerate_ByPreOrder(a_oNode.Node_LChild, a_oCallback);
+			this.Enumerate_ByPreOrder(a_oNode.Node_RChild, a_oCallback);
 		}
 
 		/** 중위 순회한다 */
-		private void EnumerateByOrder_In(CNode a_oNode, Action<T> a_oCallback)
+		private void Enumerate_ByInOrder(CNode a_oNode, Action<T> a_oCallback)
 		{
 			// 순회가 불가능 할 경우
 			if(a_oNode == null)
@@ -225,14 +225,14 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 				return;
 			}
 
-			this.EnumerateByOrder_In(a_oNode.Node_LChild, a_oCallback);
+			this.Enumerate_ByInOrder(a_oNode.Node_LChild, a_oCallback);
 			a_oCallback?.Invoke(a_oNode.Val);
 
-			this.EnumerateByOrder_In(a_oNode.Node_RChild, a_oCallback);
+			this.Enumerate_ByInOrder(a_oNode.Node_RChild, a_oCallback);
 		}
 
 		/** 후위 순회한다 */
-		private void EnumerateByOrder_Post(CNode a_oNode, Action<T> a_oCallback)
+		private void Enumerate_ByPostOrder(CNode a_oNode, Action<T> a_oCallback)
 		{
 			// 순회가 불가능 할 경우
 			if(a_oNode == null)
@@ -240,14 +240,14 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 				return;
 			}
 
-			this.EnumerateByOrder_Post(a_oNode.Node_LChild, a_oCallback);
-			this.EnumerateByOrder_Post(a_oNode.Node_RChild, a_oCallback);
+			this.Enumerate_ByPostOrder(a_oNode.Node_LChild, a_oCallback);
+			this.Enumerate_ByPostOrder(a_oNode.Node_RChild, a_oCallback);
 
 			a_oCallback?.Invoke(a_oNode.Val);
 		}
 
 		/** 레벨 순회한다 */
-		private void EnumerateByOrder_Level(CNode a_oNode, Action<T> a_oCallback)
+		private void Enumerate_ByLevelOrder(CNode a_oNode, Action<T> a_oCallback)
 		{
 			var oQueueNodes = new Queue<CNode>();
 			oQueueNodes.Enqueue(a_oNode);
