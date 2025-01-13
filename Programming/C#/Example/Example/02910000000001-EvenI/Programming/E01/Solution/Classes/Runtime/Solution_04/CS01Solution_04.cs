@@ -1,4 +1,4 @@
-#define P_S01_SOLUTION_04_01
+//#define P_S01_SOLUTION_04_01
 #define P_S01_SOLUTION_04_02
 
 using System;

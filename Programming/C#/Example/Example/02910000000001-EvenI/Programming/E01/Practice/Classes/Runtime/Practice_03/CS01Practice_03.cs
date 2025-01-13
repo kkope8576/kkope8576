@@ -8,7 +8,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime
 {
 	internal class CS01Practice_03
 	{
-		public static void Main(string[] args)
+		public static void Start(string[] args)
 		{
 			Random rnd = new Random();
 			int random = rnd.Next(1, 100);

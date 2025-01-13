@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +8,6 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 {
 	internal class CE01Queue_Practice_01<T> where T : IComparable
 	{
-		public int
+
 	}
 }

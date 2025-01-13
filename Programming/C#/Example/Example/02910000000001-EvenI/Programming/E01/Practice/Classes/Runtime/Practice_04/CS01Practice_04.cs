@@ -8,7 +8,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime
 {
 	internal class CS01Practice_04
 	{
-		public static void Main(string[] args)
+		public static void Start(string[] args)
 		{
 			int wins = 0;
 			int draws = 0;
