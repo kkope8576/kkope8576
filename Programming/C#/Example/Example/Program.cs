@@ -325,9 +325,14 @@ namespace Example
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_13.CE01Example_13.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_14.CE01Example_14.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15.CE01Example_15.Start(args);
-			_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
 #elif PRACTICE
-
+            //_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_01.CS01Practice_01.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_02.CS01Practice_02.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_03.CS01Practice_03.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_04.CS01Practice_04.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_05.CS01Practice_05.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_06.CS01Practice_06.Start(args);
 #elif SOLUTION
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
@@ -365,14 +370,14 @@ namespace Example
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
-			_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 #elif PRACTICE
-			_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
 #elif SOLUTION
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
-			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
 #endif // #if EXAMPLE
 		}
 
