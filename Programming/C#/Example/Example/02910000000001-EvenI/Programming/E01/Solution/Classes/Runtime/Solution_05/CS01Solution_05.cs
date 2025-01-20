@@ -20,6 +20,113 @@ namespace Example._02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime
 			Console.Write("라인 수 입력 : ");
 			int.TryParse(Console.ReadLine(), out int nNumLines);
 
+			for(int i = 0; i < nNumLines; ++i)
+			{
+				for(int j = 0; j < nNumLines; ++j)
+				{
+					Console.Write("{0}", (j == i || j == nNumLines - 1 - i) ? "*" : " ");
+				}
+
+				Console.WriteLine();
+			}
+
+			Console.WriteLine();
+
+			for(int i = 0; i < nNumLines; ++i)
+			{
+				for(int j = 0; j < nNumLines; ++j)
+				{
+					bool bIsStar = i == 0;
+					bIsStar = bIsStar || i == j;
+					bIsStar = bIsStar || i == nNumLines - 1;
+
+					Console.Write("{0}", bIsStar ? "*" : " ");
+				}
+
+				Console.WriteLine();
+			}
+
+			Console.WriteLine();
+
+			for(int i = nNumLines - 1; i >= 0; --i)
+			{
+				for(int j = 0; j < nNumLines; ++j)
+				{
+					bool bIsStar = i == 0;
+					bIsStar = bIsStar || i == j;
+					bIsStar = bIsStar || i == nNumLines - 1;
+
+					Console.Write("{0}", bIsStar ? "*" : " ");
+				}
+
+				Console.WriteLine();
+			}
+
+			Console.WriteLine();
+
+			for(int i = 0; i < nNumLines; ++i)
+			{
+				for(int j = 0; j < nNumLines; ++j)
+				{
+					bool bIsStar = j == 0;
+					bIsStar = bIsStar || i == j;
+					bIsStar = bIsStar || j == nNumLines - 1;
+
+					Console.Write("{0}", bIsStar ? "*" : " ");
+				}
+
+				Console.WriteLine();
+			}
+
+			Console.WriteLine();
+
+			for(int i = 0; i < nNumLines; ++i)
+			{
+				for(int j = nNumLines - 1; j >= 0; --j)
+				{
+					bool bIsStar = j == 0;
+					bIsStar = bIsStar || i == j;
+					bIsStar = bIsStar || j == nNumLines - 1;
+
+					Console.Write("{0}", bIsStar ? "*" : " ");
+				}
+
+				Console.WriteLine();
+			}
+
+			Console.WriteLine();
+			int nWidth = (nNumLines * 2) - 1;
+
+			for(int i = 0; i < nNumLines; ++i)
+			{
+				int nCenter = nWidth / 2;
+
+				for(int j = 0; j < nWidth; ++j)
+				{
+					Console.Write("{0}",
+						(j >= nCenter - i && j <= nCenter + i) ? "*" : " ");
+				}
+
+				Console.WriteLine();
+			}
+
+			Console.WriteLine();
+
+			for(int i = nNumLines - 1; i >= 0; --i)
+			{
+				int nCenter = nWidth / 2;
+
+				for(int j = 0; j < nWidth; ++j)
+				{
+					Console.Write("{0}",
+						(j >= nCenter - i && j <= nCenter + i) ? "*" : " ");
+				}
+
+				Console.WriteLine();
+			}
+
+			Console.WriteLine();
+
 #if P_S01_SOLUTION_05_01
 			for(int i = 0; i < nNumLines; ++i)
 			{
@@ -89,7 +196,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime
 
 			Console.WriteLine();
 
-			for(int i = nNumLines - 1; i >= 0 ; --i)
+			for(int i = nNumLines - 1; i >= 0; --i)
 			{
 				for(int j = 0; j < nNumLines; ++j)
 				{

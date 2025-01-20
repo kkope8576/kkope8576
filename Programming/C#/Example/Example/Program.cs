@@ -165,18 +165,6 @@ namespace Example
 		 *   ***
 		 *    **
 		 *     *
-		 *     
-		 *     *    
-		 *    ***
-		 *   *****
-		 *  *******
-		 * *********
-		 * 
-		 * *********
-		 *  *******
-		 *   *****
-		 *    ***
-		 *     *
 		 *
 		 * 프로그래밍 언어 과제 6
 		 * - 경우의 수 출력하기
@@ -240,7 +228,7 @@ namespace Example
 		 *
 		 * 프로그래밍 언어 과제 10
 		 * - 야구 게임 제작하기
-		 * - 1 ~ 9 범위 숫자 중 중복되지 않는 4 개 선택
+		 * - 1 ~ 9 범위 숫자 중 중복되지 않는 4 개 선택 (+ 단, 중복 X)
 		 * - 4 개의 숫자를 사용자로부터 입력
 		 * - 입력 받은 숫자가 정답에 존재하고 위치가 일치하면 스트라이크
 		 * - 숫자가 정답에 존재하지만 위치가 일치하지 않으면 볼
@@ -331,18 +319,18 @@ namespace Example
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_02.CS01Practice_02.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_03.CS01Practice_03.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_04.CS01Practice_04.Start(args);
-			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_05.CS01Practice_05.Start(args);
+			_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_05.CS01Practice_05.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_06.CS01Practice_06.Start(args);
 #elif SOLUTION
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_04.CS01Solution_04.Start(args);
-			_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_05.CS01Solution_05.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_05.CS01Solution_05.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_06.CS01Solution_06.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_07.CS01Solution_07.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_08.CS01Solution_08.Start(args);
-			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_09.CS01Solution_09.Start(args);
+			_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_09.CS01Solution_09.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_10.CS01Solution_10.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_11.CS01Solution_11.Start(args);
 #endif // #if EXAMPLE
