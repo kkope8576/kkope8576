@@ -16,6 +16,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime
 			int a = 100;
 			int b = 250;
 			int c = 1000;
+
 		}
 	}
 }
