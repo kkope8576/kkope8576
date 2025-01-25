@@ -22,8 +22,8 @@
  *      // 기타 플랫폼 명령문
  * #endif
  */
-//#define EXAMPLE
-//#define PRACTICE
+#define EXAMPLE
+#define PRACTICE
 #define SOLUTION
 
 /*

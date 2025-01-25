@@ -19,6 +19,8 @@ namespace Example._02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime
 
 			int.TryParse(oTokens[0], out int nWidth);
 			int.TryParse(oTokens[1], out int nHeight);
+
+			var oValues = new int[nHeight, nWidth];
 		}
 	}
 }

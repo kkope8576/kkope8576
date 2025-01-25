@@ -138,7 +138,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 					continue;
 				}
 
-				Console.Write("{0}, ", i + 1);
+				Console.Write("{0}, ", nVal);
 			}
 
 			Console.WriteLine();
