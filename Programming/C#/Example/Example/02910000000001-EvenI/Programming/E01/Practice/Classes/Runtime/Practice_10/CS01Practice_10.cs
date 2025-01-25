@@ -36,6 +36,13 @@ namespace Example._02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime
 				oNumbers[i] = number;
 			}
 
+			for(int i = 0; i < oNumbers.Length; ++i)
+			{
+				Console.Write("{0} ", oNumbers[i]);
+			}
+
+			Console.WriteLine("\n");
+
 			while(true)
 			{
 				Console.WriteLine("숫자를 입력하세요 :");
@@ -73,7 +80,5 @@ namespace Example._02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime
 				}
 			}
 		}
-	}
-
 	}
 }
