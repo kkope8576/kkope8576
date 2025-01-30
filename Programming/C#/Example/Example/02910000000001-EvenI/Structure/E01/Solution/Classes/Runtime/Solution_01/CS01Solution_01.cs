@@ -15,7 +15,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.S
 		public static void Start(string[] args)
 		{
 			var oRandom = new Random();
-			var oListValues = new CS01List_Linked_01<int>();
+			var oListValues = new CS01List_SLinked_01<int>();
 
 			for(int i = 0; i < 10; ++i)
 			{
@@ -37,7 +37,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.S
 		}
 
 		/** 값을 출력한다 */
-		private static void S01PrintValues_01<T>(CS01List_Linked_01<T> a_oListValues) where T : IComparable
+		private static void S01PrintValues_01<T>(CS01List_SLinked_01<T> a_oListValues) where T : IComparable
 		{
 			for(int i = 0; i < a_oListValues.NumValues; ++i)
 			{
