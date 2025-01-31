@@ -30,11 +30,11 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 		{
 			get
 			{
-				return this.FindNodeAt(a_nIdx).Val;
+				return this.FindNode_At(a_nIdx).Val;
 			}
 			set
 			{
-				var oNode = this.FindNodeAt(a_nIdx);
+				var oNode = this.FindNode_At(a_nIdx);
 				oNode.Val = value;
 			}
 		}
@@ -68,9 +68,9 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 		/** 값을 추가한다 */
 		public void InsertVal(int a_nIdx, T a_tVal)
 		{
-			var oNode_Next = this.FindNodeAt(a_nIdx);
+			var oNode_Next = this.FindNode_At(a_nIdx);
 
-			// 노드가 없을 경우
+			// 값 추가가 불가능 할 경우
 			if(oNode_Next == null)
 			{
 				return;
@@ -103,15 +103,27 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 		public void RemoveVal(T a_tVal)
 		{
 			var oNode_Remove = this.FindNode(a_tVal);
+			this.RemoveNode(oNode_Remove);
+		}
 
-			// 제거가 불가능 할 경우
-			if(oNode_Remove == null)
+		/** 값을 제거한다 */
+		public void RemoveVal_At(int a_nIdx)
+		{
+			var oNode_Remove = this.FindNode_At(a_nIdx);
+			this.RemoveNode(oNode_Remove);
+		}
+
+		/** 노드를 제거한다 */
+		private void RemoveNode(CNode a_oNode_Remove)
+		{
+			// 노드 제거가 불가능 할 경우
+			if(a_oNode_Remove == null)
 			{
 				return;
 			}
 
-			var oNode_Prev = oNode_Remove.Node_Prev;
-			var oNode_Next = oNode_Remove.Node_Next;
+			var oNode_Prev = a_oNode_Remove.Node_Prev;
+			var oNode_Next = a_oNode_Remove.Node_Next;
 
 			// 이전 노드가 존재 할 경우
 			if(oNode_Prev != null)
@@ -126,7 +138,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 			}
 
 			// 헤드 노드 일 경우
-			if(oNode_Remove == this.Node_Head)
+			if(a_oNode_Remove == this.Node_Head)
 			{
 				this.Node_Head = oNode_Next;
 			}
@@ -148,7 +160,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 		}
 
 		/** 노드를 탐색한다 */
-		private CNode FindNodeAt(int a_nIdx)
+		private CNode FindNode_At(int a_nIdx)
 		{
 			var oNode = this.Node_Head;
 

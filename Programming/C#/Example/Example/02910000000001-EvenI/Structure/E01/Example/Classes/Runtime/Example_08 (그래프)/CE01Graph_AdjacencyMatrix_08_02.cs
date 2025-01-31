@@ -170,7 +170,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 
 			for(int i = 0; i < this.ContainerListEdges.Count; ++i)
 			{
-				this.ContainerListEdges[i].RemoveValAt(nResult);
+				this.ContainerListEdges[i].RemoveVal_At(nResult);
 			}
 		}
 

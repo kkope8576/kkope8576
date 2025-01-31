@@ -48,16 +48,16 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			public CNode Node_RChild { get; set; } = null;
 		}
 
+		public CNode Node_Nil { get; private set; } = null;
 		public CNode Node_Root { get; private set; } = null;
-		public CNode Node_NULL { get; private set; } = null;
 
 		/** 생성자 */
 		public CE01Tree_RedBlack_07()
 		{
-			this.Node_NULL = this.CreateNode(default);
-			this.Node_NULL.Color = EColor.BLACK;
+			this.Node_Nil = this.CreateNode(default);
+			this.Node_Nil.Color = EColor.BLACK;
 
-			this.Node_Root = this.Node_NULL;
+			this.Node_Root = this.Node_Nil;
 		}
 
 		/** 값을 추가한다 */
@@ -66,7 +66,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			var oNode = this.CreateNode(a_tVal);
 
 			// 루트 노드가 없을 경우
-			if(this.Node_Root == this.Node_NULL)
+			if(this.Node_Root == this.Node_Nil)
 			{
 				this.Node_Root = oNode;
 			}
@@ -75,7 +75,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 				var oNode_Child = this.Node_Root;
 				CNode oNode_Parent = null;
 
-				while(oNode_Child != this.Node_NULL)
+				while(oNode_Child != this.Node_Nil)
 				{
 					oNode_Parent = oNode_Child;
 
@@ -112,7 +112,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			var oNode_Remove = this.Node_Root;
 			CNode oNode_Parent = null;
 
-			while(oNode_Remove != this.Node_NULL && a_tVal.CompareTo(oNode_Remove.Val) != 0)
+			while(oNode_Remove != this.Node_Nil && a_tVal.CompareTo(oNode_Remove.Val) != 0)
 			{
 				oNode_Parent = oNode_Remove;
 
@@ -128,18 +128,18 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			}
 
 			// 값 제거가 불가능 할 경우
-			if(oNode_Remove == this.Node_NULL)
+			if(oNode_Remove == this.Node_Nil)
 			{
 				return;
 			}
 
 			// 자식 노드가 모두 존재 할 경우
-			if(oNode_Remove.Node_LChild != this.Node_NULL && oNode_Remove.Node_RChild != this.Node_NULL)
+			if(oNode_Remove.Node_LChild != this.Node_Nil && oNode_Remove.Node_RChild != this.Node_Nil)
 			{
 				oNode_Parent = oNode_Remove;
 				var oNode_Descendants = oNode_Remove.Node_RChild;
 
-				while(oNode_Descendants.Node_LChild != this.Node_NULL)
+				while(oNode_Descendants.Node_LChild != this.Node_Nil)
 				{
 					oNode_Parent = oNode_Descendants;
 					oNode_Descendants = oNode_Descendants.Node_LChild;
@@ -152,7 +152,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			// 루트 노드 일 경우
 			if(oNode_Remove == this.Node_Root)
 			{
-				this.Node_Root = (this.Node_Root.Node_LChild != this.Node_NULL) ?
+				this.Node_Root = (this.Node_Root.Node_LChild != this.Node_Nil) ?
 					this.Node_Root.Node_LChild : this.Node_Root.Node_RChild;
 
 				return;
@@ -161,7 +161,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			CNode oNode_Successor = null;
 
 			// 왼쪽 노드가 존재 할 경우
-			if(oNode_Remove.Node_LChild != this.Node_NULL)
+			if(oNode_Remove.Node_LChild != this.Node_Nil)
 			{
 				// 왼쪽 노드 일 경우
 				if(oNode_Remove == oNode_Parent.Node_LChild)
@@ -379,7 +379,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			oNode_LChild.Node_RChild = a_oNode;
 
 			// LR 자식이 존재 할 경우
-			if(oNode_LRChild != this.Node_NULL)
+			if(oNode_LRChild != this.Node_Nil)
 			{
 				oNode_LRChild.Node_Parent = a_oNode;
 			}
@@ -419,7 +419,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			oNode_RChild.Node_LChild = a_oNode;
 
 			// RL 자식이 존재 할 경우
-			if(oNode_RLChild != this.Node_NULL)
+			if(oNode_RLChild != this.Node_Nil)
 			{
 				oNode_RLChild.Node_Parent = a_oNode;
 			}
@@ -451,7 +451,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			int a_nDepth, Action<int, T> a_oCallback)
 		{
 			// 순회가 불가능 할 경우
-			if(a_oNode == this.Node_NULL)
+			if(a_oNode == this.Node_Nil)
 			{
 				return;
 			}
@@ -467,7 +467,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			int a_nDepth, Action<int, T> a_oCallback)
 		{
 			// 순회가 불가능 할 경우
-			if(a_oNode == this.Node_NULL)
+			if(a_oNode == this.Node_Nil)
 			{
 				return;
 			}
@@ -483,7 +483,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			int a_nDepth, Action<int, T> a_oCallback)
 		{
 			// 순회가 불가능 할 경우
-			if(a_oNode == this.Node_NULL)
+			if(a_oNode == this.Node_Nil)
 			{
 				return;
 			}
@@ -507,7 +507,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 				a_oCallback?.Invoke(stInfo_Node.Item2, stInfo_Node.Item1.Val);
 
 				// 왼쪽 노드가 존재 할 경우
-				if(stInfo_Node.Item1.Node_LChild != this.Node_NULL)
+				if(stInfo_Node.Item1.Node_LChild != this.Node_Nil)
 				{
 					var stInfo_LChildNode = (stInfo_Node.Item1.Node_LChild,
 						stInfo_Node.Item2 + 1);
@@ -516,7 +516,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 				}
 
 				// 오른쪽 노드가 존재 할 경우
-				if(stInfo_Node.Item1.Node_RChild != this.Node_NULL)
+				if(stInfo_Node.Item1.Node_RChild != this.Node_Nil)
 				{
 					var stInfo_RChildNode = (stInfo_Node.Item1.Node_RChild,
 						stInfo_Node.Item2 + 1);
@@ -534,8 +534,8 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 				Val = a_tVal,
 				Color = EColor.RED,
 
-				Node_LChild = this.Node_NULL,
-				Node_RChild = this.Node_NULL
+				Node_LChild = this.Node_Nil,
+				Node_RChild = this.Node_Nil
 			};
 		}
 	}

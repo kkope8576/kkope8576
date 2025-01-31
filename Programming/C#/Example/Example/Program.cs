@@ -352,7 +352,13 @@ namespace Example
 		 * - 이진 탐색 트리 레벨 순회 구현하기
 		 * 
 		 * 자료구조 과제 4
-		 * - 1 번 인덱스부터 시작하는 우선 순위 큐 구현하기
+		 * - 루트 인덱스 1 번으로 시작하는 우선 순위 큐 구현하기
+		 * 
+		 * 자료구조 과제 5
+		 * - 체인법 + 이진 탐색 트리로 해시 테이블 구현하기
+		 * 
+		 * 자료구조 과제 6
+		 * - 재귀 호출을 사용하지 않고 그래프 깊이 우선 탐색 구현하기
 		 */
 		/** 자료구조 메인 메서드 */
 		private static void Main_Structure(string[] args)
@@ -364,16 +370,35 @@ namespace Example
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
-			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
+			_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 #elif PRACTICE
-			//_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
+			_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
 #elif SOLUTION
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
-			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
+			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
 #endif // #if EXAMPLE
 		}
 
+		/*
+		 * 알고리즘 과제 1
+		 * - 이진 탐색 알고리즘 재귀호출로 구현하기
+		 * 
+		 * 알고리즘 과제 2
+		 * - 착한 접미부 테이블을 구축해서 보이어 무어 알고리즘 개선하기
+		 * 
+		 * 알고리즘 과제 3
+		 * - 수식 트리 구축 알고리즘 구현하기
+		 * 
+		 * 알고리즘 과제 4
+		 * - 레드 블랙 트리 균형 회복 과정 이해하고 설명하기
+		 * 
+		 * 알고리즘 과제 5
+		 * - 가중치가 낮은 간선을 추가하는 방법으로 크루스칼 알고리즘 구현하기
+		 * 
+		 * 알고리즘 과제 6
+		 * - 가중치가 낮은 간선을 먼저 방문하도록 다익스트라 알고리즘 개선하기
+		 */
 		/** 알고리즘 메인 메서드 */
 		private static void Main_Algorithm(string[] args)
 		{
@@ -386,6 +411,10 @@ namespace Example
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
+#elif PRACTICE
+
+#elif SOLUTION
+
 #endif // #if EXAMPLE
 		}
 	}
