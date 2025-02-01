@@ -40,8 +40,8 @@ namespace Example
 	internal class Program
 	{
 		/*
-		 * C# 의 메서드는 C/C++ 과 달리 전역 영역에 구현하는 것이 불가능하며 항상 특정 클래스 or 
-		 * 구조체 내부에서만 구현하는 것이 가능하다. 
+		 * C# 의 메서드는 C/C++ 과 달리 전역 영역에 구현하는 것이 불가능하며 
+		 * 항상 특정 클래스 or 구조체 내부에서만 구현하는 것이 가능하다. 
 		 * 
 		 * 따라서 C# 의 메인 메서드는 반드시 특정 클래스 내부에 static 키워드로 명시가 
 		 * 되어있어야한다.
@@ -64,8 +64,8 @@ namespace Example
 		/** 메인 메서드 */
 		public static void Main(string[] args)
 		{
-			Program.Main_Programming(args);
-			//Program.Main_Structure(args);
+			//Program.Main_Programming(args);
+			Program.Main_Structure(args);
 			//Program.Main_Algorithm(args);
 		}
 
@@ -368,9 +368,10 @@ namespace Example
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
-			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
+			_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
-			_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
 #elif PRACTICE
 			_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
 #elif SOLUTION
