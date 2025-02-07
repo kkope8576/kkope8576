@@ -22,9 +22,9 @@
  *      // 기타 플랫폼 명령문
  * #endif
  */
-//#define EXAMPLE
+#define EXAMPLE
 #define PRACTICE
-//#define SOLUTION
+#define SOLUTION
 
 /*
  * 네임스페이스란?
@@ -40,8 +40,8 @@ namespace Example
 	internal class Program
 	{
 		/*
-		 * C# 의 메서드는 C/C++ 과 달리 전역 영역에 구현하는 것이 불가능하며 항상 특정 클래스 or 
-		 * 구조체 내부에서만 구현하는 것이 가능하다. 
+		 * C# 의 메서드는 C/C++ 과 달리 전역 영역에 구현하는 것이 불가능하며 
+		 * 항상 특정 클래스 or 구조체 내부에서만 구현하는 것이 가능하다. 
 		 * 
 		 * 따라서 C# 의 메인 메서드는 반드시 특정 클래스 내부에 static 키워드로 명시가 
 		 * 되어있어야한다.
@@ -64,8 +64,8 @@ namespace Example
 		/** 메인 메서드 */
 		public static void Main(string[] args)
 		{
-			Program.Main_Programming(args);
-			//Program.Main_Structure(args);
+			//Program.Main_Programming(args);
+			Program.Main_Structure(args);
 			//Program.Main_Algorithm(args);
 		}
 
@@ -197,14 +197,15 @@ namespace Example
 		 * - 2 차원 배열 크기를 입력 받은 후 해당 크기만큼 배열 초기화 (+ 단, 크기는 정방으로 입력)
 		 * 
 		 * Ex)
-		 * 크기 입력 : 7	
-		 *  1  0  0  0  0  0  0 
-		 * 18  2  0  0  0  0  0 
-		 * 16 27 20  4  0  0  0 
-		 * 15 26 28 21  5  0  0 
-		 * 14 25 24 23 22  6  0 
-		 * 13 12 11 10  9  8  7 
-		 * 
+		 * 크기 입력 : 7
+		 *  1  0  0  0  0  0  0
+		 * 18  2  0  0  0  0  0
+		 * 17 19  3  0  0  0  0
+		 * 16 27 20  4  0  0  0
+		 * 15 26 28 21  5  0  0
+		 * 14 25 24 23 22  6  0
+		 * 13 12 11 10  9  8  7
+		 *
 		 * 프로그래밍 언어 과제 9
 		 * - 행맨 게임 제작하기
 		 * - 단어를 랜덤하게 선택 후 해당 단어의 문자를 입력
@@ -313,18 +314,18 @@ namespace Example
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_14.CE01Example_14.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15.CE01Example_15.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
+			_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_17.CE01Example_17.Start(args);
 #elif PRACTICE
-            //_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_01.CS01Practice_01.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_01.CS01Practice_01.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_02.CS01Practice_02.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_03.CS01Practice_03.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_04.CS01Practice_04.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_05.CS01Practice_05.Start(args);
-			_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_06.CS01Practice_06.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_06.CS01Practice_06.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_07.CS01Practice_07.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_08.CS01Practice_08.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_09.CS01Practice_09.Start(args);
-			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_10.CS01Practice_10.Start(args);
-
+			_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_10.CS01Practice_10.Start(args);
 #elif SOLUTION
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
@@ -336,7 +337,7 @@ namespace Example
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_08.CS01Solution_08.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_09.CS01Solution_09.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_10.CS01Solution_10.Start(args);
-			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_11.CS01Solution_11.Start(args);
+			_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_11.CS01Solution_11.Start(args);
 #endif // #if EXAMPLE
 		}
 
@@ -351,7 +352,13 @@ namespace Example
 		 * - 이진 탐색 트리 레벨 순회 구현하기
 		 * 
 		 * 자료구조 과제 4
-		 * - 1 번 인덱스부터 시작하는 우선 순위 큐 구현하기
+		 * - 루트 인덱스 1 번으로 시작하는 우선 순위 큐 구현하기
+		 * 
+		 * 자료구조 과제 5
+		 * - 체인법 + 이진 탐색 트리로 해시 테이블 구현하기
+		 * 
+		 * 자료구조 과제 6
+		 * - 재귀 호출을 사용하지 않고 그래프 깊이 우선 탐색 구현하기
 		 */
 		/** 자료구조 메인 메서드 */
 		private static void Main_Structure(string[] args)
@@ -361,18 +368,38 @@ namespace Example
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
-			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
+			_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
 #elif PRACTICE
-			//_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
+			_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
 #elif SOLUTION
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
-			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
+			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
 #endif // #if EXAMPLE
 		}
 
+		/*
+		 * 알고리즘 과제 1
+		 * - 이진 탐색 알고리즘 재귀호출로 구현하기
+		 * 
+		 * 알고리즘 과제 2
+		 * - 착한 접미부 테이블을 구축해서 보이어 무어 알고리즘 개선하기
+		 * 
+		 * 알고리즘 과제 3
+		 * - 수식 트리 구축 알고리즘 구현하기
+		 * 
+		 * 알고리즘 과제 4
+		 * - 레드 블랙 트리 균형 회복 과정 이해하고 설명하기
+		 * 
+		 * 알고리즘 과제 5
+		 * - 가중치가 낮은 간선을 추가하는 방법으로 크루스칼 알고리즘 구현하기
+		 * 
+		 * 알고리즘 과제 6
+		 * - 가중치가 낮은 간선을 먼저 방문하도록 다익스트라 알고리즘 개선하기
+		 */
 		/** 알고리즘 메인 메서드 */
 		private static void Main_Algorithm(string[] args)
 		{
@@ -385,6 +412,10 @@ namespace Example
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
+#elif PRACTICE
+
+#elif SOLUTION
+
 #endif // #if EXAMPLE
 		}
 	}

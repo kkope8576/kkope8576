@@ -1,7 +1,7 @@
-//#define P_EXAMPLE_E01_EXAMPLE_15_01
-//#define P_EXAMPLE_E01_EXAMPLE_15_02
-//#define P_EXAMPLE_E01_EXAMPLE_15_03
-#define P_EXAMPLE_E01_EXAMPLE_15_04
+//#define P_E01_EXAMPLE_15_01
+//#define P_E01_EXAMPLE_15_02
+//#define P_E01_EXAMPLE_15_03
+#define P_E01_EXAMPLE_15_04
 
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 /*
  * 델리게이트란?
  * - 메서드를 데이터처럼 특정 메서드에 입력으로 전달하거나 출력으로 메서드를 반환 할 수 있게 해주는 
- * 기능을 의미한다. (즉, 델리게이트를 활용하면 특정 발생되는 이벤트에 따라 객체의 상태를 처리하는
+ * 기능을 의미한다. (+ 즉, 델리게이트를 활용하면 특정 발생되는 이벤트에 따라 객체의 상태를 처리하는 
  * 콜백 구조로 프로그램을 설계하는 것이 가능하다.)
  * 
  * 또한 C# 은 델리게이트를 활용해서 람다 (Lambda) or 무명 메서드를 구현하는 것이 가능하다.
@@ -27,11 +27,13 @@ using System.Threading.Tasks;
  * 것을 알 수 있다.
  * 
  * 람다 및 무명 메서드란?
- * - 일반적인 메서드와 달리 이름이 존재하지 않는 메서드를 의미한다. 따라서 람다 및 무명 메서드를
- * 활용하면 재사용성이 떨어지는 일회성 메서드를 손쉽게 구현하는 것이 가능하다.
+ * - 일반적인 메서드와 달리 이름이 존재하지 않는 메서드를 의미한다.
+ * 
+ * 따라서 람다 및 무명 메서드를 활용하면 재사용성이 떨어지는 일회성 메서드를 손쉽게 구현하는 것이 
+ * 가능하다.
  * 
  * 또한 람다 및 무명 메서드는 다른 메서드 내부에서 구현되는 내장 메서드이기 때문에 해당 메서드가
- * 선언 된 영역에 존재하는 지역 변수에 접근하는 것이 가능하다. (즉, 지역 변수에 접근하기 위해서
+ * 선언 된 영역에 존재하는 지역 변수에 접근하는 것이 가능하다. (+ 즉, 지역 변수에 접근하기 위해서
  * 별도의 데이터를 전달 할 필요가 없다는 것을 의미한다.)
  * 
  * C# 람다 구현 방법
@@ -43,7 +45,7 @@ using System.Threading.Tasks;
  * 
  * C# 람다는 식 형식과 문 형식 의 형태를 제공한다. 
  * 
- * 식 형식으로 주로 한줄로 처리되는 간단한 람다 메서드를 구현 할 때 활용되며, 문 형식은 여러 라인을 
+ * 식 형식으로 주로 한줄로 처리되는 간단한 람다 메서드를 구현 할 때 활용되며 문 형식은 여러 라인을 
  * 지니는 복잡한 명령문을 지니는 람다 메서드를 구현 할 때 활용된다.
  * 
  * 또한 C# 람다는 입력으로 전달되는 자료형의 매개 변수를 생략하는 것이 가능하다.
@@ -59,7 +61,7 @@ using System.Threading.Tasks;
  * }
  * 
  * 무명 메서드는 C# 이 람다를 지원하기 이전에 사용하던 일회성 메서드이기 때문에 현재는 잘 활용되지
- * 않는다. (즉, 해당 메서드는 C# 과거 버전과의 호환성을 위해서 존재 할 뿐 현재는 대부분 람다를
+ * 않는다. (+ 즉, 해당 메서드는 C# 과거 버전과의 호환성을 위해서 존재 할 뿐 현재는 대부분 람다를
  * 사용하는 것이 일반적이다.)
  * 
  * C# 이 지원하는 델리게이트 종류
@@ -103,7 +105,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if P_EXAMPLE_E01_EXAMPLE_15_01
+#if P_E01_EXAMPLE_15_01
 			var oRandom = new Random();
 
 			var oListValuesA = new List<int>();
@@ -147,7 +149,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine();
-#elif P_EXAMPLE_E01_EXAMPLE_15_02
+#elif P_E01_EXAMPLE_15_02
 			int nLhs = 0;
 			int nRhs = 0;
 
@@ -181,7 +183,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			{
 				Console.WriteLine("잘못된 수식을 입력했습니다.");
 			}
-#elif P_EXAMPLE_E01_EXAMPLE_15_03
+#elif P_E01_EXAMPLE_15_03
 			var oRandom = new Random();
 			var oListValues = new List<int>();
 
@@ -202,7 +204,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			/*
 			 * 람다 메서드는 해당 메서드가 구현 된 영역에 존재하는 지역 변수를 사용하는 것이
-			 * 가능하다. (즉, 람다 메서드 또한 특정 메서드의 일부로 인식한다는 것을 알 수 있다.)
+			 * 가능하다. (+ 즉, 람다 메서드 또한 특정 메서드의 일부로 인식한다는 것을 알 수 있다.)
 			 */
 			int nIdx = oListValues.FindIndex((int a_nVal) =>
 			{
@@ -219,7 +221,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			oActionA();
 			oActionB();
-#elif P_EXAMPLE_E01_EXAMPLE_15_04
+#elif P_E01_EXAMPLE_15_04
 			/*
 			 * 델리게이트 체인을 활용하면 특정 델리게이트 변수가 여러 메서드를 제어하는 것이 
 			 * 가능하다.
@@ -269,10 +271,10 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("=====> 델리게이트 호출 결과 <=====");
 			Console.WriteLine("{0}", oPrinter());
-#endif // P_EXAMPLE_E01_EXAMPLE_15_01
+#endif // P_E01_EXAMPLE_15_01
 		}
 
-#if P_EXAMPLE_E01_EXAMPLE_15_01
+#if P_E01_EXAMPLE_15_01
 		/** 오름차순으로 비교한다 */
 		public static int E01CompareByAscending_15<T>(T a_nLhs, T a_nRhs) where T : IComparable
 		{
@@ -284,11 +286,11 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		{
 			return a_nRhs.CompareTo(a_nLhs);
 		}
-#elif P_EXAMPLE_E01_EXAMPLE_15_02
+#elif P_E01_EXAMPLE_15_02
 		/*
 		 * C# 구 버전 사용 시 주의 사항
 		 * - 제네릭이 아닌 델리게이트 일반 메서드를 제어하는 것이 가능하며 제네릭 델리게이트는 
-		 * 제네릭 메서드를 제어 할 수 있다. (즉, 제네릭과 제네렉이 아닌 델리게이트를 구분해서 
+		 * 제네릭 메서드를 제어 할 수 있다. (+ 즉, 제네릭과 제네릭이 아닌 델리게이트를 구분해서 
 		 * 메서드를 제어해야 한다는 것을 알 수 있다.)
 		 */
 		/** 비교 델리게이트 */
@@ -347,7 +349,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			return null;
 		}
-#elif P_EXAMPLE_E01_EXAMPLE_15_03
+#elif P_E01_EXAMPLE_15_03
 		/*
 		 * 일반적인 메서드는 람다와 달리 다른 지역에 존재하는 지역 변수에 접근하는 것이 불가능하다.
 		 * 따라서 특정 메서드가 동작하기 위해 필요한 데이터가 있다면 해당 데이터를 일반적으로
@@ -367,10 +369,10 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 만약 해당 지역이 더이상 유효하지 않더라도 람다 메서드 내부에서는 여전히 필요에 따라
 			 * 해당 지역에 존재했던 지역 변수를 사용하는 것이 가능하다.
 			 * 
-			 * (즉, 개념적으로 람다 메서드가 외부에 존재하는 지역 변수의 사본을 가지고 있는 개념과
-			 * 비슷한 의미이다.)
+			 * (+ 즉, 개념적으로 람다 메서드가 외부에 존재하는 지역 변수의 사본을 가지고 있는 
+			 * 개념과 비슷한 의미이다.)
 			 * 
-			 * 따라서 특정 고수준 언어에서는 람다를 클로저라고도 부른다. (즉, 클로저라는 단어는 
+			 * 따라서 특정 고수준 언어에서는 람다를 클로저라고도 부른다. (+ 즉, 클로저라는 단어는 
 			 * 외부에서는 닫혀 있는 영역이지만 내부에서 여전히 열려 있는 영역이라는 의미를 내포하고 
 			 * 있다.)
 			 */
@@ -379,9 +381,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine("람다 메서드 호출 : {0}", a_nVal);
 			};
 		}
-#elif P_EXAMPLE_E01_EXAMPLE_15_04
+#elif P_E01_EXAMPLE_15_04
 		/** 출력 델리게이트 */
 		public delegate int E01Printer_15();
-#endif // P_EXAMPLE_E01_EXAMPLE_15_01
+#endif // P_E01_EXAMPLE_15_01
 	}
 }

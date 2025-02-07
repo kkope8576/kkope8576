@@ -1,6 +1,6 @@
-//#define P_EXAMPLE_E01_EXAMPLE_11_01
-//#define P_EXAMPLE_E01_EXAMPLE_11_02
-#define P_EXAMPLE_E01_EXAMPLE_11_03
+//#define P_E01_EXAMPLE_11_01
+//#define P_E01_EXAMPLE_11_02
+#define P_E01_EXAMPLE_11_03
 
 using System;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if P_EXAMPLE_E01_EXAMPLE_11_01
+#if P_E01_EXAMPLE_11_01
 			/*
 			 * 아래와 같이 프로퍼티를 활용하면 변수를 다루듯이 명령문을 작성하는 것이 가능하다.
 			 */
@@ -30,7 +30,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			Console.WriteLine("=====> 캐릭터 <=====");
 			oCharacter.ShowInfo();
-#elif P_EXAMPLE_E01_EXAMPLE_11_02
+#elif P_E01_EXAMPLE_11_02
 			CE01Array_11 oValues = new CE01Array_11(5);
 			Random oRandom = new Random();
 
@@ -47,7 +47,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			}
 
 			Console.WriteLine();
-#elif P_EXAMPLE_E01_EXAMPLE_11_03
+#elif P_E01_EXAMPLE_11_03
 			CE01Data_11.m_fVal = 3.14f;
 
 			CE01Data_11 oDataA = new CE01Data_11();
@@ -81,10 +81,10 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #endif
 		}
 
-#if P_EXAMPLE_E01_EXAMPLE_11_01
+#if P_E01_EXAMPLE_11_01
 		/*
 		 * 프로퍼티란?
-		 * - C# 이 제공하는 접근자 메서드를 구현 할 수 있는 기능을 의미한다. (즉, 프로퍼티를 
+		 * - C# 이 제공하는 접근자 메서드를 구현 할 수 있는 기능을 의미한다. (+ 즉, 프로퍼티를 
 		 * 활용하면 접근자 메서드를 좀 더 수월하게 구현하는 것이 가능하다.)
 		 * 
 		 * 전통적인 접근자 메서드는 메서드를 통해서 구현되기 때문에 멤버가 많아질수록 접근자 
@@ -118,7 +118,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * oSomeObj.Val = 10;
 		 * 
 		 * 위와 같이 프로퍼티를 활용하면 변수에 접근하는 듯이 명령문을 작성하는 것이 가능하다. 
-		 * (즉, 전통적인 방식에 비해 가독성이 향상된다는 것을 알 수 있다.)
+		 * (+ 즉, 전통적인 방식에 비해 가독성이 향상된다는 것을 알 수 있다.)
 		 */
 		/**
 		 * 캐릭터
@@ -132,12 +132,12 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/*
 			 * 자동 구현 프로퍼티란?
 			 * - 일반적인 프로퍼티와 달리 데이터를 저장하기 위한 멤버 변수를 자동으로 선언해주는 
-			 * 프로퍼티를 의미한다. (즉, 프로퍼티 자체는 멤버 변수에 접근하기 위한 수단이기 때문에 
-			 * 별도의 멤버 변수가 필요하다는 것을 알 수 있다.)
+			 * 프로퍼티를 의미한다. (+ 즉, 프로퍼티 자체는 멤버 변수에 접근하기 위한 수단이기 
+			 * 때문에 별도의 멤버 변수가 필요하다는 것을 알 수 있다.)
 			 * 
 			 * 단, 자동 구현 프로퍼티는 가장 단순한 형태의 접근자 메서드만을 구현해주기 때문에 
 			 * Getter 와 Setter 가 동작하는 과정에서 추가적인 명령문을 작성하는 것이 불가능하다는 
-			 * 단점이 존재한다. (즉, 단순하게 값을 설정하거나 가져오는 것만 가능하다.)
+			 * 단점이 존재한다. (+ 즉, 단순하게 값을 설정하거나 가져오는 것만 가능하다.)
 			 */
 			public string Name { get; set; } = string.Empty;
 
@@ -186,7 +186,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				Console.WriteLine("Name : {0}", this.Name);
 			}
 		}
-#elif P_EXAMPLE_E01_EXAMPLE_11_02
+#elif P_E01_EXAMPLE_11_02
 		/**
 		 * 배열
 		 */
@@ -204,7 +204,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/*
 			 * 인덱서란?
 			 * - 객체를 대상으로 [] (인덱스 연산자) 를 사용 할 수 있게 해주는 기능을 의미한다. 
-			 * (즉, 인덱서를 활용하면 객체를 배열처럼 제어하는 것이 가능하다.)
+			 * (+ 즉, 인덱서를 활용하면 객체를 배열처럼 제어하는 것이 가능하다.)
 			 */
 			/** 인덱서 */
 			public int this[int a_nIdx]
@@ -231,13 +231,13 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				m_oValues[this.NumValues++] = a_nVal;
 			}
 		}
-#elif P_EXAMPLE_E01_EXAMPLE_11_03
+#elif P_E01_EXAMPLE_11_03
 		/* 클래스 (정적) 멤버란?
-		 * - 객체에 종속되는 일반적인 멤버와 달리 클래스 자체에 종속되는 멤버를 의미한다. (즉, 
+		 * - 객체에 종속되는 일반적인 멤버와 달리 클래스 자체에 종속되는 멤버를 의미한다. (+ 즉, 
 		 * 클래스 멤버는 클래스 별로 하나만 존재한다는 것을 알 수 있다.)
 		 * 
-		 * 클래스 멤버에 접근하기 위해서는 객체를 생성 할 필요가 없다. (즉, 일반적인 멤버는 객체를 
-		 * 통해 접근하는 것이 가능하지만 클래스 멤버는 클래스만으로 접근하는 것이 가능하다.)
+		 * 클래스 멤버에 접근하기 위해서는 객체를 생성 할 필요가 없다. (+ 즉, 일반적인 멤버는 
+		 * 객체를 통해 접근하는 것이 가능하지만 클래스 멤버는 클래스만으로 접근하는 것이 가능하다.)
 		 * 
 		 * 또한 클래스 멤버는 해당 클래스를 통해 생성 된 객체들이 공유하는 특징이 있기 때문에 
 		 * 클래스 멤버는 전역 멤버처럼 사용하는 것이 가능하다.
@@ -272,7 +272,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				 * 
 				 * 이는 일반적인 멤버는 객체에 종속되기 때문에 멤버 변수에 접근하기 위해서는 반드시 
 				 * 객체를 지정해줄 필요가 있는데 클래스 메서드에는 이러한 정보가 없기 때문이다. 
-				 * (즉, 클래스 메서드 내부에서는 this 키워드를 사용하는 것이 불가능하다.)
+				 * (+ 즉, 클래스 메서드 내부에서는 this 키워드를 사용하는 것이 불가능하다.)
 				 */
 				//Console.WriteLine("정수 : {0}", m_nVal);
 
