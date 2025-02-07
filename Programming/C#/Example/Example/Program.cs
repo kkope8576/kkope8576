@@ -22,9 +22,9 @@
  *      // 기타 플랫폼 명령문
  * #endif
  */
-#define EXAMPLE
+//#define EXAMPLE
 #define PRACTICE
-#define SOLUTION
+//#define SOLUTION
 
 /*
  * 네임스페이스란?
@@ -197,15 +197,14 @@ namespace Example
 		 * - 2 차원 배열 크기를 입력 받은 후 해당 크기만큼 배열 초기화 (+ 단, 크기는 정방으로 입력)
 		 * 
 		 * Ex)
-		 * 크기 입력 : 7
-		 *  1  0  0  0  0  0  0
-		 * 18  2  0  0  0  0  0
-		 * 17 19  3  0  0  0  0
-		 * 16 27 20  4  0  0  0
-		 * 15 26 28 21  5  0  0
-		 * 14 25 24 23 22  6  0
-		 * 13 12 11 10  9  8  7
-		 *
+		 * 크기 입력 : 7	
+		 *  1  0  0  0  0  0  0 
+		 * 18  2  0  0  0  0  0 
+		 * 16 27 20  4  0  0  0 
+		 * 15 26 28 21  5  0  0 
+		 * 14 25 24 23 22  6  0 
+		 * 13 12 11 10  9  8  7 
+		 * 
 		 * 프로그래밍 언어 과제 9
 		 * - 행맨 게임 제작하기
 		 * - 단어를 랜덤하게 선택 후 해당 단어의 문자를 입력
@@ -319,8 +318,13 @@ namespace Example
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_02.CS01Practice_02.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_03.CS01Practice_03.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_04.CS01Practice_04.Start(args);
-			_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_05.CS01Practice_05.Start(args);
-			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_06.CS01Practice_06.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_05.CS01Practice_05.Start(args);
+			_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_06.CS01Practice_06.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_07.CS01Practice_07.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_08.CS01Practice_08.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_09.CS01Practice_09.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_10.CS01Practice_10.Start(args);
+
 #elif SOLUTION
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
@@ -330,7 +334,7 @@ namespace Example
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_06.CS01Solution_06.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_07.CS01Solution_07.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_08.CS01Solution_08.Start(args);
-			_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_09.CS01Solution_09.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_09.CS01Solution_09.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_10.CS01Solution_10.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_11.CS01Solution_11.Start(args);
 #endif // #if EXAMPLE
