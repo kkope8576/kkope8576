@@ -22,9 +22,9 @@
  *      // 기타 플랫폼 명령문
  * #endif
  */
-#define EXAMPLE
+//#define EXAMPLE
 #define PRACTICE
-#define SOLUTION
+//#define SOLUTION
 
 /*
  * 네임스페이스란?
@@ -35,6 +35,8 @@
  * 따라서 네임스페이스는 C# 에서 특정 기능을 포함하기 위한 논리적인 경로를 의미한다는 것을 알 수 
  * 있다.
  */
+using Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_04;
+
 namespace Example
 {
 	internal class Program
@@ -314,7 +316,7 @@ namespace Example
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_14.CE01Example_14.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15.CE01Example_15.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
-			_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_17.CE01Example_17.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_17.CE01Example_17.Start(args);
 #elif PRACTICE
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_01.CS01Practice_01.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_02.CS01Practice_02.Start(args);
@@ -368,17 +370,20 @@ namespace Example
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
-			_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
 #elif PRACTICE
-			_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
+			_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_04.CP01Practice_04.Start(args);
+			{
 #elif SOLUTION
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
 			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
 #endif // #if EXAMPLE
+			}
 		}
 
 		/*
