@@ -8,16 +8,17 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 {
 	internal class CP01Practice_04<T> where T : IComparable
 	{
-		CP01Practice_04<int> queue = new CP01Practice_04<int>();
-		public int NumValues { get; private set; } = 1;
+		public int NumValues { get; private set; } = 0;
 		public T[] Values { get; private set; } = null;
+
 		public CP01Practice_04(int a_nSize = 5)
 		{
-			this.Values = new T[a_nSize + 1];
+			this.Values = new T[a_nSize+1];
 		}
 
 		public void Enqueue(T a_tVal)
 		{
+
 			if(this.NumValues >= this.Values.Length)
 			{
 				var oValues = this.Values;
@@ -26,12 +27,13 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 				this.Values = oValues;
 			}
 
-			this.Values[this.NumValues++] = a_tVal;
+			this.Values[this.NumValues] = a_tVal;
 			int nIdx = this.NumValues;
+			this.NumValues++;
 
 			while(nIdx > 1)
 			{
-				int nIdx_Parent = (nIdx) / 2;
+				int nIdx_Parent = nIdx / 2;
 
 				if(this.Values[nIdx_Parent].CompareTo(this.Values[nIdx]) < 0)
 				{
@@ -50,13 +52,13 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 		{
 			T tVal = this.Values[1];
 			this.Values[1] = this.Values[this.NumValues - 1];
-
 			this.NumValues -= 1;
+
 			int nIdx = 1;
 
 			while(nIdx <= this.NumValues / 2)
 			{
-				int nIdx_Compare = (nIdx * 2);
+				int nIdx_Compare = nIdx * 2;
 
 				if(nIdx_Compare + 1 < this.NumValues)
 				{
@@ -65,6 +67,8 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 					nIdx_Compare = (this.Values[nIdx_Compare].CompareTo(this.Values[nIdx_RChild]) < 0) ?
 						nIdx_Compare : nIdx_RChild;
 				}
+
+
 				if(this.Values[nIdx].CompareTo(this.Values[nIdx_Compare]) < 0)
 				{
 					break;
@@ -76,7 +80,6 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 
 				nIdx = nIdx_Compare;
 			}
-
 
 			return tVal;
 		}

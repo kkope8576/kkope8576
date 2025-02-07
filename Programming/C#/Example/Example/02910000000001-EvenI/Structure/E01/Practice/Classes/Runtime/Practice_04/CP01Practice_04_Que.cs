@@ -9,9 +9,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 {
 	internal class CP01Practice_04_Que
 	{
-		internal class CP01Practice_04
-		{
-			/** 초기화 */
+			
 			public static void Start(string[] args)
 			{
 				var oRandom = new Random();
@@ -36,6 +34,6 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 
 				Console.WriteLine();
 			}
-		}
 	}
 }
+
