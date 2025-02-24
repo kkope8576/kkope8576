@@ -1,5 +1,5 @@
 //#define A_E01_EXAMPLE_03_01
-#define A_E01_EXAMPLE_03_02
+//#define A_E01_EXAMPLE_03_02
 #define A_E01_EXAMPLE_03_03
 
 using System;

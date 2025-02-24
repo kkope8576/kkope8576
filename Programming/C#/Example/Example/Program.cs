@@ -67,8 +67,8 @@ namespace Example
 		public static void Main(string[] args)
 		{
 			//Program.Main_Programming(args);
-			Program.Main_Structure(args);
-			//Program.Main_Algorithm(args);
+			//Program.Main_Structure(args);
+			Program.Main_Algorithm(args);
 		}
 
 		/*
@@ -385,7 +385,6 @@ namespace Example
 			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_05.CS01Solution_05.Start(args);
 #endif // #if EXAMPLE
 		}
-		
 
 		/*
 		 * 알고리즘 과제 1
@@ -410,9 +409,9 @@ namespace Example
 		private static void Main_Algorithm(string[] args)
 		{
 #if EXAMPLE
-			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
+			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
-			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
+			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
