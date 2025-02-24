@@ -16,7 +16,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 	{
 		/**
 		 * 순서
-		 */
+		 */ 
 		public enum EOrder
 		{
 			NONE = -1,
