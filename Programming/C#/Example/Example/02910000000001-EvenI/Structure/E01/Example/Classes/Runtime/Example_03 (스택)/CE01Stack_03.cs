@@ -9,7 +9,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 	/**
 	 * 스택
 	 */
-	internal class CE01Stack_03<T> where T : IComparable
+	class CE01Stack_03<T> where T : IComparable
 	{
 		public int NumValues { get; private set; } = 0;
 		public T[] Values { get; private set; } = null;

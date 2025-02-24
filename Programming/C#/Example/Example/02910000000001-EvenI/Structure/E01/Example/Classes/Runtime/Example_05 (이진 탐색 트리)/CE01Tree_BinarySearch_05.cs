@@ -9,7 +9,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 	/**
 	 * 이진 탐색 트리
 	 */
-	internal class CE01Tree_BinarySearch_05<T> where T : IComparable
+	class CE01Tree_BinarySearch_05<T> where T : IComparable
 	{
 		/**
 		 * 순서

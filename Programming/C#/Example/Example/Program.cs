@@ -377,12 +377,12 @@ namespace Example
 #elif PRACTICE
 			//_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_04.CP01Practice_04_Que.Start(args);
-			
-
 #elif SOLUTION
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
-			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_04.CS01Solution_04.Start(args);
+			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_05.CS01Solution_05.Start(args);
 #endif // #if EXAMPLE
 		}
 		

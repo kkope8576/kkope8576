@@ -9,7 +9,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime
 	/**
 	 * Solution 7
 	 */
-	internal class CS01Solution_07
+	class CS01Solution_07
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

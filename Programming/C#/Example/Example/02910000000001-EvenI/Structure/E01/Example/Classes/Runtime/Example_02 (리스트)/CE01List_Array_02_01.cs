@@ -9,7 +9,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 	/**
 	 * 배열 리스트
 	 */
-	internal class CE01List_Array_02_01<T> where T : IComparable
+	class CE01List_Array_02_01<T> where T : IComparable
 	{
 		public int NumValues { get; private set; } = 0;
 		public T[] Values { get; private set; } = null;

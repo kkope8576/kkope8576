@@ -9,7 +9,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 	/**
 	 * 해시 테이블 - 개방 주소법
 	 */
-	internal class CE01HashTable_OpenAddress_07_02<T> where T : IComparable
+	class CE01HashTable_OpenAddress_07_02<T> where T : IComparable
 	{
 		/**
 		 * 상태

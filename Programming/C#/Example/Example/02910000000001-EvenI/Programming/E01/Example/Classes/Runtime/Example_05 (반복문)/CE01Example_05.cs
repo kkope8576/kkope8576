@@ -77,7 +77,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 	/**
 	 * Example 5
 	 */
-	internal class CE01Example_05
+	class CE01Example_05
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

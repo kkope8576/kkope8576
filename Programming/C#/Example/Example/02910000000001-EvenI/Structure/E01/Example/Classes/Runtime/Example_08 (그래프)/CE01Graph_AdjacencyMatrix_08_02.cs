@@ -12,7 +12,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 	/**
 	 * 그래프 - 인접 행렬
 	 */
-	internal class CE01Graph_AdjacencyMatrix_08_02<TKey, TVal> where TKey : IComparable where TVal : IComparable
+	class CE01Graph_AdjacencyMatrix_08_02<TKey, TVal> where TKey : IComparable where TVal : IComparable
 	{
 		/**
 		 * 순서

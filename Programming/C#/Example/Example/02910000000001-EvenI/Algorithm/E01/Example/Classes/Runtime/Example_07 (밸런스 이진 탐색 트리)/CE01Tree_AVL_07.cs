@@ -9,7 +9,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 	/**
 	 * AVL 트리
 	 */
-	internal class CE01Tree_AVL_07<T> where T : IComparable
+	class CE01Tree_AVL_07<T> where T : IComparable
 	{
 		/**
 		 * 순서
