@@ -9,7 +9,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 	/**
 	 * 큐
 	 */
-	internal class CE01Queue_04<T> where T : IComparable
+	class CE01Queue_04<T> where T : IComparable
 	{
 		public int Rear { get; private set; } = 0;
 		public int Front { get; private set; } = 0;

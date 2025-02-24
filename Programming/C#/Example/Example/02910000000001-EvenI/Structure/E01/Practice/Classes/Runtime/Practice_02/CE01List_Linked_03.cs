@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02
 {
-	internal class CE01List_Linked_03<T> where T : IComparable
+	class CE01List_Linked_03<T> where T : IComparable
 	{
 		public class CNode
 		{

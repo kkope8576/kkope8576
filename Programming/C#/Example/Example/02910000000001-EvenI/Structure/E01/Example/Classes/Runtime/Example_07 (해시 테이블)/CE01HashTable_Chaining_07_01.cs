@@ -11,7 +11,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 	/**
 	 * 해시 테이블 - 체인법
 	 */
-	internal class CE01HashTable_Chaining_07_01<T> where T : IComparable
+	class CE01HashTable_Chaining_07_01<T> where T : IComparable
 	{
 		public CE01List_DLinked_02_02<T>[] ContainerLists { get; private set; } = null;
 

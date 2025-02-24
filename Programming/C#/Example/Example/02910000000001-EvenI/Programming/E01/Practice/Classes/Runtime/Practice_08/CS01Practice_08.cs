@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Example._02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_08
 {
-	internal class CS01Practice_08
+	class CS01Practice_08
 	{
 
 	}

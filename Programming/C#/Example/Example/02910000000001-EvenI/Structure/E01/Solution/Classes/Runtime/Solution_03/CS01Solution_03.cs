@@ -11,7 +11,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.S
 	/**
 	 * Solution 3
 	 */
-	internal class CS01Solution_03
+	class CS01Solution_03
 	{
 		/** 초기화 */
 		public static void Start(string[] args)

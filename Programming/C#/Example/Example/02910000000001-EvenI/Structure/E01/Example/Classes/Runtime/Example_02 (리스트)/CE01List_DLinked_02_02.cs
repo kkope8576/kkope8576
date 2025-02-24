@@ -9,7 +9,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Ex
 	/**
 	 * 연결 리스트
 	 */
-	internal class CE01List_DLinked_02_02<T> where T : IComparable
+	class CE01List_DLinked_02_02<T> where T : IComparable
 	{
 		/**
 		 * 노드
