@@ -12,7 +12,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 		{
 			public T Val { get; set; }
 			public CNode Node_Next { get; set; } = null;
-		}	
+		}
 		public int NumValues { get; private set; } = 0;
 		public CNode Node_Head { get; private set; } = null;
 		public CNode Node_Tail { get; private set; } = null;

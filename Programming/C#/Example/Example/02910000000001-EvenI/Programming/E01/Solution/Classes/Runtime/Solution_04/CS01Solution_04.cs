@@ -35,11 +35,11 @@ namespace Example._02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime
 				nTimes_Win += (nResult == 1) ? 1 : 0;
 				nTimes_Lose += (nResult == 2) ? 1 : 0;
 
-				Console.WriteLine("결과 : {0} (나 - {1}, 컴퓨터 - {2})\n", 
+				Console.WriteLine("결과 : {0} (나 - {1}, 컴퓨터 - {2})\n",
 					S01GetStr_Result_04(nResult), S01GetStr_Select_04(nSelect), S01GetStr_Select_04(nSelect_Computer));
 			} while(nTimes_Lose <= 0);
 
-			Console.WriteLine("전적 : {0} 승 {1} 무 {2} 패", 
+			Console.WriteLine("전적 : {0} 승 {1} 무 {2} 패",
 				nTimes_Win, nTimes_Draw, nTimes_Lose);
 
 			Console.WriteLine("프로그램을 종료합니다.");
