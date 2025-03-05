@@ -13,7 +13,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 
 		public CP01Practice_04(int a_nSize = 5)
 		{
-			this.Values = new T[a_nSize+1];
+			this.Values = new T[a_nSize + 1];
 		}
 
 		public void Enqueue(T a_tVal)

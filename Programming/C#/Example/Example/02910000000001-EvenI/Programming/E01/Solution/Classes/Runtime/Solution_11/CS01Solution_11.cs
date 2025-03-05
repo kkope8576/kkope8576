@@ -133,7 +133,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime
 			{
 				for(int j = 0; j < a_oValues.GetLength(1); ++j)
 				{
-					Console.Write("{0,4}", 
+					Console.Write("{0,4}",
 						(a_oValues[i, j] == 0) ? " " : $"{a_oValues[i, j]}");
 				}
 

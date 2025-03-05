@@ -29,18 +29,22 @@ namespace Example._02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime
 			}
 			else
 			{
+				// A
 				if(nScore >= 90)
 				{
 					Console.Write("A");
 				}
+				// B
 				else if(nScore >= 80)
 				{
 					Console.Write("B");
 				}
+				// C
 				else if(nScore >= 70)
 				{
 					Console.Write("C");
 				}
+				// D
 				else
 				{
 					Console.Write("D");
@@ -48,6 +52,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime
 
 				int nScore_Detail = nScore % 10;
 
+				// +
 				if(nScore >= 100 || nScore_Detail >= 7)
 				{
 					Console.Write("+");

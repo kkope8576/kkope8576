@@ -31,7 +31,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime
 						Console.WriteLine("정답은 {0} 보다 {1}", nVal, (nVal < random) ? "큽니다" : "작습니다");
 					}
 				}
-			}while (true);
+			} while(true);
 		}
 	}
 }
