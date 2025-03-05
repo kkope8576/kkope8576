@@ -22,9 +22,9 @@
  *      // 기타 플랫폼 명령문
  * #endif
  */
-#define EXAMPLE
+//#define EXAMPLE
 #define PRACTICE
-#define SOLUTION
+//#define SOLUTION
 
 /*
  * 네임스페이스란?
@@ -67,8 +67,8 @@ namespace Example
 		public static void Main(string[] args)
 		{
 			//Program.Main_Programming(args);
-			Program.Main_Structure(args);
-			//Program.Main_Algorithm(args);
+			//Program.Main_Structure(args);
+			Program.Main_Algorithm(args);
 		}
 
 		/*
@@ -373,7 +373,7 @@ namespace Example
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
-			_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
 #elif PRACTICE
 			//_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_04.CP01Practice_04_Que.Start(args);
@@ -382,7 +382,7 @@ namespace Example
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_04.CS01Solution_04.Start(args);
-			_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_05.CS01Solution_05.Start(args);
+			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_05.CS01Solution_05.Start(args);
 #endif // #if EXAMPLE
 		}
 		
@@ -410,8 +410,8 @@ namespace Example
 		private static void Main_Algorithm(string[] args)
 		{
 #if EXAMPLE
-			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
-			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
+			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
+			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
@@ -419,7 +419,7 @@ namespace Example
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
 #elif PRACTICE
-
+			_02910000000001_EvenI.Algorithm.E01.Practice.Classes.Runtime.Practice_01.CP01Practice_01.Start(args);
 #elif SOLUTION
 
 #endif // #if EXAMPLE
