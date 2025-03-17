@@ -1,4 +1,4 @@
-#define A_E01_EXAMPLE_08_01
+//#define A_E01_EXAMPLE_08_01
 #define A_E01_EXAMPLE_08_02
 
 using System;
@@ -96,7 +96,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			E01PrintTree_MinCostSpanning_08(oTree_MinCostSpanning, 'A');
 #elif A_E01_EXAMPLE_08_02
 			var oRandom = new Random();
-			var oGraph_Matrix = new CE01Graph_AdjacencyMatrix_07_02<char, int>();
+			var oGraph_Matrix = new CE01Graph_AdjacencyMatrix_08_02<char, int>();
 
 			oGraph_Matrix.AddVertex('A', oRandom.Next(1, 100));
 			oGraph_Matrix.AddVertex('B', oRandom.Next(1, 100));
@@ -136,7 +136,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			oGraph_Matrix.AddEdge('G', 'D', 3);
 
 			var oTree_MinCostSpanning = E01CreateTree_MinCostSpanning_08(oGraph_Matrix);
-			
+
 			Console.WriteLine("=====> 최소 비용 신장 트리 요소 - 크루스칼 <=====");
 			E01PrintTree_MinCostSpanning_08(oTree_MinCostSpanning, 'A');
 #endif // #if A_E01_EXAMPLE_08_01
@@ -239,12 +239,12 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 		}
 #elif A_E01_EXAMPLE_08_02
 		/** 정점 연결 여부를 검사한다 */
-		private static bool E01IsConnect_Vertex_08(CE01Graph_AdjacencyMatrix_07_02<char, int> a_oTree_MinCostSpanning,
+		private static bool E01IsConnect_Vertex_08(CE01Graph_AdjacencyMatrix_08_02<char, int> a_oTree_MinCostSpanning,
 			char a_chFrom, char a_chTo)
 		{
 			bool bIsConnect = false;
 
-			a_oTree_MinCostSpanning.Enumerate(CE01Graph_AdjacencyMatrix_07_02<char, int>.EOrder.BREADTH_FIRST, 
+			a_oTree_MinCostSpanning.Enumerate(CE01Graph_AdjacencyMatrix_08_02<char, int>.EOrder.BREADTH_FIRST,
 				a_chFrom, (a_chKey, a_nVal) =>
 			{
 				bIsConnect = bIsConnect || a_chTo == a_chKey;
@@ -254,26 +254,26 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 		}
 
 		/** 최소 비용 신장 트리를 출력한다 */
-		private static void E01PrintTree_MinCostSpanning_08(CE01Graph_AdjacencyMatrix_07_02<char, int> a_oTree_MinCostSpanning,
+		private static void E01PrintTree_MinCostSpanning_08(CE01Graph_AdjacencyMatrix_08_02<char, int> a_oTree_MinCostSpanning,
 			char a_chStart)
 		{
-			a_oTree_MinCostSpanning.Enumerate(CE01Graph_AdjacencyMatrix_07_02<char, int>.EOrder.BREADTH_FIRST, 
+			a_oTree_MinCostSpanning.Enumerate(CE01Graph_AdjacencyMatrix_08_02<char, int>.EOrder.BREADTH_FIRST,
 				a_chStart, (a_chKey, a_nVal) =>
 			{
 				var oListEdges = a_oTree_MinCostSpanning.GetEdges(a_chKey);
 
 				for(int i = 0; i < oListEdges.NumValues; ++i)
 				{
-					Console.WriteLine("{0} -> {1} : {2}", 
+					Console.WriteLine("{0} -> {1} : {2}",
 						a_chKey, oListEdges[i], a_oTree_MinCostSpanning.GetCost(a_chKey, oListEdges[i]));
 				}
 			});
 		}
 
 		/** 최소 비용 신장 트리를 생성한다 */
-		private static CE01Graph_AdjacencyMatrix_07_02<char, int> E01CreateTree_MinCostSpanning_08(CE01Graph_AdjacencyMatrix_07_02<char, int> a_oGraph_Matrix)
+		private static CE01Graph_AdjacencyMatrix_08_02<char, int> E01CreateTree_MinCostSpanning_08(CE01Graph_AdjacencyMatrix_08_02<char, int> a_oGraph_Matrix)
 		{
-			var oTree_MinCostSpanning = new CE01Graph_AdjacencyMatrix_07_02<char, int>();
+			var oTree_MinCostSpanning = new CE01Graph_AdjacencyMatrix_08_02<char, int>();
 
 			for(int i = 0; i < a_oGraph_Matrix.NumVertices; ++i)
 			{
@@ -291,7 +291,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 					var stInfo_Edge = E01MakeInfo_Edge_08(a_oGraph_Matrix.ListVertices[i].m_tKey,
 						oListEdges[j], a_oGraph_Matrix.GetCost(a_oGraph_Matrix.ListVertices[i].m_tKey, oListEdges[j]));
 
-					oTree_MinCostSpanning.AddEdge(stInfo_Edge.m_chFrom, 
+					oTree_MinCostSpanning.AddEdge(stInfo_Edge.m_chFrom,
 						stInfo_Edge.m_chTo, stInfo_Edge.m_nCost);
 
 					oPQueueInfos_Edge.Enqueue(stInfo_Edge, -stInfo_Edge.m_nCost);
@@ -309,7 +309,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 				// 간선 제거가 불가능 할 경우
 				if(!bIsConnect)
 				{
-					oTree_MinCostSpanning.AddEdge(stInfo_Edge.m_chFrom, 
+					oTree_MinCostSpanning.AddEdge(stInfo_Edge.m_chFrom,
 						stInfo_Edge.m_chTo, stInfo_Edge.m_nCost);
 				}
 			}

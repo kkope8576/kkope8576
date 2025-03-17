@@ -1,4 +1,4 @@
-#define A_E01_EXAMPLE_09_01
+//#define A_E01_EXAMPLE_09_01
 #define A_E01_EXAMPLE_09_02
 
 using System;
@@ -31,7 +31,7 @@ using Example._02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Exampl
  * 탐색의 우선 순위가 높다는 것을 알 수 있다.)
  * 
  * A* 알고리즘은 탐색 위치에 대한 우선 순위가 존재하며 우선 순위는 해당 위치와 목적지 간에 거리를
- * 통해 추청한다. (+ 즉, 정확한 거리가 아니라는 것을 알 수 있다.)
+ * 통해 추청한다. (+ 즉, 정확한 거리가 아니라 추정치라는 것을 알 수 있다.)
  * 
  * 특정 위치와 목적지 간에 거리 계산법에는 주로 유클리디안 거리 계산법이 활용되며
  * 격자 형태의 이동일 경우에는 맨해튼 거리 계산법이 활용된다.
@@ -94,7 +94,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			Console.WriteLine();
 #elif A_E01_EXAMPLE_09_02
 			var oRandom = new Random();
-			var oGraph_Matrix = new CE01Graph_AdjacencyMatrix_07_02<char, int>();
+			var oGraph_Matrix = new CE01Graph_AdjacencyMatrix_08_02<char, int>();
 
 			oGraph_Matrix.AddVertex('A', oRandom.Next(1, 100));
 			oGraph_Matrix.AddVertex('B', oRandom.Next(1, 100));
@@ -267,7 +267,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 		}
 #elif A_E01_EXAMPLE_09_02
 		/** 경로를 탐색한다 */
-		private static List<char> E01FindPath_09(CE01Graph_AdjacencyMatrix_07_02<char, int> a_oGraph_Matrix,
+		private static List<char> E01FindPath_09(CE01Graph_AdjacencyMatrix_08_02<char, int> a_oGraph_Matrix,
 			char a_chFrom, char a_chTo)
 		{
 			var oListPath = new List<char>();
@@ -294,7 +294,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 				for(int i = 0; i < oListEdges.NumValues; ++i)
 				{
-					int nVertex_To = oListEdges[i];
+					int nVertex_To = a_oGraph_Matrix.FindVertexAt(oListEdges[i]);
 					var oVertex_To = a_oGraph_Matrix.ListVertices[nVertex_To];
 
 					int nCost_To = oInfo_FromPath.m_nCost +
@@ -339,7 +339,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 				for(int i = 0; i < oListEdges.NumValues; ++i)
 				{
-					int nVertex_To = oListEdges[i];
+					int nVertex_To = a_oGraph_Matrix.FindVertexAt(oListEdges[i]);
 					var oVertex_To = a_oGraph_Matrix.ListVertices[nVertex_To];
 
 					// 탐색이 불가능 할 경우

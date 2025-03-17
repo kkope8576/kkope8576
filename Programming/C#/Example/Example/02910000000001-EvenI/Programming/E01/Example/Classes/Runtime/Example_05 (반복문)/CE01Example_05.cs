@@ -148,6 +148,31 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			{
 				Console.WriteLine("Hello, World!");
 			} while(false);
+
+			Console.WriteLine();
+			int i = 0;
+
+/*
+ * goto 키워드를 사용하기 위해서는 목적지에 해당하는 위치 정보를 명시해줘야하며
+ * 위치는 레이블을 통해 명시하는 것이 가능하다. (+ 즉, switch ~ case 조건문에서
+ * case 도 레이블을 명시하는 방법 중 하나라는 것을 알 수 있다.)
+ */
+P_E01_EXAMPLE_05_03_LOOP_START:
+			Console.WriteLine("{0}, ", i + 1);
+			i += 1;
+
+			// 반복이 가능 할 경우
+			if(i < 10)
+			{
+				goto P_E01_EXAMPLE_05_03_LOOP_START;
+			}
+			else
+			{
+				goto P_E01_EXAMPLE_05_03_LOOP_END;
+			}
+
+P_E01_EXAMPLE_05_03_LOOP_END:
+			Console.WriteLine();
 #endif // #if P_E01_EXAMPLE_05_01
 		}
 	}

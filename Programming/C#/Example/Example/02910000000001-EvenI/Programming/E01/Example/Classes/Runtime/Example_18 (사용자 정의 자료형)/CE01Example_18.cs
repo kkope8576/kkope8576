@@ -1,5 +1,5 @@
-//#define P_E01_EXAMPLE_17_01
-#define P_E01_EXAMPLE_17_02
+//#define P_E01_EXAMPLE_18_01
+#define P_E01_EXAMPLE_18_02
 
 using System;
 using System.Collections.Generic;
@@ -106,73 +106,73 @@ using System.Threading.Tasks;
  * 불가능하다. (+ 즉, 정수 이외의 상수가 필요 할 경우에는 const 키워드 등을 활용해야한다는 것을
  * 알 수 있다.)
  */
-namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_17
+namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_18
 {
 	/**
-	 * Example 17
+	 * Example 18
 	 */
-	class CE01Example_17
+	class CE01Example_18
 	{
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
-#if P_E01_EXAMPLE_17_01
-			STE01Character_17 stCharacter = new STE01Character_17();
-			stCharacter.m_nLV = 1;
-			stCharacter.m_nHP = 50;
-			stCharacter.m_nATK = 15;
+#if P_E01_EXAMPLE_18_01
+			STE01Character_18 stCharacter = new STE01Character_18();
+			stCharacter.m_nLv = 1;
+			stCharacter.m_nHp = 50;
+			stCharacter.m_nAtk = 15;
 
 			Console.WriteLine("=====> 캐릭터 정보 - 레벨 업 전 <=====");
-			E01ShowInfo_17(stCharacter);
+			E01ShowInfo_18(stCharacter);
 
-			stCharacter = E01LevelUp_17(stCharacter);
+			stCharacter = E01LevelUp_18(stCharacter);
 
 			Console.WriteLine("\n=====> 캐릭터 정보 - 레벨 업 후 <=====");
-			E01ShowInfo_17(stCharacter);
-#elif P_E01_EXAMPLE_17_02
-			EE01Type_Item_17 eItem_Acquire = E01GetItem_Acquire_17();
+			E01ShowInfo_18(stCharacter);
+#elif P_E01_EXAMPLE_18_02
+			EE01Type_Item_18 eItem_Acquire = E01GetItem_Acquire_18();
 			Console.WriteLine("획득 아이템 : {0}", eItem_Acquire);
-#endif // P_E01_EXAMPLE_17_01
+#endif // P_E01_EXAMPLE_18_01
 		}
 
-#if P_E01_EXAMPLE_17_01
+#if P_E01_EXAMPLE_18_01
 		/**
 		 * 캐릭터
 		 */
-		private struct STE01Character_17
+		private struct STE01Character_18
 		{
-			public int m_nLV;
-			public int m_nHP;
-			public int m_nATK;
+			public int m_nLv;
+			public int m_nHp;
+			public int m_nAtk;
 		}
 
 		/** 레벨을 증가시킨다 */
-		private static STE01Character_17 E01LevelUp_17(STE01Character_17 a_stCharacter)
+		private static STE01Character_18 E01LevelUp_18(STE01Character_18 a_stCharacter)
 		{
 			/*
 			 * 구조체에 new 키워드를 명시하는 것은 해당 구조체의 생성자를 호출한다는 의미이다.
 			 * (+ 즉, 객체를 생성한다는 의미가 아니라는 것을 알 수 있다.)
 			 */
-			return new STE01Character_17()
+			return new STE01Character_18()
 			{
-				m_nLV = a_stCharacter.m_nLV + 1,
-				m_nHP = a_stCharacter.m_nHP + 10,
-				m_nATK = a_stCharacter.m_nATK + 5
+				m_nLv = a_stCharacter.m_nLv + 1,
+				m_nHp = a_stCharacter.m_nHp + 10,
+				m_nAtk = a_stCharacter.m_nAtk + 5
 			};
 		}
 
 		/** 정보를 출력한다 */
-		private static void E01ShowInfo_17(STE01Character_17 a_stCharacter)
+		private static void E01ShowInfo_18(STE01Character_18 a_stCharacter)
 		{
-			Console.WriteLine("레벨 : {0}", a_stCharacter.m_nLV);
-			Console.WriteLine("체력 : {0}", a_stCharacter.m_nHP);
-			Console.WriteLine("공격력 : {0}", a_stCharacter.m_nATK);
+			Console.WriteLine("레벨 : {0}", a_stCharacter.m_nLv);
+			Console.WriteLine("체력 : {0}", a_stCharacter.m_nHp);
+			Console.WriteLine("공격력 : {0}", a_stCharacter.m_nAtk);
 		}
-#elif P_E01_EXAMPLE_17_02
+#elif P_E01_EXAMPLE_18_02
 		/**
 		 * 아이템 종류
 		 */
-		private enum EE01Type_Item_17
+		private enum EE01Type_Item_18
 		{
 			NONE = -1,
 			GOLD,
@@ -182,7 +182,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 획득 아이템을 반환한다 */
-		private static EE01Type_Item_17 E01GetItem_Acquire_17()
+		private static EE01Type_Item_18 E01GetItem_Acquire_18()
 		{
 			var oRandom = new Random();
 
@@ -191,9 +191,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 정수로 변환하는 것이 가능하다. (+ 즉, 열거형 상수와 정수는 서로 호환된다는 것을 
 			 * 알 수 있다.)
 			 */
-			return (EE01Type_Item_17)oRandom.Next((int)EE01Type_Item_17.GOLD,
-				(int)EE01Type_Item_17.MAX_VAL);
+			return (EE01Type_Item_18)oRandom.Next((int)EE01Type_Item_18.GOLD,
+				(int)EE01Type_Item_18.MAX_VAL);
 		}
-#endif // P_E01_EXAMPLE_17_01
+#endif // P_E01_EXAMPLE_18_01
 	}
 }

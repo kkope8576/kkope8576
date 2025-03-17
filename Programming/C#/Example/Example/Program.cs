@@ -317,6 +317,9 @@ namespace Example
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_15.CE01Example_15.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16.CE01Example_16.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_17.CE01Example_17.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_18.CE01Example_18.Start(args);
+			//_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_19.CE01Example_19.Start(args);
+			_02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_20.CE01Example_20.Start(args);
 #elif PRACTICE
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_01.CS01Practice_01.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_02.CS01Practice_02.Start(args);
@@ -327,7 +330,7 @@ namespace Example
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_07.CS01Practice_07.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_08.CS01Practice_08.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_09.CS01Practice_09.Start(args);
-			//_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_10.CS01Practice_10.Start(args);
+			_02910000000001_EvenI.Programming.E01.Practice.Classes.Runtime.Practice_10.CS01Practice_10.Start(args);
 #elif SOLUTION
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Programming.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
@@ -376,7 +379,7 @@ namespace Example
 			_02910000000001_EvenI.Structure.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
 #elif PRACTICE
 			//_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
-			//_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_04.CP01Practice_04_Que.Start(args);
+			_02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_04.CP01Practice_04_Que.Start(args);
 #elif SOLUTION
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
