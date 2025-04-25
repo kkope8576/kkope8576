@@ -414,18 +414,21 @@ namespace Example
 		 * - 이진 탐색 알고리즘 재귀호출로 구현하기
 		 * 
 		 * 알고리즘 과제 2
-		 * - 착한 접미부 테이블을 구축해서 보이어 무어 알고리즘 개선하기
+		 * - 퀵 정렬 성능 개선하기
 		 * 
 		 * 알고리즘 과제 3
-		 * - 수식 트리 구축 알고리즘 구현하기
+		 * - 착한 접미부 테이블을 구축해서 보이어 무어 알고리즘 개선하기
 		 * 
 		 * 알고리즘 과제 4
-		 * - 레드 블랙 트리 균형 회복 과정 이해하고 설명하기
+		 * - 수식 트리 구축 알고리즘 구현하기
 		 * 
 		 * 알고리즘 과제 5
-		 * - 가중치가 낮은 간선을 추가하는 방법으로 크루스칼 알고리즘 구현하기
+		 * - 레드 블랙 트리 균형 회복 과정 이해하고 설명하기
 		 * 
 		 * 알고리즘 과제 6
+		 * - 가중치가 낮은 간선을 추가하는 방법으로 크루스칼 알고리즘 구현하기
+		 * 
+		 * 알고리즘 과제 7
 		 * - 가중치가 낮은 간선을 먼저 방문하도록 다익스트라 알고리즘 개선하기
 		 */
 		/** 알고리즘 메인 메서드 */
@@ -434,8 +437,8 @@ namespace Example
 #if EXAMPLE
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_01.CE01Example_01.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
-			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
-			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
+			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
+			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
