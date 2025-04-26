@@ -1,5 +1,5 @@
 //#define P_E01_EXAMPLE_05_01
-//#define P_E01_EXAMPLE_05_02
+#define P_E01_EXAMPLE_05_02
 #define P_E01_EXAMPLE_05_03
 
 using System;
@@ -111,7 +111,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 					continue;
 				}
 
-				Console.Write("{0}, ", nVal);
+				Console.Write($"{0}, ", nVal);
 				++i;
 			}
 

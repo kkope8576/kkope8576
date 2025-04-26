@@ -110,7 +110,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		/**
 		 * 캐릭터
 		 */
-		private class CE01Character_10
+			private class CE01Character_10
 		{
 			public int m_nLV = 0;
 			public int m_nHP = 0;
@@ -254,7 +254,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/** 레벨을 반환한다 */
 			public int GetLV()
 			{
-				return m_nLV;
+				return m_nLV;		
 			}
 
 			/** 체력을 반환한다 */
