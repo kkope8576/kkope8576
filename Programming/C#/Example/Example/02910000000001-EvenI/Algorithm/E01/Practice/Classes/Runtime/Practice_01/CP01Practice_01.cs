@@ -20,7 +20,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Practice.Classes.Runtime.P
 
 			oListValues.Sort();
 
-			Console.WriteLine("=====> 리스트 요소 <=====");
+			Console.WriteLine("=====> 리스트 <=====");
 			P01PrintValues(oListValues);
 
 			Console.Write("\n정수 입력 : ");

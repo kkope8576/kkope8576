@@ -22,17 +22,17 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.S
 				oListValues.Add(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 리스트 요소 - 정렬 전 <=====");
+			Console.WriteLine("=====> 리스트 - 정렬 전 <=====");
 			S01PrintValues_02(oListValues);
 
 			S01SortValues_02(oListValues, S01Compare_ByAscending_02);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 정렬 후 (오름차순) <=====");
+			Console.WriteLine("\n=====> 리스트 - 정렬 후 (오름차순) <=====");
 			S01PrintValues_02(oListValues);
 
 			S01SortValues_02(oListValues, S01Compare_ByDescending_02);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 정렬 후 (내림차순) <=====");
+			Console.WriteLine("\n=====> 리스트 - 정렬 후 (내림차순) <=====");
 			S01PrintValues_02(oListValues);
 		}
 

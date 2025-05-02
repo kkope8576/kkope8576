@@ -22,14 +22,14 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 				oListValues.AddVal(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 리스트 요소 <=====");
+			Console.WriteLine("=====> 리스트 <=====");
 
 			for(int i = 0; i < oListValues.NumValues; ++i)
 			{
 				Console.Write("{0}, ", oListValues[i]);
 			}
 
-			Console.WriteLine("\n\n=====> 리스트 요소 - 추가 후 <=====");
+			Console.WriteLine("\n\n=====> 리스트 - 추가 후 <=====");
 			oListValues.InsertVal(0, 100);
 
 			for(int i = 0; i < oListValues.NumValues; ++i)

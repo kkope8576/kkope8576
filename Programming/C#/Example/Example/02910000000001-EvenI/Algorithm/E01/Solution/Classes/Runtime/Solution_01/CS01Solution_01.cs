@@ -24,7 +24,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.S
 
 			S01SortValues_01(oListValues);
 
-			Console.WriteLine("=====> 리스트 요소 <=====");
+			Console.WriteLine("=====> 리스트 <=====");
 			S01PrintValues_01(oListValues);
 
 			Console.Write("\n정수 입력 : ");
