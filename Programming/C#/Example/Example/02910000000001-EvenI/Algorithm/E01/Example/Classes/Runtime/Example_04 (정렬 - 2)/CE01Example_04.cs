@@ -167,7 +167,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			int a_nLeft, int a_nRight, Func<int, int, int> a_oCompare)
 		{
 			// 정렬이 불가능 할 경우
-			if(a_nLeft >= a_nRight)
+			if(a_nLeft >= a_nRight)	
 			{
 				return;
 			}
@@ -196,7 +196,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 				int nTemp = a_oListValues[nLeft];
 				a_oListValues[nLeft] = a_oListValues[nRight];
-				a_oListValues[nRight] = nTemp;
+				a_oListValues[nRight] = nTemp;	
 			}
 
 			// 정렬이 필요 할 경우
@@ -216,7 +216,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			Func<int, int, int> a_oCompare)
 		{
 			E01SortQuick_04(a_oListValues, 0, a_oListValues.Count - 1, a_oCompare);
-		}
-#endif // #if A_E01_EXAMPLE_04_01
+		}  
+#endif // #if A_E01_EXAMPLE_04_01 
 	}
 }
