@@ -1,5 +1,5 @@
 //#define A_E01_EXAMPLE_04_01
-#define A_E01_EXAMPLE_04_02
+//#define A_E01_EXAMPLE_04_02
 #define A_E01_EXAMPLE_04_03
 
 using System;
@@ -10,21 +10,21 @@ using System.Threading.Tasks;
 
 /*
  * 불안정 정렬 알고리즘 종류
- * - 선택 정렬 (Selection Sorting)
- * - 힙 정렬 (Heap Sorting)
- * - 퀵 정렬 (Qucik Sorting)
+ * - 선택 정렬 (Selection Sort)
+ * - 힙 정렬 (Heap Sort)
+ * - 퀵 정렬 (Qucik Sort)
  * 
- * 선택 정렬 (Selection Sorting) 이란?
+ * 선택 정렬 (Selection Sort) 이란?
  * - 데이터 집합에 존재하는 모든 데이터를 검사 후 정렬 기준에 부합하는 데이터를 찾아 올바른 위치로
  * 옮기는 과정을 반복함으로서 모든 데이터를 정렬하는 의미한다. (+ 즉, 모든 데이터를 검사하는 과정이
  * 완료 될 때마다 데이터가 하나씩 정렬된다는 것을 알 수 있다.)
  * 
- * 힙 정렬 (Heap Sorting) 이란?
+ * 힙 정렬 (Heap Sort) 이란?
  * - 데이터 집합에 존재하는 모든 데이터를 힙 구조로 정렬 후 루트 노드에 존재하는 데이터를
  * 가져오는 행위를 반복함으로서 모든 데이터를 정렬하는 알고리즘을 의미한다. (+ 즉, 힙을 구성하는
  * 방법에 따라 오름차순 or 내림차순으로 정렬 된 결과를 얻을 수 있다.)
  * 
- * 퀵 정렬 (Quick Sorting) 이란?
+ * 퀵 정렬 (Quick Sort) 이란?
  * - 특정 데이터를 기준으로 삼아 해당 데이터를 기점으로 그룹을 나누는 행위를 반복함으로서
  * 모든 데이터를 정렬하는 알고리즘을 의미한다. (+ 즉, 데이터를 더이상 나눌 수 없는 시점에 도달하면
  * 데이터의 정렬이 완료된다는 것을 알 수 있다.)
@@ -34,7 +34,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 	/**
 	 * Example 4
 	 */
-	class CE01Example_04
+	internal class CE01Example_04
 	{
 		/** 초기화 */
 		public static void Start(string[] args)
@@ -50,25 +50,25 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			Console.WriteLine("=====> 리스트 요소 - 정렬 전 <=====");
 			E01PrintValues_04(oListValues);
 
-			E01SortValues_04(oListValues, E01CompareByAscending_04);
+			E01SortValues_04(oListValues, E01Compare_ByAscending_04);
 
 			Console.WriteLine("\n=====> 리스트 요소 - 정렬 후 (오름차순) <=====");
 			E01PrintValues_04(oListValues);
 
-			E01SortValues_04(oListValues, E01CompareByDescending_04);
+			E01SortValues_04(oListValues, E01Compare_ByDescending_04);
 
 			Console.WriteLine("\n=====> 리스트 요소 - 정렬 후 (내림차순) <=====");
 			E01PrintValues_04(oListValues);
 		}
 
 		/** 오름차순으로 비교한다 */
-		private static int E01CompareByAscending_04(int a_nLhs, int a_nRhs)
+		private static int E01Compare_ByAscending_04(int a_nLhs, int a_nRhs)
 		{
 			return a_nLhs - a_nRhs;
 		}
 
 		/** 내림차순으로 비교한다 */
-		private static int E01CompareByDescending_04(int a_nLhs, int a_nRhs)
+		private static int E01Compare_ByDescending_04(int a_nLhs, int a_nRhs)
 		{
 			return a_nRhs - a_nLhs;
 		}

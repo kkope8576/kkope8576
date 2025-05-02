@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- * 제네릭이란?
+ * 제네릭 (Generic) 이란?
  * - 자료형을 명시하지 않고 메서드 or 클래스를 정의 할 수 있는 기능을 의미한다. (+ 즉, 
  * 제네릭을 활용하면 여러 자료형에 동작하는 메서드 or 클래스를 구현하는 것이 가능하다.)
  * 
@@ -21,7 +21,7 @@ using System.Threading.Tasks;
  * 하나의 메서드 or 클래스만을 제작하면 된다는 장점이 존재한다.
  * 
  * Ex)
- * void Swap(ref int a_nLhs, ref int a_nRhs)
+ * void Swap(ref int a_rnValA, ref int a_rnValB)
  * {
  *		// Do Something
  * }
@@ -33,7 +33,7 @@ using System.Threading.Tasks;
  * - 반환 형 + 메서드 이름 + 제네릭 형식 인자 + 매개 변수 + 메서드 몸체
  * 
  * Ex)
- * void Swap<T>(ref T a_rtLhs, ref T a_rtRhs)
+ * void Swap<T>(ref T a_rtValA, ref T a_rtValB)
  * {
  *		// Do Something
  * }
@@ -59,7 +59,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 	/**
 	 * Example 14
 	 */
-	class CE01Example_14
+	internal class CE01Example_14
 	{
 		/** 초기화 */
 		public static void Start(string[] args)
@@ -128,9 +128,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 #elif P_E01_EXAMPLE_14_02
 		/*
 		 * C# 제네릭 형식 인자 제한 방법
-		 * - where T : class			<- 참조 형식 자료형으로 제한
-		 * - where T : struct			<- 값 형식 자료형으로 제한
-		 * - where T : SomeClass		<- 해당 클래스를 상속하는 자료형으로 제한
+		 * - where T : class				<- 참조 형식 자료형으로 제한
+		 * - where T : struct				<- 값 형식 자료형으로 제한
+		 * - where T : SomeClass			<- 해당 클래스를 상속하는 자료형으로 제한
 		 * - where T : SomeInterface	<- 해당 인터페이스를 따르는 자료형으로 제한
 		 * 
 		 * C# 제네릭 메서드 or 제네릭 클래스는 기본적으로 모든 자료형에 동작하도록 정의 될 필요가 
@@ -243,7 +243,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				var oWStream_File = File.Open(a_oPath_File,
 					FileMode.Create, FileAccess.Write);
 
-				m_oWriter = new StreamWriter(oWStream_File);
+				this.m_oWriter = new StreamWriter(oWStream_File);
 			}
 
 			/** 문자열을 출력한다 */

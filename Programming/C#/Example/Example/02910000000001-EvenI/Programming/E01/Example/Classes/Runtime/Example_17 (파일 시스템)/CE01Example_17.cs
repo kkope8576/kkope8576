@@ -1,6 +1,6 @@
-//#define P_E01_EXAMPLE_16_01
-//#define P_E01_EXAMPLE_16_02
-#define P_E01_EXAMPLE_16_03
+//#define P_E01_EXAMPLE_17_01
+//#define P_E01_EXAMPLE_17_02
+#define P_E01_EXAMPLE_17_03
 
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- * 파일 시스템이란?
+ * 파일 시스템 (File System) 이란?
  * - 파일을 생성 및 제어 할 수 있는 기능을 의미한다. (+ 즉, 파일 시스템을 활용하면 
  * 반영구적으로 저장되는 데이터를 생성하는 것이 가능하다.)
  * 
@@ -27,7 +27,7 @@ using System.Threading.Tasks;
  * C# 은 파일을 제어하기 위한 File 클래스와 디렉토리 (폴더) 를 제어하기 위한 Directory 클래스를 
  * 제공하기 때문에 해당 클래스를 활용하면 손쉽게 파일 등을 제어하는 것이 가능하다.
  * 
- * 스트림이란?
+ * 스트림 (Stream) 이란?
  * - 데이터를 주고 받을 수 있는 통로를 의미한다. (+ 즉, 스트림이 존재하기 때문에 
  * 특정 프로그램에서 다른 프로그램으로 데이터를 전달하거나 읽어들이는 것이 가능하다.)
  * 
@@ -47,24 +47,46 @@ using System.Threading.Tasks;
  * 위와 같이 File.Open 메서드를 활용하면 파일을 대상으로 데이터를 입/출력 할 수 있는 스트림을 
  * 생성하는 것이 가능하다. (+ 즉, 프로그램에서 파일을 개방한다는 것은 파일과 데이터를 
  * 주고 받을 수 있는 스트림을 생성하는 행위라는 것을 알 수 있다.)
+ * 
+ * 파일 입/출력 모드 종류
+ * - 읽기 (Read)
+ * - 쓰기 (Write)
+ * - 추가 (Append)
+ * 
+ * 파일 개방 모드 종류
+ * - 텍스트 (Text)
+ * - 바이너리 (Binary)
+ * 
+ * 텍스트 (Text) 모드 vs 바이너리 (Binary) 모드
+ * - 텍스트 모드는 개행 문자 (데이터) 를 보정하는 특징이 존재한다. (+ 즉, 운영체제마다 개행 문자를
+ * 인식하는 방식이 다르며 텍스트 모드는 이를 고려해서 특정 운영체제에 맞게 개행 문자를 보정한다는
+ * 것을 알 수 있다.)
+ * 
+ * 따라서 윈도우 운영체제 상에서 텍스트 모드로 데이터를 입/출력 하면 \n <-> \r\n 형식으로
+ * 보정된다는 것을 알 수 있다. (+ 즉, \n 을 출력하면 \r\n 으로 보정되서 출력되며 \r\n 을
+ * 읽어들일 경우 \n 으로 읽어들여지는 것을 알 수 있다.)
+ * 
+ * 반면 바이너리 모드는 텍스트 모드와 달리 데이터 보정이 발생하지 않기 때문에 특정 데이터를 온전하게
+ * 파일에 출력하거나 읽어들이는 것이 가능하다. (+ 즉, 원본 데이터를 온전하게 파일에 출력하고 싶다면
+ * 바이너리 모드를 사용해야한다는 것을 알 수 있다.)
  */
-namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_16
+namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.Example_17
 {
 	/**
-	 * Example 16
+	 * Example 17
 	 */
-	class CE01Example_16
+	internal class CE01Example_17
 	{
 		/** 초기화 */
 		public static void Start(string[] args)
 		{
 			// 디렉토리가 없을 경우
-			if(!Directory.Exists("../../Resources/Programming/Example/Example_16"))
+			if(!Directory.Exists("../../Resources/Programming/Example/Example_17"))
 			{
-				Directory.CreateDirectory("../../Resources/Programming/Example/Example_16");
+				Directory.CreateDirectory("../../Resources/Programming/Example/Example_17");
 			}
 
-#if P_E01_EXAMPLE_16_01
+#if P_E01_EXAMPLE_17_01
 			/*
 			 * File.Open 메서드는 2 개의 역할을 수행한다.
 			 * 
@@ -75,7 +97,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 생성했을 경우이다. (+ 즉, 읽기용으로는 파일을 생성하는 것이 불가능하다는 것을 알 수 
 			 * 있다.)
 			 */
-			FileStream oWStream_File = File.Open("../../Resources/Programming/Example/Example_16/Example_16_01.txt",
+			FileStream oWStream_File = File.Open("../../Resources/Programming/Example/Example_17/Example_17_01.txt",
 				FileMode.Create, FileAccess.Write);
 
 			// 스트림이 생성되었을 경우
@@ -102,7 +124,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oWriter.Close();
 			}
 
-			FileStream oRStream_File = File.Open("../../Resources/Programming/Example/Example_16/Example_16_01.txt",
+			FileStream oRStream_File = File.Open("../../Resources/Programming/Example/Example_17/Example_17_01.txt",
 				FileMode.Open, FileAccess.Read);
 			
 			// 스트림이 생성되었을 경우
@@ -123,8 +145,8 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 				oReader.Close();
 			}
-#elif P_E01_EXAMPLE_16_02
-			FileStream oWStream_File = File.Open("../../Resources/Programming/Example/Example_16/Example_16_02.bin",
+#elif P_E01_EXAMPLE_17_02
+			FileStream oWStream_File = File.Open("../../Resources/Programming/Example/Example_17/Example_17_02.bin",
 				FileMode.Create, FileAccess.Write);
 
 			// 스트림이 생성되었을 경우
@@ -140,7 +162,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oWriter.Close();
 			}
 
-			FileStream oRStream_File = File.Open("../../Resources/Programming/Example/Example_16/Example_16_02.bin",
+			FileStream oRStream_File = File.Open("../../Resources/Programming/Example/Example_17/Example_17_02.bin",
 				FileMode.Open, FileAccess.Read);
 
 			// 스트림이 생성되었을 경우
@@ -157,7 +179,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oReader.Close();
 				Console.WriteLine();
 			}
-#elif P_E01_EXAMPLE_16_03
+#elif P_E01_EXAMPLE_17_03
 			// 매개 변수가 잘못되었을 경우
 			if(args.Length < 2)
 			{
@@ -165,11 +187,8 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				return;
 			}
 
-			FileStream oRStream_File = File.Open(args[0],
-				FileMode.Open, FileAccess.Read);
-
-			FileStream oWStream_File = File.Open(args[1],
-				FileMode.Create, FileAccess.Write);
+			FileStream oRStream_File = File.Open(args[0], FileMode.Open, FileAccess.Read);
+			FileStream oWStream_File = File.Open(args[1], FileMode.Create, FileAccess.Write);
 
 			// 스트림이 생성되었을 경우
 			if(oRStream_File != null && oWStream_File != null)

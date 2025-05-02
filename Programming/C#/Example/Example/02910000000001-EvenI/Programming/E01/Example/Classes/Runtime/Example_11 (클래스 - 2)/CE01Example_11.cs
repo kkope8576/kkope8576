@@ -13,7 +13,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 	/**
 	 * Example 11
 	 */
-	class CE01Example_11
+	internal class CE01Example_11
 	{
 		/** 초기화 */
 		public static void Start(string[] args)
@@ -23,12 +23,12 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 아래와 같이 프로퍼티를 활용하면 변수를 다루듯이 명령문을 작성하는 것이 가능하다.
 			 */
 			CE01Character_11 oCharacter = new CE01Character_11();
-			oCharacter.LV = 1;
-			oCharacter.HP = 10;
-			oCharacter.ATK = 5;
+			oCharacter.Lv = 1;
+			oCharacter.Hp = 10;
+			oCharacter.Atk = 5;
 			oCharacter.Name = "캐릭터";
 
-			Console.WriteLine("=====> 캐릭터 <=====");
+			Console.WriteLine("=====> 캐릭터 정보 <=====");
 			oCharacter.ShowInfo();
 #elif P_E01_EXAMPLE_11_02
 			CE01Array_11 oValues = new CE01Array_11(5);
@@ -125,9 +125,9 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 */
 		private class CE01Character_11
 		{
-			private int m_nLV = 0;
-			private int m_nHP = 0;
-			private int m_nATK = 0;
+			private int m_nLv = 0;
+			private int m_nHp = 0;
+			private int m_nAtk = 0;
 
 			/*
 			 * 자동 구현 프로퍼티란?
@@ -141,48 +141,48 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 */
 			public string Name { get; set; } = string.Empty;
 
-			public int LV
+			public int Lv
 			{
 				get
 				{
-					return m_nLV;
+					return m_nLv;
 				}
 				set
 				{
-					m_nLV = value;
+					m_nLv = value;
 				}
 			}
 
-			public int HP
+			public int Hp
 			{
 				get
 				{
-					return m_nHP;
+					return m_nHp;
 				}
 				set
 				{
-					m_nHP = value;
+					m_nHp = value;
 				}
 			}
 
-			public int ATK
+			public int Atk
 			{
 				get
 				{
-					return m_nATK;
+					return m_nAtk;
 				}
 				set
 				{
-					m_nATK = value;
+					m_nAtk = value;
 				}
 			}
 
 			/** 정보를 출력한다 */
 			public void ShowInfo()
 			{
-				Console.WriteLine("LV : {0}", this.LV);
-				Console.WriteLine("HP : {0}", this.HP);
-				Console.WriteLine("ATK : {0}", this.ATK);
+				Console.WriteLine("레벨 : {0}", this.Lv);
+				Console.WriteLine("체력 : {0}", this.Hp);
+				Console.WriteLine("공격력 : {0}", this.Atk);
 				Console.WriteLine("Name : {0}", this.Name);
 			}
 		}
@@ -198,7 +198,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/** 생성자 */
 			public CE01Array_11(int a_nSize)
 			{
-				m_oValues = new int[a_nSize];
+				this.m_oValues = new int[a_nSize];
 			}
 
 			/*
@@ -243,8 +243,8 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		 * 클래스 멤버는 전역 멤버처럼 사용하는 것이 가능하다.
 		 * 
 		 * C# 클래스 멤버 선언 방법
-		 * - static + 자료형 + 변수 이름								<- 클래스 변수
-		 * - static + 반환형 + 메서드 이름 + 매개 변수 + 메서드 몸체	<- 클래스 메서드
+		 * - static + 자료형 + 변수 이름										<- 클래스 변수
+		 * - static + 반환형 + 메서드 이름 + 매개 변수 + 메서드 몸체			<- 클래스 메서드
 		 * 
 		 * 위와 같이 멤버 앞에 static 키워드를 명시하면 해당 멤버는 클래스에 종속되는 클래스 
 		 * 멤버라는 것을 의미한다.

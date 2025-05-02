@@ -18,10 +18,10 @@ using System.Threading.Tasks;
  * 프로그래밍의 메서드 (함수) 는 수학의 함수와 조금 다르다는 것을 알 수 있다.)
  * 
  * C# 메서드 유형
- * - 입력 O, 출력 O		<- int SomeMethod(int a_nVal);
- * - 입력 O, 출력 X		<- void SomeMethod(int a_nVal);
- * - 입력 X, 출력 O		<- int SomeMethod();
- * - 입력 X, 출력 X		<- void SomeMethod();
+ * - 입력 O, 출력 O			<- int SomeMethod(int a_nVal);
+ * - 입력 O, 출력 X			<- void SomeMethod(int a_nVal);
+ * - 입력 X, 출력 O			<- int SomeMethod();
+ * - 입력 X, 출력 X			<- void SomeMethod();
  * 
  * 위와 같이 메서드는 입력 데이터와 출력 데이터의 존재 여부에 따라 크게 4 가지 유형으로 구분된다는 
  * 것을 알 수 있다.
@@ -46,7 +46,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 	/**
 	 * Example 8
 	 */
-	class CE01Example_08
+	internal class CE01Example_08
 	{
 		/** 초기화 */
 		public static void Start(string[] args)
@@ -90,7 +90,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * int nVal = 0;
 			 * SomeMethod(ref nVal);
 			 * 
-			 * void SomeMethod(ref int a_nVal)
+			 * void SomeMethod(ref int a_rnVal)
 			 * {
 			 *		// Do Something
 			 * }
@@ -102,12 +102,12 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 아니라 참조를 전달 받을 수 있는 매개 변수라는 것을 C# 컴파일러에게 알려 줄 필요가 
 			 * 있다.
 			 */
-			E01SwapByVal_08(nValA, nValB);
+			E01Swap_ByVal_08(nValA, nValB);
 
 			Console.WriteLine("=====> 값에 의한 호출 <=====");
 			Console.WriteLine("{0}, {1}", nValA, nValB);
 
-			E01SwapByRef_08(ref nValA, ref nValB);
+			E01Swap_ByRef_08(ref nValA, ref nValB);
 
 			Console.WriteLine("\n=====> 참조에 의한 호출 <=====");
 			Console.WriteLine("{0}, {1}", nValA, nValB);
@@ -128,8 +128,8 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			 * 특정 값을 설정해줘야하기 때문이다. (+ 즉, out 키워드로 참조를 전달 받을 경우 반드시 
 			 * 특정 값으로 설정해줘야하며 그렇지 않으면 컴파일 에러가 발생한다는 것을 알 수 있다.)
 			 */
-			E01SetValByRef_08(ref nValA, 10);
-			E01SetValByOut_08(out nValB, 20);
+			E01SetVal_ByRef_08(ref nValA, 10);
+			E01SetVal_ByOut_08(out nValB, 20);
 
 			Console.WriteLine("{0}, {1}", nValA, nValB);
 #endif
@@ -158,7 +158,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/*
 			 * return 키워드란?
 			 * - 프로그램의 흐름을 중단하고 해당 메서드를 호출한 곳으로 되돌리는 역할을 수행하는 
-			 * 키워드를 의미한다. (+ 즉, 해당 키워드를 활용하면 특정 메서드의 실행을 중지시키는 것이 
+			 * 키워드를 의미한다. (+ 즉, 해당 키워드를 활용하면 특정 메서드의 실행을 중지 시키는 것이 
 			 * 가능하다.)
 			 * 
 			 * 또한 메서드가 반환 값이 존재 할 경우 return 키워드에 반환 값을 반드시 명시해야되며 
@@ -170,7 +170,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 #elif P_E01_EXAMPLE_08_02
 		/** 값을 교환한다 */
-		private static void E01SwapByVal_08(int a_nValA, int a_nValB)
+		private static void E01Swap_ByVal_08(int a_nValA, int a_nValB)
 		{
 			int nTemp = a_nValA;
 			a_nValA = a_nValB;
@@ -178,23 +178,23 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 		}
 
 		/** 값을 교환한다 */
-		private static void E01SwapByRef_08(ref int a_nValA, ref int a_nValB)
+		private static void E01Swap_ByRef_08(ref int a_rnValA, ref int a_rnValB)
 		{
-			int nTemp = a_nValA;
-			a_nValA = a_nValB;
-			a_nValB = nTemp;
+			int nTemp = a_rnValA;
+			a_rnValA = a_rnValB;
+			a_rnValB = nTemp;
 		}
 #elif P_E01_EXAMPLE_08_03
 		/** 값을 변경한다 */
-		private static void E01SetValByRef_08(ref int a_nTarget, int a_nVal)
+		private static void E01SetVal_ByRef_08(ref int a_rnTarget, int a_nVal)
 		{
-			a_nTarget = a_nVal;
+			a_rnTarget = a_nVal;
 		}
 
 		/** 값을 변경한다 */
-		private static void E01SetValByOut_08(out int a_nTarget, int a_nVal)
+		private static void E01SetVal_ByOut_08(out int a_rnTarget, int a_nVal)
 		{
-			a_nTarget = a_nVal;
+			a_rnTarget = a_nVal;
 		}
 #endif
 	}

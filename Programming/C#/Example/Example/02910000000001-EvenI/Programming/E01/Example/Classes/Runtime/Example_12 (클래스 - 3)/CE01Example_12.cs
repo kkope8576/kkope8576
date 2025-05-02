@@ -22,7 +22,7 @@ using System.Threading.Tasks;
  * 객체를 좀 더 안전하게 사용하는 개념이라는 것을 알 수 있다.
  * 
  * 상속이란?
- * - 클래스 간에 부모/자식 관계를 형성시키는 개념을 의미한다. (+ 즉, 특정 클래스가 
+ * - 클래스 간에 부모/자식 관계를 형성 시키는 개념을 의미한다. (+ 즉, 특정 클래스가 
  * 상속 관계에 놓여있다면 클래스가 간에 상/하 관계가 형성된다는 것을 알 수 있다.)
  * 
  * 자식 클래스는 부모 클래스에 존재하는 멤버를 사용하는 것이 가능하기 때문에 상속을 활용하면 클래스 
@@ -35,17 +35,17 @@ using System.Threading.Tasks;
  * 가능하면 고려하지 않는 것을 추천한다.
  * 
  * Ex)
- * class CE01Base_12
+ * class CBase
  * {
  *		// Do Something
  * }
  * 
- * class CE01Derived_12 : CE01Base_12
+ * class CDerived : CBase
  * {
  *		// Do Something
  * }
  * 
- * 위와 CE01Derived_12 클래스는 CE01Base_12 클래스를 상속하고 있기 때문에 해당 클래스는 CE01Base_12 클래스에 존재하는 
+ * 위와 CDerived 클래스는 CBase 클래스를 상속하고 있기 때문에 해당 클래스는 CBase 클래스에 존재하는 
  * 멤버를 사용하는 것이 가능하다.
  * 
  * 단, 상속은 단방향이기 때문에 두 클래스가 서로를 상속하는 것이 불가능하다. (+ 즉, 양방향 상속은 
@@ -58,17 +58,17 @@ using System.Threading.Tasks;
  * C# 은 상속을 통해서 다형성을 흉내내는 것이 가능하다.
  * 
  * Ex)
- * class CE01Base_12
+ * class CBase
  * {
  *		// Do Something
  * }
  * 
- * class CE01Derived_12 : CE01Base_12
+ * class CDerived : CBase
  * {
  *		// Do Something
  * }
  * 
- * CE01Base_12 oBase = new CE01Derived_12();
+ * CBase oBase = new CDerived();
  * 
  * 위와 같이 자식 클래스를 통해서 생성 된 객체는 부모 클래스 형으로 참조하는 것이 가능하다. (+ 즉, 
  * 자식 객체를 부모 객체로 인지하고 있다는 것을 알 수 있다.)
@@ -80,7 +80,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 	/**
 	 * Example 12
 	 */
-	class CE01Example_12
+	internal class CE01Example_12
 	{
 		/** 초기화 */
 		public static void Start(string[] args)
@@ -206,8 +206,8 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/** 생성자 */
 			public CE01Base_12(int a_nVal, float a_fVal)
 			{
-				m_nVal = a_nVal;
-				m_fVal = a_fVal;
+				this.m_nVal = a_nVal;
+				this.m_fVal = a_fVal;
 			}
 
 			/** 정보를 출력한다 */
@@ -243,7 +243,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			public CE01Derived_12(int a_nVal, 
 				float a_fVal, string a_oStr) : base(a_nVal, a_fVal)
 			{
-				m_oStr = a_oStr;
+				this.m_oStr = a_oStr;
 			}
 
 			/** 정보를 출력한다 */
@@ -271,8 +271,8 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			/** 생성자 */
 			public CE01Base_12(int a_nVal, float a_fVal)
 			{
-				m_nVal = a_nVal;
-				m_fVal = a_fVal;
+				this.m_nVal = a_nVal;
+				this.m_fVal = a_fVal;
 			}
 
 			/*
@@ -308,7 +308,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 			public CE01Derived_12(int a_nVal,
 				float a_fVal, string a_oStr) : base(a_nVal, a_fVal)
 			{
-				m_oStr = a_oStr;
+				this.m_oStr = a_oStr;
 			}
 
 			/** 정보를 출력한다 */

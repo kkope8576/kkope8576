@@ -19,7 +19,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Practice.Classes.Runtime.P
 			}
 
 			oListValues.Sort();
-			
+
 			Console.WriteLine("=====> 리스트 요소 <=====");
 			P01PrintValues(oListValues);
 
@@ -40,15 +40,15 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Practice.Classes.Runtime.P
 
 			Console.WriteLine();
 		}
-		
+
 		private static int P01FindVal(List<int> a_oListValues, int a_nVal, int nLeft, int nRight)
 		{
 			if(nLeft > nRight)
 				return -1;
-					
+
 			int mid = (nLeft + nRight) / 2;
 
-			if(a_nVal ==  a_oListValues[mid])
+			if(a_nVal == a_oListValues[mid])
 				return mid;
 
 			if(a_nVal < a_oListValues[mid])
