@@ -38,8 +38,8 @@
  * 종료되어야한다. (+ 즉, 전처리기 조건문에는 { } 기호를 사용하는 것이 불가능하다는 것을
  * 알 수 있다.)
  */
-//#define EXAMPLE
-//#define PRACTICE
+#define EXAMPLE
+#define PRACTICE
 #define SOLUTION
 
 /*
@@ -54,8 +54,6 @@
  * 또한 네임 스페이스는 전역 공간 내에서 특정 영역을 생성하는 특징이 존재하기 때문에 관련 된 기능을 
  * 특정 네임 스페이스 내부에 선언 및 정의함으로서 관리의 용이성을 향상 시키는 것이 가능하다.
  */
-using Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.Practice_04;
-
 namespace Example
 {
 	internal class Program
@@ -439,8 +437,8 @@ namespace Example
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_02.CE01Example_02.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
-			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
-			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
+			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
+			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_09.CE01Example_09.Start(args);
@@ -448,7 +446,8 @@ namespace Example
 			_02910000000001_EvenI.Algorithm.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
 #elif SOLUTION
 			//_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
-			_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
+			//_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
+			_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
 #endif // #if EXAMPLE
 		}
 	}
