@@ -127,7 +127,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 			int j = -1;
 
 			var oTable = new int[a_oPattern.Length + 1];
-			oTable[0] = -1;
+			oTable[0] = -1; 
 
 			while(i < a_oPattern.Length)
 			{
@@ -166,7 +166,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 					return i;
 				}
 
-				i += Math.Max(1, j - oTable_BadCharacter[a_oStr[i + j]]);
+				i += Math.Max(1, j - oTable_BadCharacter[a_oStr[i + j]]); 
 			}
 
 			return -1;
