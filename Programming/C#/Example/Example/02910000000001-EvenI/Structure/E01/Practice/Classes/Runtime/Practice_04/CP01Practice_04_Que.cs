@@ -25,7 +25,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Practice.Classes.Runtime.P
 				Console.Write("{0}, ", nVal);
 			}
 
-			Console.WriteLine("\n\n=====> 우선 순위 큐 요소 <=====");
+			Console.WriteLine("\n\n=====> 우선 순위 큐 <=====");
 
 			while(oPQueueValues.NumValues > 0)
 			{

@@ -18,17 +18,17 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Practice.Classes.Runtime.P
 				oList.Add(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 리스트 요소 - 정렬 전 <=====");
+			Console.WriteLine("=====> 리스트 - 정렬 전 <=====");
 			Print(oList);
 
 			QuickSortValues(oList, E01Compare_ByAscending_04);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 정렬 후 (오름차순) <=====");
+			Console.WriteLine("\n=====> 리스트 - 정렬 후 (오름차순) <=====");
 			Print(oList);
 
 			QuickSortValues(oList, E01Compare_ByDescending_04);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 정렬 후 (내림차순) <=====");
+			Console.WriteLine("\n=====> 리스트 - 정렬 후 (내림차순) <=====");
 			Print(oList);
 		}
 			/** 오름차순으로 비교한다 */

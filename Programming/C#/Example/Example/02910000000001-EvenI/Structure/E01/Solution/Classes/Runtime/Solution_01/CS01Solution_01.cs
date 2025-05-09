@@ -22,17 +22,17 @@ namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.S
 				oListValues.AddVal(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 리스트 요소 <=====");
+			Console.WriteLine("=====> 리스트 <=====");
 			S01PrintValues_01(oListValues);
 
 			oListValues.InsertVal(0, 100);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 추가 후 <=====");
+			Console.WriteLine("\n=====> 리스트 - 추가 후 <=====");
 			S01PrintValues_01(oListValues);
 
 			oListValues.RemoveVal(100);
 
-			Console.WriteLine("\n=====> 리스트 요소 - 제거 후 <=====");
+			Console.WriteLine("\n=====> 리스트 - 제거 후 <=====");
 			S01PrintValues_01(oListValues);
 		}
 

@@ -22,7 +22,7 @@ namespace Example._02910000000001_EvenI.Structure.E01.Solution.Classes.Runtime.S
 				oHashValues.AddVal(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 해시 요소 <=====");
+			Console.WriteLine("=====> 해시 <=====");
 
 			oHashValues.Enumerate((a_nIdx, a_nVal) =>
 			{

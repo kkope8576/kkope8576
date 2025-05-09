@@ -74,7 +74,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oListValues.Add(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 리스트 요소 <=====");
+			Console.WriteLine("=====> 리스트 <=====");
 
 			for(int i = 0; i < oListValues.Count; ++i)
 			{
@@ -112,7 +112,7 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 				oListValues.Add(oRandom.Next(1, 100));
 			}
 
-			Console.WriteLine("=====> 리스트 요소 <=====");
+			Console.WriteLine("=====> 리스트 <=====");
 
 			for(int i = 0; i < oListValues.Count; ++i)
 			{
@@ -171,12 +171,12 @@ namespace Example._02910000000001_EvenI.Programming.E01.Example.Classes.Runtime.
 
 			oPrinter -= E01PrintMsgB_16;
 
-			Console.WriteLine("=====> 델리게이트 체인 - 제거 후 <=====");
+			Console.WriteLine("\n=====> 델리게이트 체인 - 제거 후 <=====");
 			Console.WriteLine("{0}", oPrinter());
 
 			oPrinter = E01PrintMsgA_16;
 
-			Console.WriteLine("=====> 델리게이트 체인 - 할당 후 <=====");
+			Console.WriteLine("\n=====> 델리게이트 체인 - 할당 후 <=====");
 			Console.WriteLine("{0}", oPrinter());
 #endif // P_E01_EXAMPLE_16_01
 		}
