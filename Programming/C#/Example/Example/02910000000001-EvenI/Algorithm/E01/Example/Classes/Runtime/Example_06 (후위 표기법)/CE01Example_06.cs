@@ -206,7 +206,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 					string oOperator = oStackOperators.Pop();
 					int nPriority_Operator = E01GetPriority_06(oOperator, false);
 
-					// 우선 순위가 낮을 경우
+					// 스택 연산자의 우선 순위가 낮을 경우
 					if(nPriority_Token < nPriority_Operator)
 					{
 						oStackOperators.Push(oOperator);
