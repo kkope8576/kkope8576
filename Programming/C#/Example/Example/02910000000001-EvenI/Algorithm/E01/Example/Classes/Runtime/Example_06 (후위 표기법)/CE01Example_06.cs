@@ -164,7 +164,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 			while(nIdx < a_oExpression.Length)
 			{
-				string oToken = E01GetToken_06(a_oExpression, nIdx);
+				string oToken = E01GetToken_06(a_oExpression, nIdx); 
 				nIdx += oToken.Length;
 
 				// 공백 일 경우
