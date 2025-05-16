@@ -107,9 +107,9 @@ namespace Example
 		 * - F : 60 미만
 		 * 
 		 * 세부 학점 계산 방법
-		 * - + : 7 ~ 9
-		 * - 0 : 4 ~ 6
 		 * - - : 0 ~ 3
+		 * - 0 : 4 ~ 6
+		 * - + : 7 ~ 9
 		 * 
 		 * Ex)
 		 * 점수 입력 : 90
@@ -438,8 +438,8 @@ namespace Example
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_03.CE01Example_03.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_04.CE01Example_04.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
-			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
-			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
+			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
+			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_09.CE01Example_09.Start(args);
 #elif PRACTICE
@@ -447,7 +447,8 @@ namespace Example
 #elif SOLUTION
 			//_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
-			_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
+			//_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
+			_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_04.CS01Solution_04.Start(args);
 #endif // #if EXAMPLE
 		}
 	}
