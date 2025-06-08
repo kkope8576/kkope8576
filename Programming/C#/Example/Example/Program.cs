@@ -448,7 +448,8 @@ namespace Example
 			//_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_01.CS01Solution_01.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_02.CS01Solution_02.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_03.CS01Solution_03.Start(args);
-			_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_04.CS01Solution_04.Start(args);
+			//_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_04.CS01Solution_04.Start(args);
+			_02910000000001_EvenI.Algorithm.E01.Solution.Classes.Runtime.Solution_06.CS01Solution_06.Start(args);
 #endif // #if EXAMPLE
 		}
 	}
