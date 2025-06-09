@@ -67,7 +67,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 #if A_E01_EXAMPLE_05_01
 		/** 문자열을 탐색한다 */
-		private static int E01FindStr_05(string a_oStr, string a_oPattern)
+		private static int E01FindStr_05(string a_oStr, string a_oPattern)`````````````																																																																														
 		{
 			for(int i = 0; i <= a_oStr.Length - a_oPattern.Length; ++i)
 			{

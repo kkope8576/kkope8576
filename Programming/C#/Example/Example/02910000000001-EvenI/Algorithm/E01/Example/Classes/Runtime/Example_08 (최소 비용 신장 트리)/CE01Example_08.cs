@@ -240,6 +240,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 
 			return oTree_MinCostSpanning;
 		}
+
 #elif A_E01_EXAMPLE_08_02
 		/** 정점 연결 여부를 검사한다 */
 		private static bool E01IsConnect_Vertex_08(CE01Graph_AdjacencyMatrix_08_02<char, int> a_oTree_MinCostSpanning,
@@ -274,16 +275,16 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 		}
 
 		/** 최소 비용 신장 트리를 생성한다 */
-		private static CE01Graph_AdjacencyMatrix_08_02<char, int> E01CreateTree_MinCostSpanning_08(CE01Graph_AdjacencyMatrix_08_02<char, int> a_oGraph_Matrix)
-		{
-			var oTree_MinCostSpanning = new CE01Graph_AdjacencyMatrix_08_02<char, int>();
-
-			for(int i = 0; i < a_oGraph_Matrix.NumVertices; ++i)
+			private static CE01Graph_AdjacencyMatrix_08_02<char, int> E01CreateTree_MinCostSpanning_08(CE01Graph_AdjacencyMatrix_08_02<char, int> a_oGraph_Matrix)
 			{
-				oTree_MinCostSpanning.AddVertex(a_oGraph_Matrix.ListVertices[i].m_tKey, 0);
-			}
+				var oTree_MinCostSpanning = new CE01Graph_AdjacencyMatrix_08_02<char, int>();
 
-			var oPQueueInfos_Edge = new PriorityQueue<STE01Info_Edge_08, int>();
+				for(int i = 0; i < a_oGraph_Matrix.NumVertices; ++i)
+				{
+					oTree_MinCostSpanning.AddVertex(a_oGraph_Matrix.ListVertices[i].m_tKey, 0);
+				}
+
+				var oPQueueInfos_Edge = new PriorityQueue<STE01Info_Edge_08, int>();
 
 			for(int i = 0; i < a_oGraph_Matrix.NumVertices; ++i)
 			{
@@ -298,7 +299,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 						stInfo_Edge.m_chTo, stInfo_Edge.m_nCost);
 
 					oPQueueInfos_Edge.Enqueue(stInfo_Edge, -stInfo_Edge.m_nCost);
-				}
+				}	
 			}
 
 			while(oPQueueInfos_Edge.Count > 0)
@@ -310,7 +311,7 @@ namespace Example._02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Ex
 				bool bIsConnect = E01IsConnect_Vertex_08(oTree_MinCostSpanning,
 					stInfo_Edge.m_chFrom, stInfo_Edge.m_chTo);
 
-				// 간선 제거가 불가능 할 경우
+				// 간선 제거가 불가능 할 경우  
 				if(!bIsConnect)
 				{
 					oTree_MinCostSpanning.AddEdge(stInfo_Edge.m_chFrom,
