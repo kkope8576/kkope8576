@@ -38,7 +38,7 @@
  * 종료되어야한다. (+ 즉, 전처리기 조건문에는 { } 기호를 사용하는 것이 불가능하다는 것을
  * 알 수 있다.)
  */
-//#define EXAMPLE
+#define EXAMPLE
 #define PRACTICE
 #define SOLUTION
 
@@ -441,8 +441,8 @@ namespace Example
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_05.CE01Example_05.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_06.CE01Example_06.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_07.CE01Example_07.Start(args);
-			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
-			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_09.CE01Example_09.Start(args);
+			//_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_08.CE01Example_08.Start(args);
+			_02910000000001_EvenI.Algorithm.E01.Example.Classes.Runtime.Example_09.CE01Example_09.Start(args);
 #elif PRACTICE
 			//_02910000000001_EvenI.Algorithm.E01.Practice.Classes.Runtime.Practice_02.CP01Practice_02.Start(args);
 			//_02910000000001_EvenI.Algorithm.E01.Practice.Classes.Runtime.Practice_03.CP01Practice_03_KMP.Start(args);

@@ -8,7 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="02910000000001-EvenI\Algorithm\E01\Practice\Classes\Runtime\Practice_03\" />
+    <Compile Remove="02910000000001-EvenI\Algorithm\E01\Practice\Classes\Runtime\Practice_03\**" />
+    <EmbeddedResource Remove="02910000000001-EvenI\Algorithm\E01\Practice\Classes\Runtime\Practice_03\**" />
+    <None Remove="02910000000001-EvenI\Algorithm\E01\Practice\Classes\Runtime\Practice_03\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="02910000000001-EvenI\Structure\E01\Practice\Classes\Runtime\Practice_01\" />
   </ItemGroup>
 
