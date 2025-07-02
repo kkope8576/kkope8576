@@ -517,7 +517,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0.49999997
+  m_BaseOffset: 0.49
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1 &351448796
@@ -2094,7 +2094,7 @@ MonoBehaviour:
   m_VoxelSize: 0.25
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 005d6fe70bde93642b39e03b982eedd5, type: 2}
-  m_BuildHeightMesh: 0
+  m_BuildHeightMesh: 1
 --- !u!1 &2028572028
 GameObject:
   m_ObjectHideFlags: 0
